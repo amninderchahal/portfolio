@@ -1,0 +1,36 @@
+{
+    "projects":[
+        {
+            "title" : "BookMySched",
+            "subtitle":"React JS | Laravel | Bootstrap",
+            "img" : [
+                "images/project-1-img-1.jpg",
+                "images/project-1-img-2.jpg"
+            ],
+            "description":"BookMySched is a web-based scheduling system that offers a user friendly, easy to use scheduler with elegant UI. It provides a complete solution for appointment management.",
+            "website" : false,
+            "github" : "https://github.com/amninderchahal/PizzaStore_Dashboard"
+        },
+        {
+            "title" : "Pizzastore Dashboard",
+            "subtitle":"Java | jquery | Highcharts Js",
+            "img" : [
+                "images/project-2-img-1.jpg",
+                "images/project-2-img-2.jpg"
+            ],
+            "website" : false,
+            "github" : "https://github.com/amninderchahal/PizzaStore_Dashboard"
+        },
+        {
+            "title" : "Project 3",
+            "subtitle":"project 3 subtitle",
+            "img" : [
+                "images/project-3-img-1.jpg",
+                "images/project-3-img-2.jpg"
+            ],
+            "website" : false,
+            "github" : false
+        }
+    ],
+    "resume":[]
+}

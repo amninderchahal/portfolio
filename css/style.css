@@ -1,0 +1,419 @@
+body{
+    margin-top: -1px;
+    margin-left:-1px;
+}
+header{
+    position: fixed;
+    z-index: 100;
+}
+.animateEaseInOut{
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+}
+.sidebar-toggle{
+    padding: 0;
+    top:0;
+    left:0;
+    display:none;
+    position: fixed;
+}
+.sidebar-toggle>button,
+.sidebar-toggle>button:focus,
+.sidebar-toggle>button:hover{
+    padding: 8px 10px 8px 10px;
+    background-color: #333;
+    border:1px solid #333;
+    border-radius: 0px;
+    color:#fff;
+    font-size: 25px;
+    line-height: 25px;    
+}
+.sidebar{
+    width: 160px;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    top:0;
+    padding-top:20vh;
+    border-right: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+a:focus{
+    outline: 0; 
+}
+.nav-link,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus{
+    height: 60px;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: center;
+    padding-top:0px;
+    text-decoration: none;
+    color: #262626;
+    text-transform: uppercase;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    transition: color .5s;
+    -webkit-transition: color .5s;
+}
+.nav-link>h4{
+    margin-bottom: 4px;
+    margin-top: 12px;
+    font-family: inherit;
+    font-weight: 600;
+}
+.nav-link-icon{
+    margin-top:-12px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background:#fff;
+    width:28px;
+    padding: 2px 4px 0px 4px;
+}
+.nav-link-line{
+    height:0;
+    background-color: rgb(7, 4, 4);
+    border:1px solid #262626;
+    border-radius: 5px;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top:8px;
+    margin-bottom: 0;
+    transition: border-color .5s;
+    -webkit-transition: border-color .5s;
+}
+.nav-link-subtitle{
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+}
+.nav-link:hover,
+.nav-link-active,
+.nav-link-active:hover,
+.nav-link-active:active,
+.nav-link-active:focus{
+    color : #0BBD89;
+}
+.nav-link:hover .nav-link-line,
+.nav-link-active .nav-link-line{
+    border-color: #0BBD89;
+}
+.main{
+    height:200vh;
+    padding-top:30px;
+    margin-left: 160px;
+    width:auto;
+    z-index: 1;
+}
+.top-line{
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color: #0BB97E; 
+    width:0;
+    height: 3px;
+    display:block;
+}
+.section{
+    width:95%;
+    margin:auto;
+}
+.animateOnLoad{
+    display:none;
+}
+.heading-wrapper,
+.content-wrapper{
+    padding-top: 2vmax;
+    padding-bottom: 2vmax;
+}
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-weight: 600;
+    font-size: 28px;
+}
+.subtitle{
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+.heading-1{
+    font-size: 32px;
+}
+.heading-3{
+    font-size: 20px;
+}
+.project{
+    width: 100%;
+    height: auto;
+    margin-bottom: 3vmax;
+}
+.project-link,
+.project-link:hover,
+.project-link:focus,
+.project-link:active{
+    text-decoration: none;
+}
+.project-link{
+    display: block;
+    position: relative;
+    font-size: 28px;
+    width:100%;
+    height:auto;
+    border: 1px solid #e5e5e5;
+}
+.project-title{
+    color:#333;
+    width: 100%;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 28px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    background-color: #0BBD89;
+  }
+.text {
+    color:#fff;
+    font-weight: 600;
+    font-size: 38px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.project-link:hover .overlay {
+    opacity: 0.9;
+}
+.modal {
+    padding: 0 !important;
+  }
+.modal-dialog{
+    width:100%;
+    height: 100%;
+    margin:auto;
+}
+.modal-content{
+    border:0;
+    border-radius: 0;
+}
+.modal-header{
+    text-align: center;
+    border: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+.modal-header>.close-modal{
+    text-align: center;
+    float:right;
+    margin-right:30px;
+    background: none;
+    border:0;
+    height:70px;
+    width: 70px;
+}
+.modal-header .close-modal .lr{
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #222;
+}
+.modal-header .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-color: #222;
+}
+.modal-header .close-modal:hover .lr,
+.modal-header .close-modal:hover .rl{
+    background-color: gray;
+}
+.modal-header .close-modal:focus{
+    outline: 0;
+}
+.modal-body{
+    padding-top: 0;
+    padding-bottom: 15vh;
+}
+.project-wrapper {
+    width: 75%;
+    height:auto;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.project-wrapper>button{
+    margin-top:20px;
+}
+.project-wrapper{
+    font-family: 'Roboto Slab','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: #212529;
+    font-size: 16px;
+    padding-top: 50px;
+    margin: auto;
+    width: 70%;
+}
+.project-section{
+    padding-bottom: 50px;
+    display: flex;
+    display: -webkit-flex;
+    margin:auto;
+}
+.project-description{
+    padding-bottom: 30px;
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+.project-links{
+    width: 20%;
+    margin-right:0; 
+}
+.project-github,
+.project-github:focus,
+.project-github:active{
+    width:80px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin:auto;
+    margin-bottom:20px; 
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+.project-github:hover{
+    text-decoration: none;
+    color: #0BBD89;
+}
+.project-github>.heading-1{
+    margin: 0;
+    line-height: 32px;
+}
+.project-github>.heading-3{
+    padding-top: 0;
+    line-height: 22px;
+    margin:0;
+}
+.project-website{
+    display: block;
+    padding: 6px 8px 6px 8px;
+    border: 2px solid #333;
+    color: #333;
+    width:100px;
+    margin:auto;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-transform: uppercase;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+.project-website:hover{
+    color: #0BBD89;
+    border: 2px solid #0BBD89;
+    text-decoration: none;
+}
+.project-website:focus,
+.project-website:active{
+    text-decoration: none;
+    color:#333;
+}
+.image-wrapper>img{
+    width: 100%;
+    height: 100%;
+    margin-bottom:40px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width:992px) {
+    .sidebar{
+        width: 0px;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+    }
+    .nav-link{
+        margin-left:-160px;
+        -webkit-transition: margin 1s;
+        transition: margin 1s;
+    }
+    .navlink-visible{
+        margin-left:10px;
+        -webkit-transition: margin 1s;
+        transition: margin 1s;
+    }
+    .sidebar-visible{
+        width: 160px;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+    }
+
+    .sidebar-toggle{
+        display:block;
+        left:0;
+        -webkit-transition: left 1s;
+        transition: left 1s;
+    }
+    .sidebar-toggle-active{
+        left:160px;
+        -webkit-transition: left 1s;
+        transition: left 1s;
+    }
+    .main{
+        padding:70px 0 0 0;
+        margin: auto;
+    }
+    .project-wrapper {
+        width: 98%;
+    }
+    .project-section{
+        flex-direction: column;
+        width:95%;
+    }
+    .project-description{
+        width: 100%;
+        margin: 0;
+    }
+    .project-links{
+        display: flex;
+        display: -webkit-flex;
+        width: 100%;
+        margin-left:0;
+        padding-left:8%;
+        padding-right:8%; 
+    }
+    .project-github{
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .project-website{
+        margin-right: 0;
+    }
+}
