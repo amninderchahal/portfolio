@@ -306,9 +306,21 @@ a:focus{
     transition: all .5s;
     -webkit-transition: all .5s;
 }
+.project-github-icon svg{
+    margin: auto;
+    width:32px;
+    height: 32px;
+}
 .project-github:hover{
     text-decoration: none;
     color: #3762BA;
+}
+.project-github-icon #Shape{
+    fill:#333;
+    transition: fill .5s;
+}
+.project-github:hover .project-github-icon #Shape{
+    fill: #3762BA
 }
 .project-github>.heading-1{
     margin: 0;
