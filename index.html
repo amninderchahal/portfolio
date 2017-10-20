@@ -13,8 +13,8 @@
     <!--Angular JS-->
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
-    <!--Font Awesome-->
-    <script src="js/font-awesome.js"></script>
+    <!--Material Design Icons-->
+    <link rel="stylesheet" href="css/material-icons.css">
     <!--Fonts-->
     <link href="css/google-fonts.css" rel="stylesheet">
     <!--Stylesheet-->
@@ -24,37 +24,37 @@
     <header>
         <div class="sidebar-toggle animateEaseInOut">
             <button class="btn btn-default" type="button">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="material-icons">menu</i>
             </button>
         </div>
         <div class="sidebar animateEaseInOut">
-            <a class="nav-link animateEaseInOut" href="#/">
+            <a class="nav-link" href="#/">
                 <h4 class="nav-link-text">About</h4>
                 <span class="nav-link-icon-span">
                     <hr class="nav-link-line" />
-                    <p class="nav-link-icon"><i class="fa fa-address-card" aria-hidden="true"></i></p>
+                    <p class="nav-link-icon"><i class="material-icons">account_box</i></p>
                 </span>
                 <p class="nav-link-subtitle">Who I Am</p>
             </a>
-            <a class="nav-link animateEaseInOut" href="#projects">
+            <a class="nav-link" href="#projects">
                 <h4 class="nav-link-text">Work</h4>
                 <span class="nav-link-icon-span">
                     <hr class="nav-link-line" />
-                    <p class="nav-link-icon"><i class="fa fa-desktop" aria-hidden="true"></i></p>
+                    <p class="nav-link-icon"><i class="material-icons">desktop_mac</i></p>
                 </span>
                 <p class="nav-link-subtitle">View Projects</p>
             </a>
-            <a class="nav-link animateEaseInOut" href="#contact">
+            <a class="nav-link" href="#contact">
                 <h4 class="nav-link-text">Contact</h4>
                 <span class="nav-link-icon-span">
                     <hr class="nav-link-line" />
-                    <p class="nav-link-icon"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i></p>
+                    <p class="nav-link-icon"><i class="material-icons">contact_phone</i></p>
                 </span>
                 <p class="nav-link-subtitle">Get In Touch</p>
             </a>
         </div>
     </header>
-    <span class="top-line"></span>
+    <span class="loading-line"></span>
     <div class="main">
         <div class="section" ng-view></div>
     </div>

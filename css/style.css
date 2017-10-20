@@ -45,7 +45,7 @@ a:focus{
 .nav-link:hover,
 .nav-link:active,
 .nav-link:focus{
-    height: 60px;
+    height: 75px;
     width: 140px;
     margin-left: auto;
     margin-right: auto;
@@ -67,13 +67,16 @@ a:focus{
     font-weight: 600;
 }
 .nav-link-icon{
-    margin-top:-12px;
+    margin-top:-11px;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
     background:#fff;
-    width:28px;
+    width:23px;
     padding: 2px 4px 0px 4px;
+}
+.nav-link-icon-span .material-icons{
+    font-size: 16px;
 }
 .nav-link-line{
     height:0;
@@ -94,32 +97,26 @@ a:focus{
     font-weight: 400;
     text-align: center;
 }
-.nav-link:hover,
-.nav-link-active,
-.nav-link-active:hover,
-.nav-link-active:active,
-.nav-link-active:focus{
-    color : #0BBD89;
+.nav-link:hover{
+    color : #3762BA;
 }
-.nav-link:hover .nav-link-line,
-.nav-link-active .nav-link-line{
-    border-color: #0BBD89;
+.nav-link:hover .nav-link-line{
+    border-color: #3762BA;
 }
 .main{
-    height:200vh;
     padding-top:30px;
     margin-left: 160px;
     width:auto;
     z-index: 1;
 }
-.top-line{
+.loading-line{
     position:fixed;
     z-index: 1;
     top:0;
     left:0;
-    background-color: #0BB97E; 
+    background-color: #255CC3;
     width:0;
-    height: 3px;
+    height: 2px;
     display:block;
 }
 .section{
@@ -156,7 +153,6 @@ a:focus{
 }
 .project{
     width: 100%;
-    height: auto;
     margin-bottom: 3vmax;
 }
 .project-link,
@@ -191,17 +187,18 @@ a:focus{
     opacity: 0;
     transition: .5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
-    background-color: #0BBD89;
+    background-color: #5F76B3;
   }
 .text {
     color:#fff;
-    font-weight: 600;
-    font-size: 38px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+}
+.text .material-icons{
+    font-size: 38px;
 }
 .project-link:hover .overlay {
     opacity: 0.9;
@@ -290,12 +287,12 @@ a:focus{
 .project-description{
     padding-bottom: 30px;
     width: 70%;
-    margin: auto;
+    margin-left: auto;
     text-align: left;
 }
 .project-links{
-    width: 20%;
-    margin-right:0; 
+    width: 23%;
+    margin:0;
 }
 .project-github,
 .project-github:focus,
@@ -311,7 +308,7 @@ a:focus{
 }
 .project-github:hover{
     text-decoration: none;
-    color: #0BBD89;
+    color: #3762BA;
 }
 .project-github>.heading-1{
     margin: 0;
@@ -337,8 +334,8 @@ a:focus{
     -webkit-transition: all .5s;
 }
 .project-website:hover{
-    color: #0BBD89;
-    border: 2px solid #0BBD89;
+    color: #3762BA;
+    border: 2px solid #3762BA;
     text-decoration: none;
 }
 .project-website:focus,
@@ -359,13 +356,19 @@ a:focus{
         -webkit-transition: width 1s;
         transition: width 1s;
     }
-    .nav-link{
-        margin-left:-160px;
+    .nav-link,
+    .nav-link:hover,
+    .nav-link:active,
+    .nav-link:focus{
+        margin-left: -160px;
         -webkit-transition: margin 1s;
         transition: margin 1s;
     }
-    .navlink-visible{
-        margin-left:10px;
+    .navlink-visible,
+    .navlink-visible:hover,
+    .navlink-visible:active,
+    .navlink-visible:focus{
+        margin-left: 10px;
         -webkit-transition: margin 1s;
         transition: margin 1s;
     }
@@ -409,11 +412,13 @@ a:focus{
         padding-left:8%;
         padding-right:8%; 
     }
-    .project-github{
-        margin-left: 0;
-        margin-bottom: 0;
-    }
+    .project-github,
     .project-website{
-        margin-right: 0;
+        margin: auto;
+    }
+}
+@media screen and (max-width:768px) {
+    .project-link:hover .overlay {
+        opacity: 0;
     }
 }

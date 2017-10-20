@@ -1,28 +1,29 @@
 /* Jquery Code starts here */
 $(document).ready(function(){
-    $('.nav-link:first').addClass("nav-link-active");
+    function toggleNav(){
+        $('.sidebar').toggleClass('sidebar-visible');
+        $('.nav-link').toggleClass('navlink-visible');
+        $('.sidebar-toggle').toggleClass('sidebar-toggle-active');
+    }
     var link = "";
     $('.nav-link').click(function(){
         var href = $(this).attr('href');
         if(href===link) return;
         link = href;
-        $('.top-line').animate({
+        $('.loading-line').animate({
             width: "100%"
         },800, function(){
-            $('.top-line').css("width", "0");
+            $('.loading-line').css("width", "0");
         });
-        $('.nav-link').removeClass("nav-link-active");
-        $(this).addClass("nav-link-active");
+        if($('.sidebar').hasClass('sidebar-visible')) toggleNav();
     });
     $('.main').click(function(){
         if($('.sidebar').hasClass('sidebar-visible')){
             $('.sidebar-toggle>button').click();
         }
     });
-    $('.sidebar-toggle>button').click(function(){
-        $('.sidebar').toggleClass('sidebar-visible');
-        $('.nav-link').toggleClass('navlink-visible');
-        $('.sidebar-toggle').toggleClass('sidebar-toggle-active');
+    $('.sidebar-toggle>button, .navlink-visible').click(function(){
+        toggleNav();
     });
 });
 
