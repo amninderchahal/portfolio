@@ -1,8 +1,8 @@
 angular.module("portfolio.projects", ["ngRoute"])
 .controller('projectsCtrl', function($scope, $http){
-    $http.get('/data.json')
+    $http.get('/json/projects.json')
     .then(function(response){
-        $scope.projects = response.data.projects;
+        $scope.projects = response.data;
     });
     $scope.projectClick = function(id, $event){
         $event.preventDefault();

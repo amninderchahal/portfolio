@@ -191,7 +191,7 @@ a:focus{
     display: inline-block;
     width:120px;
     height:auto;
-    margin:0 30px;
+    margin:0 20px;
     padding:8px 8px 8px 8px;
 }
 .skill-img{
@@ -326,6 +326,15 @@ a:focus{
     text-align: center;
     padding-top: 20px;
 }
+.project-lables{
+    font-size:16px;
+    text-align: center;
+    font-weight: 400;
+    padding-top: .3em;
+}
+.project-lables span{
+    margin:2px;
+}
 .project-wrapper>button{
     margin-top:20px;
 }
@@ -441,12 +450,12 @@ a:focus{
     display: inline-block;
 }
 .contact-item{
-    margin: 16px auto;
+    margin: 20px auto;
     width: 250px;
     position:relative;
     font-family: 'Archivo Narrow';
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
 }
 .contact-item .material-icons{
@@ -455,7 +464,7 @@ a:focus{
 }
 .contact-item p{
     display: inline;
-    margin-left:26px;
+    margin-left:30px;
 }
 .link-wrapper{
     width:160px;
@@ -534,6 +543,9 @@ a:focus{
     .name-heading-wrapper{
         padding-top:0px;
     }
+    .profile-pic-wrapper{
+        width:160px;
+    }
     .project-wrapper {
         width: 98%;
     }
@@ -564,12 +576,11 @@ a:focus{
     }
 }
 @media screen and (max-width:768px) {
+    .skills-wrapper>div{
+        margin:0 31px;
+    }
     .project-link:hover .overlay {
         opacity: 0;
-    }
-    .profile-pic-wrapper{
-        width:180px;
-        height: auto;
     }
     .project-github,
     .project-website{

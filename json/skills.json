@@ -1,0 +1,26 @@
+[
+    {
+        "title":"HTML5",
+        "img":"images/skills/html5.png"
+    },
+    {
+        "title":"CSS3",
+        "img":"images/skills/css3.png"
+    },
+    {
+        "title":"JavaScript",
+        "img":"images/skills/js.png"
+    },
+    {
+        "title":"jQuery",
+        "img":"images/skills/jquery.png"
+    },
+    {
+        "title":"Angular JS",
+        "img":"images/skills/angularjs.png"
+    },
+    {
+        "title":"React JS",
+        "img":"images/skills/reactjs.png"
+    }
+]
