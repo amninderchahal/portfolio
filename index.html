@@ -6,13 +6,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"> 
-    <!--Bootstrap and Jquery-->
+    <!--Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--Angular JS-->
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
     <!--Icons-->
     <link rel="stylesheet" href="css/material-icons.css">
     <!--Fonts-->
@@ -24,7 +19,7 @@
     <header>
         <div class="sidebar-toggle animateEaseInOut">
             <button class="btn btn-default" type="button">
-                <i class="material-icons">menu</i>
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
         </div>
         <div class="sidebar animateEaseInOut">
@@ -59,7 +54,16 @@
         <div class="section" ng-view></div>
     </div>
     <!--Scripts-->
+    <!--jQuery and Bootstrap-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--Angular JS-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <!--custom scripts-->
     <script src="app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="views/about.js"></script>
     <script src="views/projects.js"></script>
 </body>
 </html>

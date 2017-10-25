@@ -1,11 +1,25 @@
-<div class="animateOnLoad">
+<div class="animateOnLoad container-fluid">
     <div class="row heading-wrapper">
-        <h1 class="title heading-1">Amninder Chahal</h1>
-        <p class="subtitle">Web Developer</p>
+        <div class="name-heading-wrapper">
+            <h1 class="title heading-1">Amninder Chahal</h1>
+            <p class="subtitle">Front-End Developer</p>
+        </div>
     </div>
-    <div class="content-wrapper container-fluid">
-        <div class="about-summary">
-                          
+    <div class="content-wrapper row">
+        <div class="about-summary col-md-9 col-centered">
+            <div class="profile-pic-wrapper">
+                <img class="profile-pic img-thumbnail" src="images/profile.jpeg">   
+            </div>
+            <p></p>
+        </div>
+        <div class="about-summary col-md-9 col-centered">
+            <h3 class="title heading-2 about-section-title">Skills</h3>
+            <div class="skills-wrapper">
+                <div class"skill" ng-repeat="skill in skills">
+                    <img class="skill-img" src="{{skill.img}}">
+                    <p class="title skill-title">{{skill.title}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

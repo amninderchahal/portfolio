@@ -1,3 +1,4 @@
+/************Index Page Style**********/
 body{
     margin-top: -1px;
     margin-left:-1px;
@@ -21,13 +22,15 @@ header{
 .sidebar-toggle>button:focus,
 .sidebar-toggle>button:hover{
     padding: 8px 10px 8px 10px;
-    background-color: #333;
-    border:1px solid #333;
+    background-color: #1a1a1a;
+    border:1px solid #1a1a1a;
     border-radius: 0px;
     color:#fff;
-    font-size: 25px;
-    line-height: 25px;    
+    font-size: 22px;
+    line-height: 22px;
+    margin:0;  
 }
+
 .sidebar{
     width: 160px;
     height:100vh;
@@ -56,7 +59,7 @@ a:focus{
     text-decoration: none;
     color: #262626;
     text-transform: uppercase;
-    font-family: "Andale Mono", AndaleMono, monospace;
+    font-family: 'Fjalla One';
     transition: color .5s;
     -webkit-transition: color .5s;
 }
@@ -64,7 +67,8 @@ a:focus{
     margin-bottom: 4px;
     margin-top: 12px;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 21px;
 }
 .nav-link-icon{
     margin-top:-11px;
@@ -80,7 +84,6 @@ a:focus{
 }
 .nav-link-line{
     height:0;
-    background-color: rgb(7, 4, 4);
     border:1px solid #262626;
     border-radius: 5px;
     margin-left:20px;
@@ -91,13 +94,13 @@ a:focus{
     -webkit-transition: border-color .5s;
 }
 .nav-link-subtitle{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Poly';
     text-transform: uppercase;
     font-size: 10px;
     font-weight: 400;
     text-align: center;
     margin-bottom: 0;
-    margin-top: -4px;
+    margin-top: -2px;
 }
 .nav-link:hover{
     color : #3762BA;
@@ -136,23 +139,78 @@ a:focus{
 .title{
     text-align: center;
     text-transform: uppercase;
-    font-family: "Andale Mono", AndaleMono, monospace;
+    font-family: 'Archivo Narrow';
     font-weight: 600;
     font-size: 28px;
 }
 .subtitle{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Ubuntu Condensed';
     text-transform: uppercase;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
+    margin-bottom: 0;
 }
 .heading-1{
     font-size: 32px;
 }
+.heading-2{
+    font-size: 24px;
+}
 .heading-3{
     font-size: 20px;
 }
+.heading-4{
+    font-size: 18px;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+/************About Page Style**********/
+.heading-wrapper>.row{
+    padding-top: 20px;
+}
+.profile-pic-wrapper{
+    margin-left: 0;
+    width:180px;
+    height:auto;
+    display: inline-block;
+}
+.name-heading-wrapper{
+    padding-top:10px;
+}
+.about-section-title{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.about-section{
+    padding-top:20px;
+}
+.skills-wrapper>div{
+    display: inline-block;
+    width:120px;
+    height:auto;
+    margin:0 30px;
+    padding:8px 8px 8px 8px;
+}
+.skill-img{
+    width:80px;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-bottom: 0;
+}
+.skill-title{
+    width:100%;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Lato', sans-serif;
+    text-transform: none;
+    margin:0;
+    margin-top: 8px;
+}
+/************Work Page Style**********/
 .project{
     width: 100%;
     margin-bottom: 3vmax;
@@ -172,11 +230,10 @@ a:focus{
     border: 1px solid #e5e5e5;
 }
 .project-title{
-    color:#333;
+    color:#4d4d4d;
     width: 100%;
     text-align: center;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 28px;
+    margin-top: 10px;
 }
 .overlay {
     position: absolute;
@@ -300,7 +357,7 @@ a:focus{
 .project-github:focus,
 .project-github:active{
     width:80px;
-    color: #333;
+    color: #1a1a1a;
     text-decoration: none;
     display: block;
     margin:auto;
@@ -317,11 +374,11 @@ a:focus{
     text-decoration: none;
     color: #3762BA;
 }
-.project-github-icon #Shape{
-    fill:#333;
+.project-github-icon svg{
+    fill:#1a1a1a;
     transition: fill .5s;
 }
-.project-github:hover .project-github-icon #Shape{
+.project-github:hover .project-github-icon svg{
     fill: #3762BA
 }
 .project-github>.heading-1{
@@ -336,8 +393,8 @@ a:focus{
 .project-website{
     display: block;
     padding: 6px 8px 6px 8px;
-    border: 2px solid #333;
-    color: #333;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
     width:100px;
     margin:auto;
     font-size: 14px;
@@ -355,14 +412,81 @@ a:focus{
 .project-website:focus,
 .project-website:active{
     text-decoration: none;
-    color:#333;
+    color:#1a1a1a;
 }
 .image-wrapper>img{
     width: 100%;
     height: 100%;
     margin-bottom:40px;
     border: 1px solid #eaeaea;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+/************Contact Page Style**********/
+.contact-section{
+    width:100%;
+}
+.status-txt{
+    text-align: center;
+    font-family: 'Gudea', sans-serif;
+}
+.contact-info{
+    width: 55%;
+    padding-top:20px;
+    display: inline-block;
+}
+.social-media-links{
+    width: 40%;
+    padding-top:20px;
+    display: inline-block;
+}
+.contact-item{
+    margin: 16px auto;
+    width: 250px;
+    position:relative;
+    font-family: 'Archivo Narrow';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+.contact-item .material-icons{
+    position: absolute;
+    top:0;
+}
+.contact-item p{
+    display: inline;
+    margin-left:26px;
+}
+.link-wrapper{
+    width:160px;
+    margin:auto;
+    text-align: center;
+}
+.link{
+    display: inline-block;
+    width:40px;
+    margin: 4px;
+}
+.link svg,
+.link:focus svg,
+.link:active svg,
+.link:visited svg{
+    fill: #1a1a1a;
+    width:36px;
+    height:36px;
+}
+.link:hover svg{
+    fill: #3762BA;
+    transition: all .5s;
+}
+.mail-btn-wrapper{
+    width:100%;
+    text-align: center;
+    padding-top:50px;
+}
+.mail-btn{
+    padding: 10px 15px 10px 15px;
+    font-size: 18px;
 }
 @media screen and (max-width:992px) {
     .sidebar{
@@ -407,6 +531,9 @@ a:focus{
         padding:70px 0 0 0;
         margin: auto;
     }
+    .name-heading-wrapper{
+        padding-top:0px;
+    }
     .project-wrapper {
         width: 98%;
     }
@@ -430,9 +557,23 @@ a:focus{
     .project-website{
         margin: auto;
     }
+    .contact-info,
+    .social-media-links{
+        display: block;
+        width:100%;
+    }
 }
 @media screen and (max-width:768px) {
     .project-link:hover .overlay {
         opacity: 0;
+    }
+    .profile-pic-wrapper{
+        width:180px;
+        height: auto;
+    }
+    .project-github,
+    .project-website{
+        width:auto;
+        font-size: 14px;
     }
 }

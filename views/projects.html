@@ -11,7 +11,7 @@
                         <div class="text"><i class="material-icons">zoom_in</i></div>
                     </div>
                 </a>
-                <p class="project-title heading-3">{{project.title}}</p>
+                <p class="project-title title heading-3">{{project.title}}</p>
             </div>
             
             <!-- Modal -->
@@ -35,17 +35,7 @@
                                 <div ng-if="project.github||project.website" class="project-links">
                                     <a class="project-github" ng-if="project.github" href="{{project.github}}" target="_blank">
                                         <i class="project-github-icon">
-                                            <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
-                                                <title>mark-github</title>
-                                                <desc>Created with Sketch.</desc>
-                                                <defs></defs>
-                                                <g id="Octicons" stroke="none" stroke-width="1" fill-rule="evenodd">
-                                                    <g id="mark-github" fill="#000000">
-                                                        <path d="M8,0 C3.58,0 0,3.58 0,8 C0,11.54 2.29,14.53 5.47,15.59 C5.87,15.66 6.02,15.42 6.02,15.21 C6.02,15.02 6.01,14.39 6.01,13.72 C4,14.09 3.48,13.23 3.32,12.78 C3.23,12.55 2.84,11.84 2.5,11.65 C2.22,11.5 1.82,11.13 2.49,11.12 C3.12,11.11 3.57,11.7 3.72,11.94 C4.44,13.15 5.59,12.81 6.05,12.6 C6.12,12.08 6.33,11.73 6.56,11.53 C4.78,11.33 2.92,10.64 2.92,7.58 C2.92,6.71 3.23,5.99 3.74,5.43 C3.66,5.23 3.38,4.41 3.82,3.31 C3.82,3.31 4.49,3.1 6.02,4.13 C6.66,3.95 7.34,3.86 8.02,3.86 C8.7,3.86 9.38,3.95 10.02,4.13 C11.55,3.09 12.22,3.31 12.22,3.31 C12.66,4.41 12.38,5.23 12.3,5.43 C12.81,5.99 13.12,6.7 13.12,7.58 C13.12,10.65 11.25,11.33 9.47,11.53 C9.76,11.78 10.01,12.26 10.01,13.01 C10.01,14.08 10,14.94 10,15.21 C10,15.42 10.15,15.67 10.55,15.59 C13.71,14.53 16,11.53 16,8 C16,3.58 12.42,0 8,0 L8,0 Z" id="Shape"></path>
-                                                    </g>
-                                                </g>
-                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 0C3.6 0 0 3.6 0 8 0 11.5 2.3 14.5 5.5 15.6 5.9 15.7 6 15.4 6 15.2 6 15 6 14.4 6 13.7 4 14.1 3.5 13.2 3.3 12.8 3.2 12.6 2.8 11.8 2.5 11.7 2.2 11.5 1.8 11.1 2.5 11.1 3.1 11.1 3.6 11.7 3.7 11.9 4.4 13.2 5.6 12.8 6.1 12.6 6.1 12.1 6.3 11.7 6.6 11.5 4.8 11.3 2.9 10.6 2.9 7.6 2.9 6.7 3.2 6 3.7 5.4 3.7 5.2 3.4 4.4 3.8 3.3 3.8 3.3 4.5 3.1 6 4.1 6.7 4 7.3 3.9 8 3.9 8.7 3.9 9.4 4 10 4.1 11.6 3.1 12.2 3.3 12.2 3.3 12.7 4.4 12.4 5.2 12.3 5.4 12.8 6 13.1 6.7 13.1 7.6 13.1 10.7 11.3 11.3 9.5 11.5 9.8 11.8 10 12.3 10 13 10 14.1 10 14.9 10 15.2 10 15.4 10.2 15.7 10.6 15.6 13.7 14.5 16 11.5 16 8 16 3.6 12.4 0 8 0L8 0Z"/></svg>
                                         </i>
                                         <p class="title heading-3">github</p>
                                     </a>
@@ -55,7 +45,7 @@
                             <div class="image-wrapper">
                                 <img ng-repeat="img in project.img" src="{{img}}" alt="Image">
                             </div>
-                            <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close Project</button>
                         </div>
                     </div>
                 </div>
