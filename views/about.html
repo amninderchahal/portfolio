@@ -1,4 +1,4 @@
-<div class="animateOnLoad container-fluid">
+<div class="container-fluid">
     <div class="row heading-wrapper">
         <div class="name-heading-wrapper">
             <h1 class="title heading-1">Amninder Chahal</h1>
@@ -6,14 +6,22 @@
         </div>
     </div>
     <div class="content-wrapper row">
-        <div class="about-summary col-md-9 col-centered">
+        <div class="about-summary about-intro col-md-9 col-centered">
             <div class="profile-pic-wrapper">
                 <img class="profile-pic img-thumbnail" src="images/profile.jpeg">   
             </div>
-            <p></p>
+            <div class="intro-wrapper">
+                <p class="intro-text">{{intro}}</p>
+            </div>
+            <div ng-if="summary" class="summary-wrapper">
+                <p class="summary-text">{{summary}}</p>
+            </div>
         </div>
         <div class="about-summary col-md-9 col-centered">
             <h3 class="title heading-2 about-section-title">Skills</h3>
+            <div class="skills-text">
+                <p></p>
+            </div>
             <div class="skills-wrapper">
                 <div class"skill" ng-repeat="skill in skills">
                     <img class="skill-img" src="{{skill.img}}">
@@ -23,6 +31,3 @@
         </div>
     </div>
 </div>
-<script>
-    $('.animateOnLoad').delay(600).fadeIn(600);
-</script>

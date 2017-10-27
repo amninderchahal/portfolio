@@ -6,7 +6,7 @@ angular.module("portfolio.projects", ["ngRoute"])
     });
     $scope.projectClick = function(id, $event){
         $event.preventDefault();
-        var id = "#modal-"+id;
-        $(id).modal();
+        $scope.modal = $scope.projects[id];
+        $("#modal").modal();
     };
 });

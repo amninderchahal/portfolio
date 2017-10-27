@@ -11,11 +11,6 @@
         if(href===link) 
             return;
         link = href;
-        $('.loading-line').animate({
-            width: "100%"
-            },800, function(){
-                $('.loading-line').css("width", "0");
-        });
         if($('.sidebar').hasClass('sidebar-visible')) 
             toggleNav();
     }
@@ -23,7 +18,7 @@
         $('.nav-link').on('click', showPageLoadAnimation);
         $('.main').on('click', function(){
             if($('.sidebar').hasClass('sidebar-visible')){
-                $('.sidebar-toggle>button').click();
+                $('.sidebar-toggle>button').trigger('click');
             }
         });
         $('.sidebar-toggle>button, .navlink-visible').on("click", toggleNav);

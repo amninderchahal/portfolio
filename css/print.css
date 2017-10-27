@@ -1,0 +1,26 @@
+.sidebar{
+    display: none;
+}
+.main{
+    padding:40px 0 0 0;
+    margin: auto;
+}
+.profile-pic-wrapper,
+.intro-wrapper{
+    position: relative;
+    margin:auto;
+    padding-top: 0;
+}
+.profile-pic-wrapper{
+    width:160px;
+}
+.contact-info,
+.social-media-links{
+    display: block;
+    width:100%;
+}
+.social-media-links .link-wrapper{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}

@@ -1,7 +1,9 @@
 angular.module('portfolio.about', ['ngRoute'])
 .controller('aboutCtrl', function($scope, $http){
-    $http.get("/json/skills.json")
+    $http.get("/json/about.json")
         .then(function(res){
-            $scope.skills = res.data;
+            $scope.intro = res.data.intro;
+            $scope.summary = res.data.summary;
+            $scope.skills = res.data.skills;
     });
 });

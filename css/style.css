@@ -114,22 +114,9 @@ a:focus{
     width:auto;
     z-index: 1;
 }
-.loading-line{
-    position:fixed;
-    z-index: 1;
-    top:0;
-    left:0;
-    background-color: #255CC3;
-    width:0;
-    height: 2px;
-    display:block;
-}
 .section{
     width:95%;
     margin:auto;
-}
-.animateOnLoad{
-    display:none;
 }
 .heading-wrapper,
 .content-wrapper{
@@ -171,11 +158,23 @@ a:focus{
 .heading-wrapper>.row{
     padding-top: 20px;
 }
+.about-intro{
+    position: relative;
+    min-height:200px;
+    font-family: 'Gudea';
+    font-size: 17px;
+}
 .profile-pic-wrapper{
-    margin-left: 0;
+    margin: 0;
+    height:180px;
     width:180px;
-    height:auto;
-    display: inline-block;
+    position: absolute;
+    top:0;
+}
+.intro-wrapper{
+    position: relative;
+    margin-left: 200px;
+    padding-top:5px;
 }
 .name-heading-wrapper{
     padding-top:10px;
@@ -253,6 +252,7 @@ a:focus{
     position: absolute;
     top: 50%;
     left: 50%;
+    height: 38px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
@@ -333,7 +333,7 @@ a:focus{
     padding-top: .3em;
 }
 .project-lables span{
-    margin:2px;
+    margin:3px;
 }
 .project-wrapper>button{
     margin-top:20px;
@@ -546,6 +546,9 @@ a:focus{
     .profile-pic-wrapper{
         width:160px;
     }
+    .intro-wrapper{
+        margin-left: 175px;
+    }
     .project-wrapper {
         width: 98%;
     }
@@ -576,8 +579,20 @@ a:focus{
     }
 }
 @media screen and (max-width:768px) {
+    .about-intro{
+        min-height:auto;
+    }
+    .profile-pic-wrapper{
+        margin: auto;
+        position: relative;
+    }
+    .intro-wrapper{
+        position: relative;
+        margin:auto;
+        padding-top: 0;
+    }
     .skills-wrapper>div{
-        margin:0 31px;
+        margin:0 auto;
     }
     .project-link:hover .overlay {
         opacity: 0;
