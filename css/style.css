@@ -194,7 +194,7 @@ a:focus{
     padding:8px 8px 8px 8px;
 }
 .skill-img{
-    width:80px;
+    width:70px;
     height: auto;
     display: block;
     margin: auto;
@@ -339,28 +339,32 @@ a:focus{
     margin-top:20px;
 }
 .project-wrapper{
-    font-family: 'Roboto Slab','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: "Gudea";
     color: #212529;
-    font-size: 16px;
+    font-size: 17px;
     padding-top: 50px;
     margin: auto;
-    width: 70%;
+    width: 75%;
 }
 .project-section{
-    padding-bottom: 50px;
-    display: flex;
-    display: -webkit-flex;
+    padding-bottom: 20px;
     margin:auto;
+    width: 80%;
 }
 .project-description{
-    padding-bottom: 30px;
-    width: 70%;
-    margin-left: auto;
+    width: 100%;
+    margin:0;
     text-align: left;
 }
 .project-links{
-    width: 23%;
+    width: 100%;
     margin:0;
+    padding: 50px 0;
+}
+.project-github,
+.project-website{
+    margin:0 15px;
+    display: inline-block;
 }
 .project-github,
 .project-github:focus,
@@ -368,9 +372,6 @@ a:focus{
     width:80px;
     color: #1a1a1a;
     text-decoration: none;
-    display: block;
-    margin:auto;
-    margin-bottom:20px; 
     transition: all .5s;
     -webkit-transition: all .5s;
 }
@@ -400,12 +401,12 @@ a:focus{
     margin:0;
 }
 .project-website{
-    display: block;
     padding: 6px 8px 6px 8px;
     border: 2px solid #1a1a1a;
     color: #1a1a1a;
-    width:100px;
-    margin:auto;
+    width:110px;
+    position: relative;
+    top: -20px;
     font-size: 14px;
     font-weight: 600;
     font-family: 'Ubuntu Condensed', sans-serif;
@@ -426,7 +427,7 @@ a:focus{
 .image-wrapper>img{
     width: 100%;
     height: 100%;
-    margin-bottom:40px;
+    margin-bottom:80px;
     border: 1px solid #eaeaea;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 25px 0 rgba(0, 0, 0, 0.1);
 }
@@ -441,7 +442,7 @@ a:focus{
 }
 .contact-info{
     width: 55%;
-    padding-top:20px;
+    padding-top:40px;
     display: inline-block;
 }
 .social-media-links{
@@ -491,7 +492,7 @@ a:focus{
 .mail-btn-wrapper{
     width:100%;
     text-align: center;
-    padding-top:50px;
+    padding-top:60px;
 }
 .mail-btn{
     padding: 10px 15px 10px 15px;
@@ -553,24 +554,7 @@ a:focus{
         width: 98%;
     }
     .project-section{
-        flex-direction: column;
         width:95%;
-    }
-    .project-description{
-        width: 100%;
-        margin: 0;
-    }
-    .project-links{
-        display: flex;
-        display: -webkit-flex;
-        width: 100%;
-        margin-left:0;
-        padding-left:8%;
-        padding-right:8%; 
-    }
-    .project-github,
-    .project-website{
-        margin: auto;
     }
     .contact-info,
     .social-media-links{
@@ -594,12 +578,17 @@ a:focus{
     .skills-wrapper>div{
         margin:0 auto;
     }
+    .skill-img{
+        width:50px;
+    }
     .project-link:hover .overlay {
         opacity: 0;
     }
     .project-github,
     .project-website{
-        width:auto;
-        font-size: 14px;
+        font-size: 13px;
+    }
+    .project-github{
+        width:70px;
     }
 }

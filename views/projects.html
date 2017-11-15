@@ -28,11 +28,16 @@
                     <div class="modal-body">
                         <h3 class="title heading-1">{{modal.title}}</h3>
                         <p class="project-lables">
-                            <span ng-repeat="label in modal.labels" class="label label-default">{{label}}</span>
+                            <span ng-repeat="label in modal.labels" class="label label-info">{{label}}</span>
                         </p>
                         <div class="project-wrapper">
                             <div class="project-section">
-                                <p class="project-description">{{modal.description}}</p>
+                                <div class="project-description">
+                                    <p>{{modal.description}}</p>
+                                    <ul ng-if="modal.features">
+                                        <li ng-repeat="feature in modal.features">{{feature}}</li>
+                                    </ul>
+                                </div>
                                 <div ng-if="modal.github||modal.website" class="project-links">
                                     <a class="project-github" ng-if="modal.github" href="{{modal.github}}" target="_blank">
                                         <i class="project-github-icon">

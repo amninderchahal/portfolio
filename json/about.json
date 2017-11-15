@@ -1,33 +1,64 @@
 {
     "intro":"I am an experienced Web Developer/Designer with a passion for emerging technologies. I have experience with JavaScript libraries/frameworks such as React JS and Angular JS, C#, Java, and PHP(Laravel). I have industry experience of working as a Web Developer during internship at Hackearth pvt ltd. In addition to that, I have well-developed knowledge of relational databases such as MySQL and SQL Server.",
     "summary":"",
-    "skills":[
-        {
-            "title":"HTML5",
-            "img":"images/skills/html5.png"
-        },
-        {
-            "title":"CSS3",
-            "img":"images/skills/css3.png"
-        },
-        {
-            "title":"JavaScript",
-            "img":"images/skills/js.png"
-        },{
-            "title":"Bootstrap",
-            "img":"images/skills/bootstrap.png"
-        },
-        {
-            "title":"jQuery",
-            "img":"images/skills/jquery.png"
-        },
-        {
-            "title":"Angular JS",
-            "img":"images/skills/angularjs.png"
-        },
-        {
-            "title":"React JS",
-            "img":"images/skills/reactjs.png"
-        }
-    ]
+    "skills":{
+        "frontEnd": [
+                {
+                    "title":"HTML5",
+                    "img":"images/skills/html5.png"
+                },
+                {
+                    "title":"CSS3",
+                    "img":"images/skills/css3.png"
+                },
+                {
+                    "title":"JavaScript",
+                    "img":"images/skills/js.png"
+                },{
+                    "title":"Bootstrap",
+                    "img":"images/skills/bootstrap.png"
+                },
+                {
+                    "title":"jQuery",
+                    "img":"images/skills/jquery.png"
+                },
+                {
+                    "title":"Angular JS",
+                    "img":"images/skills/angularjs.png"
+                },
+                {
+                    "title":"React JS",
+                    "img":"images/skills/reactjs.png"
+                }
+            ],
+        "backEnd":[
+                {
+                    "title":"HTML5",
+                    "img":"images/skills/html5.png"
+                },
+                {
+                    "title":"CSS3",
+                    "img":"images/skills/css3.png"
+                },
+                {
+                    "title":"JavaScript",
+                    "img":"images/skills/js.png"
+                },{
+                    "title":"Bootstrap",
+                    "img":"images/skills/bootstrap.png"
+                },
+                {
+                    "title":"jQuery",
+                    "img":"images/skills/jquery.png"
+                },
+                {
+                    "title":"Angular JS",
+                    "img":"images/skills/angularjs.png"
+                },
+                {
+                    "title":"React JS",
+                    "img":"images/skills/reactjs.png"
+                }
+        ]
+    }
 }
