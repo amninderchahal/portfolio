@@ -1,8 +1,10 @@
 {
-    "intro":"I am an experienced Web Developer/Designer with a passion for emerging technologies. I have experience with JavaScript libraries/frameworks such as React JS and Angular JS, C#, Java, and PHP(Laravel). I have industry experience of working as a Web Developer during internship at Hackearth pvt ltd. In addition to that, I have well-developed knowledge of relational databases such as MySQL and SQL Server.",
-    "summary":"",
-    "skills":{
-        "frontEnd": [
+    "intro":"I am an experienced Web Developer with a drive to learn and work with emerging technologies. I like to write code that is efficient, reusable, and well-documented. I love working with front-end technologies such as Angular JS, React JS, and jQuery. In the past, I have worked on the development of RESTful APIs, Relational Databases, back-ends and front-ends for websites. I learn new technologies fairly quickly.",
+    "skillSummary":"I have experience working as a web developer and building websites of highest quality that are responsive, perform efficiently, and work on multiple platforms. I have worked from front-end to server-side programming and designing relational databases. I use Github and Bitbucket for version control for my apps",
+    "mySkills":[
+        {
+         "title": "Front-End Skills",
+         "skills":[
                 {
                     "title":"HTML5",
                     "img":"images/skills/html5.png"
@@ -14,7 +16,8 @@
                 {
                     "title":"JavaScript",
                     "img":"images/skills/js.png"
-                },{
+                },
+                {
                     "title":"Bootstrap",
                     "img":"images/skills/bootstrap.png"
                 },
@@ -29,36 +32,60 @@
                 {
                     "title":"React JS",
                     "img":"images/skills/reactjs.png"
+                },
+                {
+                    "title":"jQuery UI",
+                    "img":"images/skills/jquery_ui.png"
                 }
             ],
-        "backEnd":[
+            "description":"While working as a web developer, I learned to use above technologies to build websites with beautiful user interfaces, that work on various devices and browsers. I have used Angular JS and React JS to build single-page applications with reusable components, jQuery and jQuery UI to build additional functionality and dynamic elements for exceptional user experience."
+        },
+        {
+        "title": "Back-End Skills",
+         "skills":[
                 {
-                    "title":"HTML5",
-                    "img":"images/skills/html5.png"
+                    "title":"PHP",
+                    "img":"images/skills/php.png"
                 },
                 {
-                    "title":"CSS3",
-                    "img":"images/skills/css3.png"
+                    "title":"Laravel",
+                    "img":"images/skills/laravel.png"
                 },
                 {
-                    "title":"JavaScript",
-                    "img":"images/skills/js.png"
+                    "title":"ASP.Net",
+                    "img":"images/skills/asp.net.png"
+                },
+                {
+                    "title":"C#",
+                    "img":"images/skills/csharp.png"
                 },{
-                    "title":"Bootstrap",
-                    "img":"images/skills/bootstrap.png"
+                    "title":"Java EE",
+                    "img":"images/skills/java_ee.png"
                 },
                 {
-                    "title":"jQuery",
-                    "img":"images/skills/jquery.png"
+                    "title":"RESTful API",
+                    "img":"images/skills/restapi.png"
                 },
                 {
-                    "title":"Angular JS",
-                    "img":"images/skills/angularjs.png"
-                },
-                {
-                    "title":"React JS",
-                    "img":"images/skills/reactjs.png"
+                    "title":"Node JS",
+                    "img":"images/skills/nodejs.jpg"
                 }
-        ]
-    }
+            ],
+            "description":"I have experience working with the above mentioned server-side technologies. I strictly follow the DRY approach when coding. I write source code that is efficient, easy to read and reuse, and is well-documented to assist future developers. I follow object-oriented programming principles to design and maintain projects."
+        },
+        {
+        "title": "Databases",
+         "skills":[
+                {
+                    "title":"SQL Server",
+                    "img":"images/skills/sqlserver.png"
+                },
+                {
+                    "title":"MySQL",
+                    "img":"images/skills/mysql.png"
+                }
+            ],
+            "description":"Relational databases are the heart of large-scale and enterprise level applications. I have experience working with Microsoft SQL Server and MySQL to design and maintain relational databases."
+        }
+    ]
 }

@@ -5,7 +5,7 @@
         $('.nav-link').toggleClass('navlink-visible');
         $('.sidebar-toggle').toggleClass('sidebar-toggle-active');
     }
-    function showPageLoadAnimation(){
+    function preventSamePageReload(){
         var $this = $(this),
             href = $this.attr('href');
         if(href===link) 
@@ -15,7 +15,7 @@
             toggleNav();
     }
     $(document).ready(function(){
-        $('.nav-link').on('click', showPageLoadAnimation);
+        $('.nav-link').on('click', preventSamePageReload);
         $('.main').on('click', function(){
             if($('.sidebar').hasClass('sidebar-visible')){
                 $('.sidebar-toggle>button').trigger('click');

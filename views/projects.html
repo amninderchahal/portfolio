@@ -1,17 +1,23 @@
 <div>
-    <div class="row heading-wrapper">
-        <h1 class="heading-1 title">Projects</h1>
-    </div>
-    <div class="content-wrapper container-fluid">
+    <div class="content-wrapper work-section container-fluid">
+        <div class="row heading-wrapper">
+            <h1 class="heading-1 title">Work Experience</h1>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+        <div class="row heading-wrapper">
+            <h1 class="heading-1 title">Personal Projects</h1>
+        </div>
         <div ng-repeat="project in projects" class="col-md-4 col-sm-6 col-xl-3">
             <div class="project">
                 <a class="project-link" ng-click="projectClick($index, $event)" href="#">
-                    <img class="project-img img-responsive" src="{{project.img[0]}}">
+                    <img class="project-img img-responsive" ng-src="{{project.img[0]}}">
                     <div class="overlay">
                         <div class="text"><i class="material-icons">zoom_in</i></div>
                     </div>
+                    <p class="project-title title heading-3">{{project.title}}</p>
                 </a>
-                <p class="project-title title heading-3">{{project.title}}</p>
             </div>
         </div>
         <!-- Modal -->
@@ -49,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="image-wrapper">
-                                <img ng-repeat="img in modal.img" src="{{img}}" alt="Image">
+                                <img ng-repeat="img in modal.img" ng-src="{{img}}" alt="Image">
                             </div>
                             <button type="button" class="btn btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close Project</button>
                         </div>

@@ -2,32 +2,28 @@
     <div class="row heading-wrapper">
         <div class="name-heading-wrapper">
             <h1 class="title heading-1">Amninder Chahal</h1>
-            <p class="subtitle">Front-End Developer</p>
+            <p class="subtitle">Building highest quality responsive websites and outstanding user interfaces</p>
         </div>
     </div>
     <div class="content-wrapper row">
-        <div class="about-summary about-intro col-md-9 col-centered">
+        <div class="about-section about-intro col-md-9 col-centered">
             <div class="profile-pic-wrapper">
                 <img class="profile-pic img-thumbnail" src="images/profile.jpeg">   
             </div>
-            <div class="intro-wrapper">
-                <p class="intro-text">{{intro}}</p>
-            </div>
-            <div ng-if="summary" class="summary-wrapper">
-                <p class="summary-text">{{summary}}</p>
-            </div>
+            <p class="intro-text">{{intro}}</p>
         </div>
-        <div class="about-summary col-md-9 col-centered">
+        <div class="about-section col-md-9 col-centered">
             <h3 class="title heading-2 about-section-title">Skills</h3>
             <div class="skills-text">
-                <p></p>
+                <p ng-if="skillSummary">{{skillSummary}}</p>
             </div>
-            <div class="skills-wrapper">
-                <p class="skills-header">Front-end Skills</p>
-                <div class"skill" ng-repeat="skill in skills.frontEnd">
-                    <img class="skill-img" src="{{skill.img}}">
+            <div class="skills-wrapper" ng-repeat="section in mySkills">
+                <p class="heading-4 skills-header">{{section.title}}</p>
+                <div class"skill" ng-repeat="skill in section.skills">
+                    <img class="skill-img" ng-src="{{skill.img}}">
                     <p class="title skill-title">{{skill.title}}</p>
                 </div>
+                <p class="skills-description">{{section.description}}</p>
             </div>
         </div>
     </div>

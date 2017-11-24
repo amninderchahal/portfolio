@@ -131,9 +131,9 @@ a:focus{
     font-size: 28px;
 }
 .subtitle{
-    font-family: 'Ubuntu Condensed';
+    font-family: 'Ubuntu';
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 400;
     text-align: center;
     margin-bottom: 0;
@@ -150,6 +150,9 @@ a:focus{
 .heading-4{
     font-size: 18px;
 }
+.heading-5{
+    font-size: 16px;
+}
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -158,23 +161,23 @@ a:focus{
 .heading-wrapper>.row{
     padding-top: 20px;
 }
-.about-intro{
-    position: relative;
-    min-height:200px;
+.about-section{
+    padding-top:20px;
     font-family: 'Gudea';
     font-size: 17px;
+    line-height: 28px;
+}
+.about-intro{
+    min-height:200px;
 }
 .profile-pic-wrapper{
-    margin: 0;
+    margin-right: 15px;
     height:180px;
     width:180px;
-    position: absolute;
-    top:0;
+    float: left;
 }
-.intro-wrapper{
-    position: relative;
-    margin-left: 200px;
-    padding-top:5px;
+.intro-text{
+    line-height: 34px;
 }
 .name-heading-wrapper{
     padding-top:10px;
@@ -183,12 +186,17 @@ a:focus{
     text-align: left;
     margin-bottom: 20px;
 }
-.about-section{
-    padding-top:20px;
+.skills-wrapper{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.skills-header{
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 .skills-wrapper>div{
     display: inline-block;
-    width:120px;
+    width:95px;
     height:auto;
     margin:0 20px;
     padding:8px 8px 8px 8px;
@@ -202,14 +210,20 @@ a:focus{
 }
 .skill-title{
     width:100%;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 20px;
     font-family: 'Lato', sans-serif;
     text-transform: none;
     margin:0;
     margin-top: 8px;
 }
+.skills-description{
+    padding-left: 20px;
+}
 /************Work Page Style**********/
+.work-section{
+    padding-top: 0;
+}
 .project{
     width: 100%;
     margin-bottom: 3vmax;
@@ -226,6 +240,8 @@ a:focus{
     font-size: 28px;
     width:100%;
     height:auto;
+}
+.project-link>img{
     border: 1px solid #e5e5e5;
 }
 .project-title{
@@ -239,8 +255,8 @@ a:focus{
     top: 0;
     left:0;
     right:0;
-    bottom:0;
-    height: 100%;
+    bottom:38px;
+    height: auto;
     width: 100%;
     opacity: 0;
     transition: .5s ease-in-out;
@@ -541,14 +557,22 @@ a:focus{
         padding:70px 0 0 0;
         margin: auto;
     }
+
     .name-heading-wrapper{
         padding-top:0px;
     }
+    .about-intro{
+        padding-top: 30px;
+    }
     .profile-pic-wrapper{
         width:160px;
+        display: block;
+        float: none;
+        margin: auto;
     }
     .intro-wrapper{
-        margin-left: 175px;
+        margin:auto;
+        padding-top: 0;
     }
     .project-wrapper {
         width: 98%;
@@ -566,15 +590,6 @@ a:focus{
     .about-intro{
         min-height:auto;
     }
-    .profile-pic-wrapper{
-        margin: auto;
-        position: relative;
-    }
-    .intro-wrapper{
-        position: relative;
-        margin:auto;
-        padding-top: 0;
-    }
     .skills-wrapper>div{
         margin:0 auto;
     }
@@ -590,5 +605,13 @@ a:focus{
     }
     .project-github{
         width:70px;
+    }
+    .modal-header>.close-modal{
+        height:50px;
+        width: 50px;
+        margin-bottom: 30px;
+    }
+    .modal-header .close-modal div{
+        height: 50px;
     }
 }
