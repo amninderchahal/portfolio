@@ -94,7 +94,7 @@ a:focus{
     -webkit-transition: border-color .5s;
 }
 .nav-link-subtitle{
-    font-family: 'Poly';
+    font-family: "Ubuntu";
     text-transform: uppercase;
     font-size: 10px;
     font-weight: 400;
@@ -126,14 +126,14 @@ a:focus{
 .title{
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Archivo Narrow';
+    font-family: 'Ubuntu Condensed';
     font-weight: 600;
     font-size: 28px;
 }
 .subtitle{
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', serif;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 400;
     text-align: center;
     margin-bottom: 0;
@@ -157,6 +157,71 @@ a:focus{
     float: none;
     margin: 0 auto;
 }
+.education{
+    text-transform: uppercase;
+    font-family: 'Ubuntu Condensed';
+    padding: 20px;
+}
+.education .header,
+.work .header,
+.education .details,
+.work .details,{
+    padding: 6px 0;
+}
+.education .header p,
+.work .header p,
+.education .details p,
+.work .details p{
+    display: inline-block;
+    width:49%;
+    margin: auto;
+}
+.work .title,
+.education .title{
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+}
+.name,
+.location{
+    text-align: right
+}
+.work .description{
+    width:95%;
+    margin: auto;
+}
+.description-title{
+    margin-bottom: 0;
+    margin-top:8px;
+}
+.description>.list-item{
+    text-transform: none;
+    font-family: 'Gudea';
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-bottom: 0;
+    margin-left: 30px;
+    line-height: 20px;
+}
+.description>ul{
+    margin-left: 15px;
+    list-style-type: circle;
+    text-transform: none;
+    font-family: 'Gudea';
+    line-height: 20px;
+}
+.learn-more{
+    text-align: center;
+    padding-top:30px;
+    clear: both;
+    font-family: 'Gudea';
+    font-size: 15px;
+}
+.learn-more-links .link svg{
+    width:30px;
+    height:30px;
+}
 /************About Page Style**********/
 .heading-wrapper>.row{
     padding-top: 20px;
@@ -164,8 +229,8 @@ a:focus{
 .about-section{
     padding-top:20px;
     font-family: 'Gudea';
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 24px;
 }
 .about-intro{
     min-height:200px;
@@ -177,7 +242,7 @@ a:focus{
     float: left;
 }
 .intro-text{
-    line-height: 34px;
+    line-height: 24px;
 }
 .name-heading-wrapper{
     padding-top:10px;
@@ -188,7 +253,6 @@ a:focus{
 }
 .skills-wrapper{
     margin-top:30px;
-    margin-bottom: 30px;
 }
 .skills-header{
     font-weight: 600;
@@ -220,13 +284,62 @@ a:focus{
 .skills-description{
     padding-left: 20px;
 }
+
 /************Work Page Style**********/
 .work-section{
     padding-top: 0;
 }
+.work-experience{
+    margin-bottom:60px;
+}
+.work{
+    padding: 30px;
+    width:75%;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: 'Ubuntu Condensed';
+}
+.work-header,
+.work-details{
+    padding: 6px 0;
+}
+.work-header p,
+.work-details p{
+    display: inline-block;
+    width:49%;
+    margin: auto;
+}
+.work-title,
+.company-name{
+    font-weight: 600;
+    line-height: 24px;
+}
+.company-name,
+.work-location{
+    text-align: right
+}
+.work-description{
+    width:95%;
+    margin: auto;
+}
+.work-duties{
+    margin-bottom: 0;
+    margin-top:8px;
+}
+.work-description>.list-item{
+    text-transform: none;
+    font-family: 'Gudea';
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
 .project{
-    width: 100%;
+    width: 85%;
+    margin: auto;
     margin-bottom: 3vmax;
+    margin-top: 30px;
 }
 .project-link,
 .project-link:hover,
@@ -242,7 +355,7 @@ a:focus{
     height:auto;
 }
 .project-link>img{
-    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 }
 .project-title{
     color:#4d4d4d;
@@ -357,7 +470,7 @@ a:focus{
 .project-wrapper{
     font-family: "Gudea";
     color: #212529;
-    font-size: 17px;
+    font-size: 15px;
     padding-top: 50px;
     margin: auto;
     width: 75%;
@@ -444,8 +557,7 @@ a:focus{
     width: 100%;
     height: 100%;
     margin-bottom:80px;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 }
 
 /************Contact Page Style**********/
@@ -491,7 +603,7 @@ a:focus{
 .link{
     display: inline-block;
     width:40px;
-    margin: 4px;
+    margin: 5px;
 }
 .link svg,
 .link:focus svg,
@@ -515,6 +627,21 @@ a:focus{
     font-size: 18px;
 }
 @media screen and (max-width:992px) {
+    .heading-1{
+        font-size: 24px;
+    }
+    .heading-2{
+        font-size: 20px;
+    }
+    .heading-3{
+        font-size: 18px;
+    }
+    .heading-4{
+        font-size: 16px;
+    }
+    .heading-5{
+        font-size: 14px;
+    }
     .sidebar{
         width: 0px;
         -webkit-transition: width 1s;
@@ -574,11 +701,27 @@ a:focus{
         margin:auto;
         padding-top: 0;
     }
+    .skills-description{
+        padding-left: 0;
+    }
+    .education{
+        padding:20px 0;
+    }
+    .work-experience{
+        margin-bottom: 15px;
+    }
+    .work{
+        width:100%;
+        padding:30px 0;
+    }
     .project-wrapper {
         width: 98%;
     }
     .project-section{
         width:95%;
+    }
+    .project{
+        width:100%;
     }
     .contact-info,
     .social-media-links{

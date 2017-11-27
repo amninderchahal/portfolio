@@ -1,0 +1,62 @@
+{
+    "work":[
+        {
+            "title":"Web Developer",
+            "date":"June 2015 - July 2016",
+            "company":"HackEarth Private Limited",
+            "location":"Mohali, Punjab, India",
+            "duties":[
+                "Build front-end using HTML, CSS, Javascript, and Jquery",
+                "Develop Single-Page applications using Angular JS",
+                "Test and document source code",
+                "Refactor source code for better readability and performance",
+                "Develop​ ​ back-end​ ​ in​ ​ PHP ​ framework​ ​ Laravel",
+                "Design and work with relational databases in MySQL"
+            ]
+        },
+        {
+            "title":"Web Developer Internship",
+            "date":"Jan 2015 - June 2015",
+            "company":"HackEarth Private Limited",
+            "location":"Mohali, Punjab, India",
+            "duties":[
+                "Develop front-end for websites using HTML, CSS, JavaScript, and Jquery",
+                "Write source code to handle back-end logic and database operations in PHP",
+                "Design relational databases using MYSQL in accordance with client needs"
+            ]
+        }
+    ],
+    "projects":[
+        {
+            "title" : "BookMySched",
+            "labels":["React JS","Laravel","Bootstrap", "jQuery"],
+            "img" : [
+                "images/projects/project-1-img-1.png",
+                "images/projects/project-1-img-2.png"
+            ],
+            "description":"BookMySched is a web-based scheduling system that offers a user friendly, easy to use scheduler with elegant UI. It provides a complete solution for appointment management.",
+            "features" : [
+                "Three-level authorization.",
+                "Superadmin​ - ​ ​ ​ Superadmin​ ​ has​ ​ total​ ​ control​ ​ of​ ​ the​ ​ system.​ ​ It​ ​ has​ ​ the​ ​ ability​ ​ to​ ​ view,​ ​ edit, and​ ​ delete​ ​ organizations​ ​ from​ ​ the​ ​ system.",
+                "Admin​ ​ - ​ ​ Further​ ​ the​ ​ admin​ ​ of​ ​ the​ ​ organization​ ​ whom​ ​ we​ ​ will​ ​ sell​ ​ our​ ​ product​ ​ to​ ​ can add,​ ​ edit​ ​ and​ ​ remove​ ​ employees​ ​ and​ ​ employees’​ ​ availability.",
+                "Employee​ ​ - ​ ​ The​ ​ employees​ ​ of​ ​ that​ ​ organization​ ​ can​ ​ view​ ​ the​ ​ calendar,​ ​ book,​ ​ reschedule or​ ​ cancel​ ​ appointments.",
+                "Services​ ​ - ​ ​ Admin​ ​ can​ ​ add​ ​ or​ ​ remove​ ​ services.​ ​ Customers​ ​ will​ ​ be​ ​ charged​ ​ according​ ​ to the​ ​ services​ ​ they​ ​ take.",
+                "History​ ​ - ​ ​ All​ ​ the​ ​ past​ ​ appointments,​ ​ including​ ​ canceled​ ​ or​ ​ rescheduled​ ​ appointments, can​ ​ be​ ​ viewed​ ​ with​ ​ a ​ ​ date​ ​ picker.",
+                "Search​ ​ - ​ ​ A ​ ​ fully-functional​ ​ search​ ​ feature​ ​ for​ ​ searching​ ​ database​ ​ records​ ​ for appointments,​ ​ users,​ ​ clients​ ​ etc​ ​ based​ ​ on​ ​ the​ ​ authorization​ ​ of​ ​ the​ ​ logged​ ​ in​ ​ user."
+            ],
+            "website" : "false",
+            "github" : "https://github.com/amninderchahal/PizzaStore_Dashboard"
+        },
+        {
+            "title" : "Pizzastore Dashboard",
+            "labels":["Java","jQuery","Highcharts JS", "Bootstrap"],
+            "img" : [
+                "images/projects/project-2-img-1.png",
+                "images/projects/project-2-img-2.png"
+            ],
+            "description":"",
+            "website" : false,
+            "github" : "https://github.com/amninderchahal/PizzaStore_Dashboard"
+        }
+    ]
+}

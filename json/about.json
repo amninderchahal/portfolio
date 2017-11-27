@@ -1,9 +1,9 @@
 {
-    "intro":"I am an experienced Web Developer with a drive to learn and work with emerging technologies. I like to write code that is efficient, reusable, and well-documented. I love working with front-end technologies such as Angular JS, React JS, and jQuery. In the past, I have worked on the development of RESTful APIs, Relational Databases, back-ends and front-ends for websites. I learn new technologies fairly quickly.",
+    "intro":"I am an experienced Web Developer with a drive to learn and work with emerging technologies. I like to write code that is efficient, reusable, and well-documented. I love working with front-end technologies such as Angular JS, React JS, and jQuery. In the past, I have worked on the development of RESTful APIs, Relational Databases, back-ends and front-ends for websites. ",
     "skillSummary":"I have experience working as a web developer and building websites of highest quality that are responsive, perform efficiently, and work on multiple platforms. I have worked from front-end to server-side programming and designing relational databases. I use Github and Bitbucket for version control for my apps",
     "mySkills":[
         {
-         "title": "Front-End Skills",
+         "title": "Front-End Developer",
          "skills":[
                 {
                     "title":"HTML5",
@@ -41,7 +41,7 @@
             "description":"While working as a web developer, I learned to use above technologies to build websites with beautiful user interfaces, that work on various devices and browsers. I have used Angular JS and React JS to build single-page applications with reusable components, jQuery and jQuery UI to build additional functionality and dynamic elements for exceptional user experience."
         },
         {
-        "title": "Back-End Skills",
+        "title": "Back-End Developer",
          "skills":[
                 {
                     "title":"PHP",
@@ -58,24 +58,24 @@
                 {
                     "title":"C#",
                     "img":"images/skills/csharp.png"
-                },{
-                    "title":"Java EE",
-                    "img":"images/skills/java_ee.png"
                 },
                 {
-                    "title":"RESTful API",
-                    "img":"images/skills/restapi.png"
+                    "title":"NUnit",
+                    "img":"images/skills/nunit.png"
                 },
                 {
                     "title":"Node JS",
                     "img":"images/skills/nodejs.jpg"
-                }
-            ],
-            "description":"I have experience working with the above mentioned server-side technologies. I strictly follow the DRY approach when coding. I write source code that is efficient, easy to read and reuse, and is well-documented to assist future developers. I follow object-oriented programming principles to design and maintain projects."
-        },
-        {
-        "title": "Databases",
-         "skills":[
+                },
+                {
+                    "title":"Java EE",
+                    "img":"images/skills/java_ee.png"
+                },
+                
+                {
+                    "title":"RESTful API",
+                    "img":"images/skills/restapi.png"
+                },
                 {
                     "title":"SQL Server",
                     "img":"images/skills/sqlserver.png"
@@ -85,7 +85,7 @@
                     "img":"images/skills/mysql.png"
                 }
             ],
-            "description":"Relational databases are the heart of large-scale and enterprise level applications. I have experience working with Microsoft SQL Server and MySQL to design and maintain relational databases."
+            "description":"I have experience working with the above mentioned server-side technologies. I strictly follow the DRY approach when coding. I write source code that is efficient, easy to read and reuse, and is well-documented to assist future developers. I follow object-oriented programming principles to design and maintain projects. I also have experience working with Microsoft SQL Server and MySQL to design and maintain relational databases."
         }
     ]
 }
