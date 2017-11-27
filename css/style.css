@@ -739,6 +739,10 @@ a:focus{
     .skill-img{
         width:50px;
     }
+    .work-section{
+        padding-left:0;
+        padding-right: 0;
+    }
     .project-link:hover .overlay {
         opacity: 0;
     }
