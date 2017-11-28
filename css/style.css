@@ -160,7 +160,7 @@ a:focus{
 .education{
     text-transform: uppercase;
     font-family: 'Ubuntu Condensed';
-    padding: 20px;
+    padding: 20px 0;
 }
 .education .header,
 .work .header,
