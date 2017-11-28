@@ -172,9 +172,24 @@ a:focus{
 .work .header p,
 .education .details p,
 .work .details p{
-    display: inline-block;
     width:49%;
-    margin: auto;
+}
+.education .header .title,
+.work .header .title{
+    float:left;
+}
+.education .header .name,
+.work .header .name{
+    float:right;
+}
+.education .details,
+.work .details{
+    display: block;
+    clear: both;
+}
+.education .details p,
+.work .details p{
+    display: inline-block;
 }
 .work .title,
 .education .title{
@@ -188,6 +203,7 @@ a:focus{
 }
 .work .description{
     width:95%;
+    clear: both;
     margin: auto;
 }
 .description-title{
@@ -259,7 +275,7 @@ a:focus{
     margin-bottom: 20px;
 }
 .skills-wrapper>div{
-    display: inline-block;
+    display:inline-block;
     width:95px;
     height:auto;
     margin:0 20px;
