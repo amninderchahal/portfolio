@@ -297,9 +297,6 @@ a:focus{
     margin:0;
     margin-top: 8px;
 }
-.skills-description{
-    padding-left: 20px;
-}
 
 /************Work Page Style**********/
 .work-section{
@@ -716,12 +713,6 @@ a:focus{
     .intro-wrapper{
         margin:auto;
         padding-top: 0;
-    }
-    .skills-description{
-        padding-left: 0;
-    }
-    .education{
-        padding:20px 0;
     }
     .work-experience{
         margin-bottom: 15px;
