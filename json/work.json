@@ -63,6 +63,22 @@
             ],
             "website" : false,
             "github" : "https://github.com/amninderchahal/PizzaStore_Dashboard"
+        },
+        {
+            "title" : "Tic Tac Toe Game",
+            "labels":["ASP.Net","C#"],
+            "img" : [
+                "images/projects/project-3-img-1.PNG",
+                "images/projects/project-3-img-2.PNG"
+            ],
+            "description":"An ASP.Net web application that lets the user play a game of Tic Tac Toe against computer. A simple and fun web based game that I made for class assignment",
+            "features" : [
+                "Two difficulty levels to choose",
+                "Player gets really challenging moves from computer",
+                "Computer counters player's moves to win"
+            ],
+            "website" : false,
+            "github" : "https://github.com/amninderchahal/TicTacToe"
         }
     ]
 }
