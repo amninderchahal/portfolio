@@ -2,6 +2,8 @@
 body{
     margin-top: -1px;
     margin-left:-1px;
+    color:#1a1a1a;
+    font-family: 'Gudea';
 }
 header{
     position: fixed;
@@ -113,7 +115,7 @@ a:focus{
     margin-left: 160px;
     width:auto;
     z-index: 1;
-    background-color: rgba(0,0,0,0.02);
+    background-color: #f7f7f7;
 }
 .section{
     width:95%;
@@ -121,8 +123,9 @@ a:focus{
 }
 .heading-wrapper,
 .content-wrapper{
-    padding-top: 2vmax;
-    padding-bottom: 2vmax;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
 }
 .title{
     text-align: center;
@@ -137,7 +140,6 @@ a:focus{
     font-size: 10.5px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 0;
 }
 .heading-1{
     font-size: 32px;
@@ -158,108 +160,68 @@ a:focus{
     float: none;
     margin: 0 auto;
 }
-.education{
-    text-transform: uppercase;
-    font-family: 'Ubuntu Condensed';
-    padding: 20px 0;
-}
-.education .header,
-.work .header,
-.education .details,
-.work .details,{
-    padding: 6px 0;
-}
-.education .header p,
-.work .header p,
-.education .details p,
-.work .details p{
-    width:49%;
-}
-.education .header .title,
-.work .header .title{
-    float:left;
-}
-.education .header .name,
-.work .header .name{
-    float:right;
-}
-.education .details,
-.work .details{
-    display: block;
-    clear: both;
-}
-.education .details p,
-.work .details p{
-    display: inline-block;
-}
-.work .title,
-.education .title{
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
-}
-.name,
-.location{
-    text-align: right
-}
-.work .description{
-    width:95%;
-    clear: both;
-    margin: auto;
-}
-.description-title{
-    margin-bottom: 0;
-    margin-top:8px;
-}
-.description>.list-item{
-    text-transform: none;
-    font-family: 'Gudea';
-    display: list-item;
-    list-style-type: disc;
-    list-style-position: outside;
-    margin-bottom: 0;
-    margin-left: 30px;
-    line-height: 20px;
-}
-.description>ul{
-    margin-left: 15px;
-    list-style-type: circle;
-    text-transform: none;
-    font-family: 'Gudea';
-    line-height: 20px;
-}
 .learn-more{
     text-align: center;
     padding-top:30px;
     clear: both;
     font-family: 'Gudea';
     font-size: 15px;
+    margin-top: auto;
+    margin-bottom:0;
 }
 .learn-more-links .link svg{
     width:30px;
     height:30px;
 }
 /************About Page Style**********/
-.heading-wrapper>.row{
-    padding-top: 20px;
-}
 .about-section{
     padding-top:20px;
     font-family: 'Gudea';
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 26px;
 }
-.about-intro{
-    min-height:200px;
+.resume-links{
+    padding-top:30px;
+    width:220px;
+    margin:auto;
+}
+.resume-links a{
+    display: inline-block;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-transform: uppercase;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    text-decoration: none;
+    margin:0 30px;
+}
+.resume-links a:hover{
+    color:#3762BA;
+}
+.resume-links a:hover svg{
+    fill: #3762BA;
+}
+.resume-links .glyphicon{
+    display: block;
+    font-size:30px;
+    margin-bottom:3px;
+}
+.resume-links svg{
+    height:35px;
+    width:35px;
+    display: block;
+    margin:auto;
+    transition: all .5s;
+    -webkit-transition: all .5s;
 }
 .profile-pic-wrapper{
+    width:160px;
     margin-right: 15px;
-    height:180px;
-    width:180px;
     float: left;
-}
-.intro-text{
-    line-height: 24px;
 }
 .name-heading-wrapper{
     padding-top:10px;
@@ -298,7 +260,106 @@ a:focus{
     margin:0;
     margin-top: 8px;
 }
-
+.skills-description{
+    margin-top:15px;
+}
+/*********** Resume Page Style**********/
+.resume-content{
+    padding-top:30px;
+}
+.resume-section .heading-wrapper{
+    padding-bottom: 10px;
+}
+.subtitle strong{
+    font-size:13px;
+    line-height: 15px;
+}
+.resume-row{
+    padding-left:30px;
+    padding-right: 40px;
+}
+.resume-row .col-md-3 .title{
+    text-align: left;
+}
+.resume-row .col-md-3,
+.resume-row .col-md-9{
+    padding:40px 0 0 0;
+}
+.resume-row .col-md-3{
+    padding-left: 0px;
+}
+.resume-row .col-md-9{
+    border-bottom: 1px solid #aaaaaa;
+}
+.resume-row:last-child .col-md-9{
+    border-bottom:none;
+}
+.resume-row:first-child .col-md-9,
+.resume-row:first-child .col-md-3{
+    padding-top:20px;
+}
+.resume-section-description,
+.resume-section-content{
+    margin-bottom:40px;
+    font-size: 15px;
+}
+.resume-section-content{
+    text-transform: uppercase;
+    font-family: 'Ubuntu Condensed';
+    line-height: 24px;
+}
+.resume-section-content .header,
+.resume-section-content .details{
+    padding: 6px 0;
+}
+.resume-section-content .header p,
+.resume-section-content .details p{
+    width:49%;
+    margin-bottom: 0;
+}
+.resume-section-content .header .title{
+    float:left;
+}
+.resume-section-content .header .name{
+    float:right;
+}
+.resume-section-content .details{
+    display: block;
+    clear: both;
+}
+.resume-section-content .details p{
+    display: inline-block;
+}
+.resume-section-content .title{
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+}
+.resume-section-content .name,
+.resume-section-content .location{
+    text-align: right
+}
+.resume-section-content .description{
+    clear: both;
+    text-transform: none;
+    font-family: 'Gudea';
+    margin-top:8px;
+    font-size: 16px;
+}
+.description-title{
+    margin-bottom: 0;
+    margin-top:8px;
+}
+.resume-section-content .list-item{
+    text-transform: none;
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    font-family: 'Gudea';
+    margin-bottom: 4px;
+    margin-left: 30px;
+    line-height: 20px;
+}
 /************Work Page Style**********/
 .work-section{
     padding-top: 0;
@@ -362,8 +423,8 @@ a:focus{
     display: block;
     position: relative;
     font-size: 28px;
-    width:100%;
-    height:auto;
+    width:85%;
+    margin:auto;
 }
 .project-link>img{
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
@@ -692,10 +753,21 @@ a:focus{
         transition: left 1s;
     }
     .main{
-        padding:70px 0 0 0;
+        padding:30px 0 0 0;
         margin: auto;
     }
-
+    .about-section{
+        font-size: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-heading-wrapper{
+        padding-bottom: 0;
+        position: relative;
+        display: block;
+        top:170px;
+        z-index:2;
+    }
     .name-heading-wrapper{
         padding-top:0px;
     }
@@ -703,14 +775,30 @@ a:focus{
         padding-top: 30px;
     }
     .profile-pic-wrapper{
-        width:160px;
+        width:140px;
         display: block;
+        position: relative;
+        bottom:180px;
         float: none;
         margin: auto;
+        z-index: 1;
+    }
+    .resume-links{
+        padding-top: 15px;
     }
     .intro-wrapper{
         margin:auto;
         padding-top: 0;
+    }
+    .resume-row{
+        padding-left:0;
+        padding-right: 0;
+    }
+    .resume-row .col-md-9{
+        padding:10px 0 0 0;
+    }
+    .resume-row .col-md-3{
+        padding:30px 0 0 0;
     }
     .work-experience{
         margin-bottom: 15px;

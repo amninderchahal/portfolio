@@ -1,0 +1,55 @@
+<div>
+    <div class="content-wrapper resume-section container-fluid">
+            <div class="col-md-11 col-sm-12 col-centered">
+                <div class="row heading-wrapper">
+                    <div class="name-heading-wrapper">
+                        <h1 class="title heading-1">Amninder Chahal</h1>
+                        <p class="subtitle"> +1 (519) 722-1603&nbsp; <strong>•</strong> &nbsp; amninderchahhal@gmail.com<br>Kitchener, ON, Canada</p>
+                    </div>
+                </div>
+                <div class="row resume-row" ng-repeat="section in resume">
+                    <div class="col-md-3 col-sm-12">
+                        <p class="title heading-2">{{section.heading}}</p>
+                    </div>
+                    <div class="col-md-9 col-sm-12 ">
+                        <div class="resume-section-description" ng-if="section.description">{{section.description}}</div>
+                        <div class="resume-section-content" ng-if="section.repeatable" ng-repeat="item in section.repeatable">
+                            <div ng-if="item.title || item.institutionName" class="header">
+                                <p class="title heading-4">{{item.title}}</p>
+                                <p class="name title heading-5">{{item.institutionName}}</p>
+                            </div>
+                            <div ng-if="item.duration || item.location" class="details">
+                                <p class="duration heading-5">{{item.duration}}</p>
+                                <p class="location heading-5">{{item.location}}</p>
+                            </div>
+                            <div ng-if="item.text" class="description">
+                                <p>{{item.text}}</p>
+                            </div>
+                            <div ng-if="item.listItems">
+                                <p class="description-title">{{item.listTitle}}</p>
+                                <p class="list-item" ng-repeat="listItem in item.listItems">{{listItem}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="work-experience">
+                    <div class="work" ng-repeat="section in work">
+                        <div class="header">
+                            <p class="title heading-2">{{section.title}}</p>
+                            <p class="name heading-4">{{section.company}}</p>
+                        </div>
+                        <div class="details">
+                            <p class="duration heading-5">{{section.date}}</p>
+                            <p class="location heading-5">{{section.location}}</p>
+                        </div>
+                        <div class="description">
+                            <p class="description-title">Responsibilities:</p>
+                            <p class="list-item" ng-repeat="duty in section.duties">{{duty}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

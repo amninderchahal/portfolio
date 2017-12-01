@@ -1,30 +1,9 @@
 <div>
     <div class="content-wrapper work-section container-fluid">
         <div class="row heading-wrapper">
-            <h1 class="heading-1 title">Work Experience</h1>
-        </div>
-        <div class="col-sm-12">
-            <div class="work-experience">
-                <div class="work" ng-repeat="section in work">
-                    <div class="header">
-                        <p class="title heading-2">{{section.title}}</p>
-                        <p class="name heading-4">{{section.company}}</p>
-                    </div>
-                    <div class="details">
-                        <p class="duration heading-5">{{section.date}}</p>
-                        <p class="location heading-5">{{section.location}}</p>
-                    </div>
-                    <div class="description">
-                        <p class="description-title">Responsibilities:</p>
-                        <p class="list-item" ng-repeat="duty in section.duties">{{duty}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row heading-wrapper">
             <h1 class="heading-1 title">Personal Projects</h1>
         </div>
-        <div ng-repeat="project in projects" class="col-sm-6 col-md-4">
+        <div ng-repeat="project in projects" class="col-sm-6">
             <div class="project">
                 <a class="project-link" ng-click="projectClick($index, $event)" href="#">
                     <img class="project-img img-responsive" ng-src="{{project.img[0]}}">

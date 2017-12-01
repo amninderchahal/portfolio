@@ -1,6 +1,7 @@
 angular.module("portfolio", ["ngRoute",
                              "portfolio.work",
-                             "portfolio.about"])
+                             "portfolio.about",
+                             "portfolio.resume"])
 .config(function($routeProvider, $locationProvider){
     $routeProvider
     .when("/" , {
@@ -13,6 +14,10 @@ angular.module("portfolio", ["ngRoute",
     })
     .when("/contact", {
         templateUrl : "views/contact.html"
+    })
+    .when("/resume", {
+        templateUrl : "views/resume.html",
+        controller : "resumeCtrl"
     });
     $locationProvider.hashPrefix('');
 });

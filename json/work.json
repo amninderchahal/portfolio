@@ -1,31 +1,4 @@
 {
-    "work":[
-        {
-            "title":"Web Developer",
-            "date":"June 2015 - July 2016",
-            "company":"HackEarth Private Limited",
-            "location":"Mohali, Punjab, India",
-            "duties":[
-                "Build front-end using HTML, CSS, Javascript, and Jquery",
-                "Develop Single-Page applications using Angular JS",
-                "Test and document source code",
-                "Refactor source code for better readability and performance",
-                "Develop​ ​ back-end​ ​ in​ ​ PHP ​ framework​ ​ Laravel",
-                "Design and work with relational databases in MySQL"
-            ]
-        },
-        {
-            "title":"Web Developer Internship",
-            "date":"Jan 2015 - June 2015",
-            "company":"HackEarth Private Limited",
-            "location":"Mohali, Punjab, India",
-            "duties":[
-                "Develop front-end for websites using HTML, CSS, JavaScript, and Jquery",
-                "Write source code to handle back-end logic and database operations in PHP",
-                "Design relational databases using MYSQL in accordance with client needs"
-            ]
-        }
-    ],
     "projects":[
         {
             "title" : "BookMySched",

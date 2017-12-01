@@ -2,24 +2,24 @@
     display: none;
 }
 .main{
-    padding:40px 0 0 0;
+    padding:10px 0 0 0;
     margin: auto;
 }
-.profile-pic-wrapper,
-.intro-wrapper{
-    position: relative;
-    margin:auto;
-    padding-top: 0;
+.resume-links{
+    display:none;
 }
-.profile-pic-wrapper{
-    width:160px;
+.resume-row .col-md-9{
+    padding:10px 0 0 0;
+}
+.resume-row .col-md-3{
+    padding:10px 0 0 0;
 }
 .contact-info,
 .social-media-links{
     display: block;
     width:100%;
 }
-.social-media-links .link-wrapper{
+.link-wrapper{
     display: flex;
     display: -webkit-flex;
     flex-direction: column;

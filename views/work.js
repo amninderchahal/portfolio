@@ -3,7 +3,6 @@ angular.module("portfolio.work", ["ngRoute"])
     $http.get('/json/work.json')
     .then(function(response){
         $scope.projects = response.data.projects;
-        $scope.work = response.data.work;
     });
     $scope.projectClick = function(id, $event){
         $event.preventDefault();
