@@ -182,11 +182,12 @@ a:focus{
 }
 .resume-links{
     padding-top:30px;
-    width:220px;
+    width:160px;
     margin:auto;
 }
 .resume-links a{
     display: inline-block;
+    width:60px;
     color: #1a1a1a;
     text-transform: uppercase;
     text-align: center;
@@ -197,7 +198,11 @@ a:focus{
     transition: all .5s;
     -webkit-transition: all .5s;
     text-decoration: none;
-    margin:0 30px;
+    margin-right:15px;
+}
+.resume-links a:last-child{
+    margin-right: 0;
+    margin-left:15px
 }
 .resume-links a:hover{
     color:#3762BA;
@@ -218,10 +223,15 @@ a:focus{
     transition: all .5s;
     -webkit-transition: all .5s;
 }
-.profile-pic-wrapper{
+.about-section .profile-pic-wrapper{
     width:160px;
     margin-right: 15px;
     float: left;
+}
+.about-heading-wrapper .profile-pic-wrapper{
+    width:140px;
+    display: none;
+    margin: auto;
 }
 .name-heading-wrapper{
     padding-top:10px;
@@ -289,7 +299,7 @@ a:focus{
     padding-left: 0px;
 }
 .resume-row .col-md-9{
-    border-bottom: 1px solid #aaaaaa;
+    border-bottom: 1px solid #cccccc;
 }
 .resume-row:last-child .col-md-9{
     border-bottom:none;
@@ -763,10 +773,7 @@ a:focus{
     }
     .about-heading-wrapper{
         padding-bottom: 0;
-        position: relative;
         display: block;
-        top:170px;
-        z-index:2;
     }
     .name-heading-wrapper{
         padding-top:0px;
@@ -774,14 +781,11 @@ a:focus{
     .about-intro{
         padding-top: 30px;
     }
-    .profile-pic-wrapper{
-        width:140px;
+    .about-section .profile-pic-wrapper{
+        display: none;
+    }
+    .about-heading-wrapper .profile-pic-wrapper{
         display: block;
-        position: relative;
-        bottom:180px;
-        float: none;
-        margin: auto;
-        z-index: 1;
     }
     .resume-links{
         padding-top: 15px;
