@@ -4,6 +4,7 @@ angular.module("portfolio.work", ["ngRoute"])
     .then(function(response){
         $scope.projects = response.data.projects;
     });
+    $scope.pageClass = "page-work";
     $scope.projectClick = function(id, $event){
         $event.preventDefault();
         $rootScope.modal = $scope.projects[id];

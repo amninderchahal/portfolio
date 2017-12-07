@@ -6,4 +6,5 @@ angular.module('portfolio.about', ['ngRoute'])
             $scope.skillSummary = res.data.skillSummary;
             $scope.mySkills = res.data.mySkills;
     });
+    $scope.pageClass = "page-about";
 });
