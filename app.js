@@ -1,4 +1,5 @@
 angular.module("portfolio", ["ngRoute",
+                             "ngAnimate",
                              "portfolio.work",
                              "portfolio.about",
                              "portfolio.resume"])

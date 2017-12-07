@@ -4,6 +4,7 @@ body{
     margin-left:-1px;
     color:#1a1a1a;
     font-family: 'Gudea';
+    overflow-x: hidden;
 }
 header{
     position: fixed;
@@ -110,16 +111,21 @@ a:focus{
 .nav-link:hover .nav-link-line{
     border-color: #3762BA;
 }
+
 .main{
-    padding-top:30px;
     margin-left: 160px;
     width:auto;
     z-index: 1;
-    background-color: #f7f7f7;
+    position: relative;
 }
 .section{
-    width:95%;
-    margin:auto;
+    width:100%;
+    min-height: 101vh;
+    position:absolute; 
+    top:0;
+    left:0;
+    padding:30px 3%;
+    background-color: #f7f7f7;
 }
 .heading-wrapper,
 .content-wrapper{
@@ -708,6 +714,65 @@ a:focus{
     padding: 10px 15px 10px 15px;
     font-size: 18px;
 }
+
+/****** Page Change Animations for Desktop Only ******/
+@media screen and (min-width:992px){
+    /* rotate and fall */
+    @-webkit-keyframes rotateFall {
+        0% { -webkit-transform: rotateZ(0deg); }
+        20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+        40% { -webkit-transform: rotateZ(17deg); }
+        60% { -webkit-transform: rotateZ(16deg); }
+        100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
+    }
+    @-moz-keyframes rotateFall {
+        0% { -moz-transform: rotateZ(0deg); }
+        20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+        40% { -moz-transform: rotateZ(17deg); }
+        60% { -moz-transform: rotateZ(16deg); }
+        100% { -moz-transform: translateY(100%) rotateZ(17deg); }
+    }
+    @keyframes rotateFall {
+        0% { transform: rotateZ(0deg); }
+        20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+        40% { transform: rotateZ(17deg); }
+        60% { transform: rotateZ(16deg); }
+        100% { transform: translateY(100%) rotateZ(17deg); }
+    }
+    /* slide in from the right */
+    @keyframes slideInRight {
+        from 	{ transform:translateX(100%); }
+        to 		{ transform: translateX(0); }
+    }
+    @-moz-keyframes slideInRight {
+        from 	{ -moz-transform:translateX(100%); }
+        to 		{ -moz-transform: translateX(0); }
+    }
+    @-webkit-keyframes slideInRight {
+        from 	{ -webkit-transform:translateX(100%); }
+        to 		{ -webkit-transform: translateX(0); }
+    }
+    .main .ng-enter{
+        z-index: 888; 
+        height:100vh;
+        animation:slideInRight 0.5s both ease-in;
+    }
+    .main .ng-leave{
+        z-index: 999;
+        transform-origin: 0% 0%; animation: rotateFall 1s both ease-in;
+    }
+
+    .modal-rotate{
+        opacity: 0.5;
+        transform: rotatez(360deg) scale(0.2);
+        transition: all 0.5s ease-in;
+    }
+    .modal-rotate.in{
+        opacity: 1;
+        transform: rotatez(0deg) scale(1);
+    }
+}
+/****** Tablets ******/
 @media screen and (max-width:992px) {
     .heading-1{
         font-size: 24px;
@@ -825,7 +890,15 @@ a:focus{
         display: block;
         width:100%;
     }
+    .modal-rotate{
+        opacity: 0;
+        transition: all 0.3s ease-in;
+    }
+    .modal-rotate.in{
+        opacity: 1;
+    }
 }
+/****** Small Screen Devices ******/
 @media screen and (max-width:768px) {
     .about-intro{
         min-height:auto;

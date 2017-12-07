@@ -1,12 +1,12 @@
 angular.module("portfolio.work", ["ngRoute"])
-.controller('workCtrl', function($scope, $http){
+.controller('workCtrl', ["$scope", "$http", "$rootScope", function($scope, $http, $rootScope){
     $http.get('/json/work.json')
     .then(function(response){
         $scope.projects = response.data.projects;
     });
     $scope.projectClick = function(id, $event){
         $event.preventDefault();
-        $scope.modal = $scope.projects[id];
+        $rootScope.modal = $scope.projects[id];
         $("#modal").modal();
     };
-});
+}]);
