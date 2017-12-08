@@ -739,7 +739,7 @@ a:focus{
         60% { transform: rotateZ(16deg); }
         100% { transform: translateY(100%) rotateZ(17deg); }
     }
-    /* slide in from the right */
+    /* slide in from right */
     @keyframes slideInRight {
         from 	{ transform:translateX(100%); }
         to 		{ transform: translateX(0); }
@@ -752,144 +752,26 @@ a:focus{
         from 	{ -webkit-transform:translateX(100%); }
         to 		{ -webkit-transform: translateX(0); }
     }
-     /* slide in from the Left */
-     @keyframes slideInLeft {
-        from 	{ transform:translateX(-100%); }
-        to 		{ transform: translateX(0); }
-    }
-    @-moz-keyframes slideInLeft {
-        from 	{ -moz-transform:translateX(-100%); }
-        to 		{ -moz-transform: translateX(0); }
-    }
-    @-webkit-keyframes slideInLeft {
-        from 	{ -webkit-transform:translateX(-100%); }
-        to 		{ -webkit-transform: translateX(0); }
-    }
-    /* slide out to the right */
-    @keyframes slideOutRight {
-        from 	{ transform:translateX(0); }
-        to 		{ transform: translateX(100%); }
-    }
-    @-moz-keyframes slideOutRight {
-        from 	{ -moz-transform:translateX(0); }
-        to 		{ -moz-transform: translateX(100%); }
-    }
-    @-webkit-keyframes slideOutRight {
-        from 	{ -webkit-transform:translateX(0); }
-        to 		{ -webkit-transform: translateX(100%); }
-    }
-    /* slide In from Top */
-    @keyframes slideInTop {
-        from 	{ transform:translateY(-100%); }
-        to 		{ transform: translateY(0); }
-    }
-    @-moz-keyframes slideInTop {
-        from 	{ -moz-transform:translateY(-100%); }
-        to 		{ -moz-transform: translateY(0); }
-    }
-    @-webkit-keyframes slideInTop {
-        from 	{ -webkit-transform:translateY(-100%); }
-        to 		{ -webkit-transform: translateY(0); }
-    }
-    /* slide In from bottom */
-    @keyframes slideInBottom {
-        from 	{ transform:translateY(100%); }
-        to 		{ transform: translateY(0); }
-    }
-    @-moz-keyframes slideInBottom {
-        from 	{ -moz-transform:translateY(100%); }
-        to 		{ -moz-transform: translateY(0); }
-    }
-    @-webkit-keyframes slideInBottom {
-        from 	{ -webkit-transform:translateY(100%); }
-        to 		{ -webkit-transform: translateY(0); }
-    }
-    /* slide Out bottom */
-    @keyframes slideOutBottom {
-        from 	{ transform:translateY(0); }
-        to 		{ transform: translateY(100%); }
-    }
-    @-moz-keyframes slideOutBottom {
-        from 	{ -moz-transform:translateY(0); }
-        to 		{ -moz-transform: translateY(100%); }
-    }
-    @-webkit-keyframes slideOutBottom {
-        from 	{ -webkit-transform:translateY(0); }
-        to 		{ -webkit-transform: translateY(100%); }
-    }
-    /* Rotate Out Newspaper */
-    @keyframes rotateOutNewspaper {
-        from 	{ transform: rotatez(0deg) scale(1); opacity:1; }
-        to 		{ transform: rotatez(360deg) scale(0.2); opacity:0; }
-    }
-    @-moz-keyframes rotateOutNewspaper {
-        from 	{ -moz-transform:rotatez(0deg) scale(1); opacity:1; }
-        to 		{ -moz-transform: rotatez(360deg) scale(0.2); opacity:0; }
-    }
-    @-webkit-keyframes rotateOutNewspaper {
-        from 	{ -webkit-transform:rotatez(0deg) scale(1); opacity:1; }
-        to 		{ -webkit-transform: rotatez(360deg) scale(0.2); opacity:0; }
-    }
-    /* Scale In Rotate */
-    @keyframes rotateInScale {
-        from 	{ transform: rotatez(45deg);}
-        to 		{ transform: rotatez(0)}
-    }
-    @-moz-keyframes rotateInScale {
-        from 	{ -moz-transform: rotateX(90deg) scale(0.5); opacity:0.5; }
-        to 		{ -moz-transform: rotateX(0deg) scale(1); opacity:1; }
-    }
-    @-webkit-keyframes rotateInScale {
-        from 	{ -webkit-transform: rotateX(90deg) scale(0.5); opacity:0.5; }
-        to 		{ -webkit-transform: rotateX(0deg) scale(1); opacity:1; }
-    }
+    /* Page load animations */
     .main .ng-enter{
         z-index: 888; 
+        animation:slideInRight 0.6s both ease-in;
     }
     .main .ng-leave{
         z-index: 999; 
-    }
-    /********* About Page Animations *********/
-    .main .page-about.ng-enter{
-        animation:slideInRight 0.6s both ease-in;
-    }
-    .main .page-about.ng-leave{
-        transform-origin: 0% 0%; 
-        animation: slideOutBottom 0.6s both ease-in;
-    }
-    /********* Work Page Animations *********/
-    .main .page-work.ng-enter{
-        animation:slideInRight 0.6s both ease-in;
-    }
-    .main .page-work.ng-leave{
         transform-origin: 0% 0%; 
         animation: rotateFall 1s both ease-in;
     }
-    /********* Contact Page Animations *********/
-    .main .page-contact.ng-enter{
-        transform-origin: 100% 0%;
-        animation:rotateInScale 0.6s both ease-in;
-    }
-    .main .page-contact.ng-leave{
-        transform-origin: 0% 0%; 
-        animation: rotateFall 1s both ease-in;
-    }
-    /********* Resume Page Animations *********/
-    .main .page-resume.ng-enter{
-        transform-origin: 100% 0%;
-        animation:rotateInScale 0.6s both ease-in;
-    }
-    .main .page-resume.ng-leave{
-        animation:rotateOutNewspaper 0.6s both ease-in;
-    }
+    /* Modal open animations */
     .modal-rotate{
-        opacity: 0.5;
-        transform: rotatez(360deg) scale(0.2);
+        transform: translateY(100%);
         transition: all 0.5s ease-in;
     }
     .modal-rotate.in{
-        opacity: 1;
-        transform: rotatez(0deg) scale(1);
+        transform: translateY(0);
+    }
+    .modal-backdrop.in{
+        display: none;
     }
 }
 /****** Tablets ******/
