@@ -670,19 +670,18 @@ a:focus{
 .contact-item{
     margin: 20px auto;
     width: 250px;
-    position:relative;
     font-family: 'Archivo Narrow';
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
 }
-.contact-item .material-icons{
-    position: absolute;
-    top:0;
+.contact-item p, 
+.contact-item i{
+    display: inline-block;
 }
-.contact-item p{
-    display: inline;
-    margin-left:30px;
+.contact-item i{
+    line-height: 24px;
+    padding-top: 5px;
 }
 .link-wrapper{
     width:160px;
