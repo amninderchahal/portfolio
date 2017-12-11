@@ -1,0 +1,10 @@
+.nav-link-icon-span{ 
+    display:none; 
+}
+.contact-item{
+    position: static;
+}
+.contact-item p, 
+.contact-item i{
+    display: inline-block;
+}
