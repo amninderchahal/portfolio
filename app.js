@@ -8,19 +8,28 @@ angular.module("portfolio", ["ngRoute",
     $routeProvider
     .when("/" , {
         templateUrl : "views/about.html",
-        controller : "aboutCtrl"
+        controller : "aboutCtrl",
+        title : "About"
     })
     .when("/work", {
         templateUrl : "views/work.html",
-        controller : "workCtrl"
+        controller : "workCtrl",
+        title : "Personal Projects"
     })
     .when("/contact", {
         templateUrl : "views/contact.html",
-        controller : "contactCtrl"
+        controller : "contactCtrl",
+        title : "Contact"
     })
     .when("/resume", {
         templateUrl : "views/resume.html",
-        controller : "resumeCtrl"
+        controller : "resumeCtrl",
+        title : "Resume"
     });
     $locationProvider.hashPrefix('');
-});
+})
+.run(['$location', '$rootScope', function($location, $rootScope){
+    $rootScope.$on("$routeChangeSuccess", function(event, current, previous){
+        $rootScope.title = current.$$route.title;
+    });
+}]);

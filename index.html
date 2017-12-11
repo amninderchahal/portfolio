@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Amninder Chahal</title>
+    <title ng-bind="$root.title+ ' - Amninder Chahal'"></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
@@ -22,7 +22,7 @@
         <link rel="stylesheet" type="text/css" href="css/IE.css">
     <![endif]-->
 </head>
-<body ng-app="portfolio">
+<body>
     <header>
         <div class="sidebar-toggle animateEaseInOut">
             <button class="btn btn-default" type="button">
