@@ -15,7 +15,10 @@
             toggleNav();
     }
     $(document).ready(function(){
+        /* Prevent same page reload on nav click */
         $('.nav-link').on('click', preventSamePageReload);
+
+        /* Hide navbar on mobile when user clicks on content */
         $('.main').on('click', function(){
             if($('.sidebar').hasClass('sidebar-visible')){
                 $('.sidebar-toggle>button').trigger('click');

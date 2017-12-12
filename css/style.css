@@ -52,11 +52,9 @@ a:focus{
 .nav-link:active,
 .nav-link:focus{
     height: 75px;
-    width: 140px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    width: 100%;
+    margin: 3vh 0;
+    padding:10px;
     text-align: center;
     padding-top:0px;
     text-decoration: none;
@@ -65,6 +63,9 @@ a:focus{
     font-family: 'Fjalla One';
     transition: color .5s;
     -webkit-transition: color .5s;
+}
+.nav-link.active{
+    border-right: 3px solid #666666;
 }
 .nav-link>h4{
     margin-bottom: 4px;

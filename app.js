@@ -21,7 +21,7 @@ angular.module("portfolio", ["ngRoute",
         controller : "contactCtrl",
         title : "Contact"
     })
-    .when("/resume", {
+    .when("/about/resume", {
         templateUrl : "views/resume.html",
         controller : "resumeCtrl",
         title : "Resume"
@@ -32,4 +32,9 @@ angular.module("portfolio", ["ngRoute",
     $rootScope.$on("$routeChangeSuccess", function(event, current, previous){
         $rootScope.title = current.$$route.title;
     });
+}])
+.controller('appCtrl', ['$scope', '$location', function($scope, $location){
+    $scope.isActive = function(route) {
+        return route === $location.path();
+    }
 }]);
