@@ -856,7 +856,7 @@ a:focus{
     .navlink-visible:hover,
     .navlink-visible:active,
     .navlink-visible:focus{
-        margin-left: 10px;
+        margin-left: 0;
         -webkit-transition: margin 1s;
         transition: margin 1s;
     }
