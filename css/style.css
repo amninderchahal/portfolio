@@ -294,13 +294,6 @@ a:focus{
 .resume-section .heading-1 strong{
     font-size: 36px;
 }
-.resume-section .subtitle{
-    border-top: 3px solid #444444;
-    border-bottom: 3px solid #444444;
-    display: block;  
-    padding-top:6px;
-    padding-bottom: 6px;
-}
 .subtitle strong{
     font-size:13px;
     line-height: 15px;
