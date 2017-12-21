@@ -1,6 +1,7 @@
 angular.module("portfolio", ["ngRoute",
                              "ngAnimate",
                              "portfolio.work",
+                             "portfolio.project",
                              "portfolio.about",
                              "portfolio.resume",
                              "portfolio.contact"])
@@ -14,6 +15,11 @@ angular.module("portfolio", ["ngRoute",
     .when("/work", {
         templateUrl : "views/work.html",
         controller : "workCtrl",
+        title : "Personal Projects"
+    })
+    .when("/work/project/:id", {
+        templateUrl : "views/project.html",
+        controller : "projectCtrl",
         title : "Personal Projects"
     })
     .when("/contact", {

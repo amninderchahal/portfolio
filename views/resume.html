@@ -15,8 +15,8 @@
                         <div class="resume-section-description" ng-if="section.description">{{section.description}}</div>
                         <div class="resume-section-content" ng-if="section.repeatable" ng-repeat="item in section.repeatable">
                             <div ng-if="item.title || item.institutionName" class="header">
-                                <p class="title heading-4">{{item.title}}</p>
-                                <p class="name title heading-5">{{item.institutionName}}</p>
+                                <p class="title heading-4">{{item.institutionName}}</p>
+                                <p class="name title heading-5">{{item.title}}</p>
                             </div>
                             <div ng-if="item.duration || item.location" class="details">
                                 <p class="duration heading-5">{{item.duration}}</p>

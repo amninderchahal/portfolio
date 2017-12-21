@@ -487,34 +487,21 @@ a:focus{
 .project-link:hover .overlay {
     opacity: 0.9;
 }
-.modal {
-    padding: 0 !important;
-  }
-.modal-dialog{
-    width:100%;
-    height: 100%;
-    margin:auto;
-}
-.modal-content{
-    border:0;
-    border-radius: 0;
-}
-.modal-header{
+.project-div{
     text-align: center;
-    border: 0;
-    padding-top: 20px;
-    padding-bottom: 0;
+    padding-bottom:50px;
+    padding-top: 50px;
 }
-.modal-header>.close-modal{
+.project-close-icon{
     text-align: center;
-    float:right;
-    margin-right:30px;
-    background: none;
-    border:0;
+    display: block;
+    position: absolute;
+    right:40px;
+    top:30px;
     height:70px;
     width: 70px;
 }
-.modal-header .close-modal .lr{
+.project-close-icon .lr{
     z-index: 1051;
     width: 1px;
     height: 75px;
@@ -524,7 +511,7 @@ a:focus{
     transform: rotate(45deg);
     background-color: #222;
 }
-.modal-header .close-modal .lr .rl {
+.project-close-icon .lr .rl {
     z-index: 1052;
     width: 1px;
     height: 75px;
@@ -533,44 +520,35 @@ a:focus{
     transform: rotate(90deg);
     background-color: #222;
 }
-.modal-header .close-modal:hover .lr,
-.modal-header .close-modal:hover .rl{
+.project-close-icon:hover .lr,
+.project-close-icon:hover .rl{
     background-color: gray;
 }
-.modal-header .close-modal:focus{
+.project-close-icon:focus{
     outline: 0;
 }
-.modal-body{
-    padding-top: 0;
-    margin-top: -20px;
-    padding-bottom: 15vh;
-}
 .project-wrapper {
-    width: 75%;
+    width: 90%;
     height:auto;
     margin: auto;
     text-align: center;
     padding-top: 20px;
+    font-family: "Gudea";
+    color: #212529;
+    font-size: 15px;
+    padding-top: 50px;
 }
-.project-lables{
+.project-labels{
     font-size:16px;
     text-align: center;
     font-weight: 400;
     padding-top: .3em;
 }
-.project-lables span{
+.project-labels span{
     margin:3px;
 }
 .project-wrapper>button{
     margin-top:20px;
-}
-.project-wrapper{
-    font-family: "Gudea";
-    color: #212529;
-    font-size: 15px;
-    padding-top: 50px;
-    margin: auto;
-    width: 75%;
 }
 .project-section{
     padding-bottom: 20px;
@@ -748,28 +726,6 @@ a:focus{
         60% { -moz-transform: rotateZ(16deg); }
         100% { -moz-transform: translateY(100%) rotateZ(17deg); }
     }
-    /* rotate and fall Right*/
-    @keyframes rotateFallRight {
-        0% { transform: rotateZ(0deg); }
-        20% { transform: rotateZ(-10deg); animation-timing-function: ease-out; }
-        40% { transform: rotateZ(-17deg); }
-        60% { transform: rotateZ(-16deg); }
-        100% { transform: translateY(100%) rotateZ(-17deg); }
-    }
-    @-webkit-keyframes rotateFallRight {
-        0% { -webkit-transform: rotateZ(-0deg); }
-        20% { -webkit-transform: rotateZ(-10deg); -webkit-animation-timing-function: ease-out; }
-        40% { -webkit-transform: rotateZ(-17deg); }
-        60% { -webkit-transform: rotateZ(-16deg); }
-        100% { -webkit-transform: translateY(100%) rotateZ(-17deg); }
-    }
-    @-moz-keyframes rotateFallRight {
-        0% { -moz-transform: rotateZ(0deg); }
-        20% { -moz-transform: rotateZ(-10deg); -moz-animation-timing-function: ease-out; }
-        40% { -moz-transform: rotateZ(-17deg); }
-        60% { -moz-transform: rotateZ(-16deg); }
-        100% { -moz-transform: translateY(100%) rotateZ(-17deg); }
-    }
     /* slide in from right */
     @keyframes slideInRight {
         from 	{ transform:translateX(100%); }
@@ -783,18 +739,57 @@ a:focus{
         from 	{ -webkit-transform:translateX(100%); }
         to 		{ -webkit-transform: translateX(0); }
     }
-    /* slide in from Left */
-    @keyframes slideInLeft {
-        from 	{ transform:translateX(-100%); }
-        to 		{ transform: translateX(0); }
+    /* slide down */
+    @keyframes slideDown {
+        from 	{ transform:translateY(0); }
+        to 		{ transform: translateY(100%); }
     }
-    @-moz-keyframes slideInLeft {
-        from 	{ -moz-transform:translateX(-100%); }
-        to 		{ -moz-transform: translateX(0); }
+    @-moz-keyframes slideDown {
+        from 	{ -moz-transform:translateY(0); }
+        to 		{ -moz-transform: translateY(100%); }
     }
-    @-webkit-keyframes slideInLeft {
-        from 	{ -webkit-transform:translateX(-100%); }
-        to 		{ -webkit-transform: translateX(0); }
+    @-webkit-keyframes slideDown {
+        from 	{ -webkit-transform:translateY(0); }
+        to 		{ -webkit-transform: translateY(100%); }
+    }
+    /* slide in from bottom */
+    @keyframes slideInBottom {
+        from 	{ transform:translateY(100%); }
+        to 		{ transform: translateY(0); }
+    }
+    @-moz-keyframes slideInBottom {
+        from 	{ -moz-transform:translateY(100%); }
+        to 		{ -moz-transform: translateY(0); }
+    }
+    @-webkit-keyframes slideInBottom {
+        from 	{ -webkit-transform:translateY(100%); }
+        to 		{ -webkit-transform: translateY(0); }
+    }
+     /* Fade out Slowly */
+     @keyframes FadeOut {
+        from 	{ opacity:1; }
+        to 		{ opacity: 0.9; }
+    }
+    @-moz-keyframes FadeOut {
+        from 	{ -moz-opacity:1; }
+        to 		{ -moz-opacity: 0.9; }
+    }
+    @-webkit-keyframes FadeOut {
+        from 	{ opacity:1; }
+        to 		{ opacity: 0.9; }
+    }
+     /* FadeIn */
+     @keyframes FadeIn {
+        from 	{ opacity:0; }
+        to 		{ opacity: 1; }
+    }
+    @-moz-keyframes FadeIn {
+        from 	{ -moz-opacity:0; }
+        to 		{ -moz-opacity: 1; }
+    }
+    @-webkit-keyframes FadeIn {
+        from 	{ opacity:0; }
+        to 		{ opacity: 1; }
     }
     /* Page load animations */
     .main .ng-enter{
@@ -806,27 +801,19 @@ a:focus{
         transform-origin: 0% 0%; 
         animation: rotateFall 1s both ease-in;
     }
-    /* About Page load animations */
-    .main .page-about.ng-enter{
-        z-index: 888; 
-        animation:slideInLeft 0.6s both ease-in;
+    .main .page-work.ng-enter{
+        animation: FadeIn 0.8s ease;
     }
-    /* Resume Page load animations */
-    .main .page-resume.ng-leave{
-        z-index: 999; 
-        transform-origin: 100% 0%; 
-        animation: rotateFallRight 1s both ease-in;
+    .main .page-work.ng-leave{
+        z-index: 777;
+        animation: FadeOut 0.6s ease;
     }
-    /* Modal open animations */
-    .modal-rotate{
-        transform: translateY(100%);
-        transition: all 0.5s ease-in;
+    .main .page-project.ng-enter{
+        z-index: 1000;
+        animation:slideInBottom 0.6s ease;
     }
-    .modal-rotate.in{
-        transform: translateY(0);
-    }
-    .modal-backdrop.in{
-        display: none;
+    .main .page-project.ng-leave{
+        animation:slideDown 0.6s ease-in;
     }
 }
 /****** Tablets ******/
@@ -847,30 +834,17 @@ a:focus{
         font-size: 14px;
     }
     .sidebar{
-        width: 0px;
-        -webkit-transition: width 1s;
-        transition: width 1s;
-    }
-    .nav-link,
-    .nav-link:hover,
-    .nav-link:active,
-    .nav-link:focus{
-        margin-left: -160px;
-        -webkit-transition: margin 1s;
-        transition: margin 1s;
-    }
-    .navlink-visible,
-    .navlink-visible:hover,
-    .navlink-visible:active,
-    .navlink-visible:focus{
-        margin-left: 0;
-        -webkit-transition: margin 1s;
-        transition: margin 1s;
+        transform:translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        transition: all 1s;
     }
     .sidebar-visible{
-        width: 160px;
-        -webkit-transition: width 1s;
-        transition: width 1s;
+        transform:translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
     }
 
     .sidebar-toggle{
@@ -950,16 +924,6 @@ a:focus{
         display: block;
         width:100%;
     }
-    .modal-body{
-        margin-top: 0;
-    }
-    .modal-rotate{
-        opacity: 0;
-        transition: all 0.3s ease-in;
-    }
-    .modal-rotate.in{
-        opacity: 1;
-    }
 }
 /****** Small Screen Devices ******/
 @media screen and (max-width:768px) {
@@ -985,13 +949,5 @@ a:focus{
     }
     .project-github{
         width:70px;
-    }
-    .modal-header>.close-modal{
-        height:50px;
-        width: 50px;
-        margin-bottom: 30px;
-    }
-    .modal-header .close-modal div{
-        height: 50px;
     }
 }

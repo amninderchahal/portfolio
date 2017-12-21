@@ -13,15 +13,14 @@
                 "duration":"June 2015 - July 2016",
                 "institutionName":"HackEarth Private Limited",
                 "location":"Mohali, Punjab, India",
-                "text":false,
+                "text":"A startup that provides IT solutions to professionals and enterprises. I worked on the development, styling,  testing, and deployment of web applications to the cloud.",
                 "listTitle":"Responsibilities:",
                 "listItems":[
-                    "Build front-end using Javascript,  Angularjs, and jQuery",
-                    "Build Single-Page applications using Angular Routing, Angular Templating, and AJAX",
-                    "Develop back-ends and Web APIs in PHP and Laravel",
-                    "Design and work with relational databases in MySQL",
-                    "Test and document written source code",
-                    "Work according to Agile methodologies"
+                    "Build front-end using JavaScript, jQuery, Angularjs, and React JS",
+                    "Create responsive user interfaces using HTML5, CSS3, and Bootstrap",
+                    "Create back-end logic for websites and Web APIs in Laravel",
+                    "Write SQL commands and stored procedures(Routines) in MySQL",
+                    "Work as per agile methodology"
                 ]
             },
             {
@@ -29,12 +28,13 @@
                 "duration":"Jan 2015 - June 2015",
                 "institutionName":"HackEarth Private Limited",
                 "location":"Mohali, Punjab, India",
-                "text":false,
+                "text":"I worked on the designing and development of an ecommerce web application.",
                 "listTitle":"Responsibilities:",
                 "listItems":[
-                    "Responsible for developing front-end, back-end, and database for an eCommerce  website",
-                    "Build Client-side using HTML5, CSS3, Javascript, Bootstrap, and jQuery",
-                    "Develop Back-end using PHP and MySQL"
+                    "Build client side with HTML5, CSS3, and Bootstrap",
+                    "Implement dynamic components using JavaScript and jQuery",
+                    "Develop back-end logic in PHP",
+                    "Design relational database in MySQL"
                 ]
             }
         ]
@@ -67,10 +67,10 @@
         "repeatable":[
             {
                 "listItems":[
-                    "Core Programming Languages: PHP, Java, C#, SQL, HTML5, CSS3, and JavaScript",
+                    "Front-end: Angularjs, React JS, jQuery, jQuery UI, and Bootstrap",
+                    "Back-end: Laravel, ASP.Net, Java EE, and Node JS",
+                    "Core programming languages: HTML5, CSS3, JavaScript, PHP, C#, Java, and SQL",
                     "Databases: MySQL, Microsoft SQL Server",
-                    "Front-end Technologies: Angularjs, React JS, jQuery, jQuery UI, and Bootstrap",
-                    "Back-end Technologies: ASP.Net, Laravel, Node JS, CakePHP, and Java EE",
                     "IDE: Visual Studio 2015, SQL Server Management Studio, NetBeans, and Eclipse",
                     "Tools: Github, Bitbucket"
                 ]
