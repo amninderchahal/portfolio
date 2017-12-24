@@ -794,15 +794,12 @@ a:focus{
     /* Page load animations */
     .main .ng-enter{
         z-index: 888; 
-        animation:slideInRight 0.6s both ease-in;
+        animation:FadeIn 0.8s ease;
     }
     .main .ng-leave{
         z-index: 999; 
         transform-origin: 0% 0%; 
         animation: rotateFall 1s both ease-in;
-    }
-    .main .page-work.ng-enter{
-        animation: FadeIn 0.8s ease;
     }
     .main .page-work.ng-leave{
         z-index: 777;
