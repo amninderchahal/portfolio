@@ -83,6 +83,10 @@
                 {
                     "title":"MySQL",
                     "img":"images/skills/mysql.png"
+                },
+                {
+                    "title":"MongoDB",
+                    "img":"images/skills/mongodb.png"
                 }
             ],
             "description":"I have experience working with the above mentioned server-side technologies. I strictly follow the DRY approach when coding. I write source code that is efficient, easy to read and reuse, and is well-documented to assist future developers. I follow object-oriented programming principles to design and maintain projects. I also have experience working with Microsoft SQL Server and MySQL to design and maintain relational databases."
