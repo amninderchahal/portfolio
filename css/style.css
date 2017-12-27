@@ -6,10 +6,6 @@ body{
     font-family: 'Gudea';
     overflow-x: hidden;
 }
-header{
-    position: fixed;
-    z-index: 100;
-}
 .animateEaseInOut{
     transition-timing-function: ease-in-out;
     -webkit-transition-timing-function: ease-in-out;
@@ -20,6 +16,7 @@ header{
     left:0;
     display:none;
     position: fixed;
+    z-index:101;
 }
 .sidebar-toggle>button,
 .sidebar-toggle>button:focus,
@@ -37,6 +34,8 @@ header{
 .sidebar{
     width: 160px;
     height:100vh;
+    position: fixed;
+    z-index: 100;
     display:flex;
     flex-direction: column;
     top:0;
@@ -112,7 +111,6 @@ a:focus{
 .nav-link:hover .nav-link-line{
     border-color: #3762BA;
 }
-
 .main{
     margin-left: 160px;
     width:auto;
@@ -126,7 +124,10 @@ a:focus{
     top:0;
     left:0;
     padding:30px 3%;
-    background-color: #f7f7f7;
+    background-color: #fcfcfc;
+}
+.section.page-project{
+    background-color: #fff;
 }
 .heading-wrapper,
 .content-wrapper{
@@ -807,10 +808,10 @@ a:focus{
     }
     .main .page-project.ng-enter{
         z-index: 1000;
-        animation:slideInBottom 0.6s ease;
+        animation:slideInBottom 0.8s ease;
     }
     .main .page-project.ng-leave{
-        animation:slideDown 0.6s ease-in;
+        animation:slideDown 0.8s ease-in;
     }
 }
 /****** Tablets ******/
@@ -834,9 +835,9 @@ a:focus{
         transform:translateX(-100%);
         -webkit-transform: translateX(-100%);
         -moz-transform: translateX(-100%);
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        transition: all 1s;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
     }
     .sidebar-visible{
         transform:translateX(0);
@@ -847,13 +848,12 @@ a:focus{
     .sidebar-toggle{
         display:block;
         left:0;
-        -webkit-transition: left 1s;
-        transition: left 1s;
+        -webkit-transition: left 1s ease;
+        -moz-transition: left 1s ease;
+        transition: left 1s ease;
     }
     .sidebar-toggle-active{
         left:160px;
-        -webkit-transition: left 1s;
-        transition: left 1s;
     }
     .main{
         padding:30px 0 0 0;
@@ -915,6 +915,16 @@ a:focus{
     }
     .project{
         width:100%;
+    }
+    .project-close-icon{
+        width:50px;
+        height:50px;
+    }
+    .project-close-icon .lr{
+        height: 50px;
+    }
+    .project-close-icon .lr .rl {
+        height: 50px;
     }
     .contact-info,
     .social-media-links{
