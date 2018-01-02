@@ -6,7 +6,7 @@
     </a>
     <h3 class="title heading-1">{{project.title}}</h3>
     <p class="project-labels">
-        <span ng-repeat="label in project.labels" class="label label-primary">{{label}}</span>
+        <span ng-repeat="label in project.labels" class="label label-primary" emit-last-repeater-element>{{label}}</span>
     </p>
     <div class="project-wrapper">
         <div class="project-section">

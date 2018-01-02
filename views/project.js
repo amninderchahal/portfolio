@@ -12,6 +12,51 @@ angular.module("portfolio.project", ["ngRoute"])
         $event.preventDefault();
         $('html, body').animate({
             scrollTop: $(".main").offset().top
-        }, 600);
+        }, 1000);
     };
-}]);
+    $scope.$on('LastRepeaterElement', function(){
+        setTimeout(addZoomEffect, 200);
+    });
+}])
+.directive('emitLastRepeaterElement', function() {
+    return function(scope){
+        if (scope.$last)
+            scope.$emit('LastRepeaterElement');
+    };
+});
+function getWidth(img){
+    var parentWidth = img.parent().width(),
+        width = img.width(),
+        widthPercent = (width / parentWidth) * 100;
+
+    return widthPercent;
+}
+function setWidth(img, width){
+    var parentWidth = img.parent().width(),
+        newWidth = (parentWidth * width) / 100;
+    img.width(newWidth);
+}
+function addZoomEffect(){
+    var lastScrollTop = $(window).scrollTop(),
+        currentScrollTop,
+        img = $('.image-wrapper>img'),
+        width = getWidth(img);
+        
+    $(window).scroll(function(){
+        currentScrollTop = $(window).scrollTop();
+        if (lastScrollTop <= currentScrollTop){
+            if (currentScrollTop > 200 && currentScrollTop < 600){
+                if(width < 100)
+                    setWidth(img, width+1);
+            }
+        }
+        else{
+            if (currentScrollTop < 500){
+                if (width > 50)
+                    setWidth(img, width-1);
+            }
+        }
+        width = getWidth(img);
+        lastScrollTop = currentScrollTop;
+    });
+}
