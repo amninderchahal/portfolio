@@ -45,14 +45,14 @@ function addZoomEffect(){
     $(window).scroll(function(){
         currentScrollTop = $(window).scrollTop();
         if (lastScrollTop <= currentScrollTop){
-            if (currentScrollTop > 200 && currentScrollTop < 600){
+            if (currentScrollTop > 120 && currentScrollTop < 600){
                 if(width < 100)
                     setWidth(img, width+1);
             }
         }
         else{
-            if (currentScrollTop < 500){
-                if (width > 50)
+            if (currentScrollTop < 500 && currentScrollTop > 50){
+                if (width > 60)
                     setWidth(img, width-1);
             }
         }
