@@ -3,7 +3,7 @@ body{
     margin-top: -1px;
     margin-left:-1px;
     color:#1a1a1a;
-    font-family: 'Gudea';
+    font-family: 'Nunito Sans', sans-serif;
     overflow-x: hidden;
 }
 .animateEaseInOut{
@@ -138,8 +138,8 @@ a:focus{
 .title{
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Ubuntu Condensed';
-    font-weight: 600;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 800;
     font-size: 28px;
 }
 .subtitle{
@@ -150,7 +150,7 @@ a:focus{
     text-align: center;
 }
 .heading-1{
-    font-size: 32px;
+    font-size: 40px;
 }
 .heading-2{
     font-size: 24px;
@@ -172,7 +172,6 @@ a:focus{
     text-align: center;
     padding-top:30px;
     clear: both;
-    font-family: 'Gudea';
     font-size: 15px;
     margin-top: auto;
     margin-bottom:0;
@@ -184,7 +183,6 @@ a:focus{
 /************About Page Style**********/
 .about-section{
     padding-top:20px;
-    font-family: 'Gudea';
     font-size: 16px;
     line-height: 26px;
 }
@@ -273,7 +271,6 @@ a:focus{
     width:100%;
     font-size: 13px;
     line-height: 20px;
-    font-family: 'Lato', sans-serif;
     text-transform: none;
     margin:0;
     margin-top: 8px;
@@ -289,11 +286,10 @@ a:focus{
     padding-bottom: 10px;
 }
 .resume-section .heading-1{
-    font-family: 'Lora', serif;
-    font-size: 30px;
+    font-size: 38px;
 }
 .resume-section .heading-1 strong{
-    font-size: 36px;
+    font-size: 42px;
 }
 .subtitle strong{
     font-size:13px;
@@ -330,7 +326,6 @@ a:focus{
 }
 .resume-section-content{
     text-transform: uppercase;
-    font-family: 'Ubuntu Condensed';
     line-height: 24px;
 }
 .resume-section-content .header,
@@ -352,6 +347,10 @@ a:focus{
     display: block;
     clear: both;
 }
+
+.resume-section-content .details .title{
+    font-weight: 400;
+}
 .resume-section-content .details p{
     display: inline-block;
 }
@@ -367,25 +366,24 @@ a:focus{
 .resume-section-content .description{
     clear: both;
     text-transform: none;
-    font-family: 'Gudea';
     margin-top:8px;
     font-size: 16px;
 }
 .description-title{
     margin-bottom: 0;
     margin-top:8px;
+    text-transform: none;
 }
 .resume-section-content .list-item{
     text-transform: none;
     display: list-item;
     list-style-type: disc;
     list-style-position: outside;
-    font-family: 'Gudea';
     margin-bottom: 4px;
     margin-left: 30px;
     line-height: 20px;
 }
-/************Work Page Style**********/
+/************ Work Page Style**********/
 .work-section{
     padding-top: 0;
 }
@@ -428,7 +426,6 @@ a:focus{
 }
 .work-description>.list-item{
     text-transform: none;
-    font-family: 'Gudea';
     display: list-item;
     list-style-type: disc;
     list-style-position: outside;
@@ -546,7 +543,6 @@ a:focus{
     margin: auto;
     text-align: center;
     padding-top: 20px;
-    font-family: "Gudea";
     color: #212529;
     font-size: 15px;
     padding-top: 50px;
@@ -656,7 +652,6 @@ a:focus{
 }
 .status-txt{
     text-align: center;
-    font-family: 'Gudea', sans-serif;
 }
 .contact-info{
     width: 55%;
@@ -834,16 +829,16 @@ a:focus{
         font-size: 24px;
     }
     .heading-2{
-        font-size: 20px;
+        font-size: 22px;
     }
     .heading-3{
-        font-size: 18px;
+        font-size: 20px;
     }
     .heading-4{
-        font-size: 16px;
+        font-size: 18px;
     }
     .heading-5{
-        font-size: 14px;
+        font-size: 16px;
     }
     .sidebar{
         transform:translateX(-100%);
@@ -901,8 +896,11 @@ a:focus{
         margin:auto;
         padding-top: 0;
     }
+    .resume-section .heading-1{
+        font-size: 28px;
+    }
     .resume-section .heading-1 strong{
-        font-size: 30px;
+        font-size: 32px;
     }
     .resume-row{
         padding-left:0;
@@ -965,6 +963,8 @@ a:focus{
         padding-right: 0;
     }
     .overlay,
+    .text,
+    .project-link:hover .text,
     .project-link:hover .overlay {
         opacity: 0;
     }

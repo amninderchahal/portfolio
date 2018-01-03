@@ -15,7 +15,7 @@ angular.module("portfolio.project", ["ngRoute"])
         }, 1000);
     };
     $scope.$on('LastRepeaterElement', function(){
-        setTimeout(addZoomEffect, 200);
+        setTimeout(zoomOnScroll.initialize, 200);
     });
 }])
 .directive('emitLastRepeaterElement', function() {
@@ -24,39 +24,45 @@ angular.module("portfolio.project", ["ngRoute"])
             scope.$emit('LastRepeaterElement');
     };
 });
-function getWidth(img){
-    var parentWidth = img.parent().width(),
-        width = img.width(),
-        widthPercent = (width / parentWidth) * 100;
 
-    return widthPercent;
-}
-function setWidth(img, width){
-    var parentWidth = img.parent().width(),
-        newWidth = (parentWidth * width) / 100;
-    img.width(newWidth);
-}
-function addZoomEffect(){
-    var lastScrollTop = $(window).scrollTop(),
-        currentScrollTop,
-        img = $('.image-wrapper>img'),
-        width = getWidth(img);
-        
-    $(window).scroll(function(){
-        currentScrollTop = $(window).scrollTop();
-        if (lastScrollTop <= currentScrollTop){
-            if (currentScrollTop > 120 && currentScrollTop < 600){
-                if(width < 100)
-                    setWidth(img, width+1);
+var zoomOnScroll = (function($){
+    var getWidth = function(img){
+        var parentWidth = img.parent().width(),
+            width = img.width(),
+            widthPercent = (width / parentWidth) * 100;
+    
+        return widthPercent;
+    }
+    var setWidth = function(img, width){
+        var parentWidth = img.parent().width(),
+            newWidth = (parentWidth * width) / 100;
+        img.width(newWidth);
+    }
+    var addZoomEffect = function(){
+        var lastScrollTop = $(window).scrollTop(),
+            currentScrollTop,
+            img = $('.image-wrapper>img'),
+            width = getWidth(img);
+            
+        $(window).scroll(function(){
+            currentScrollTop = $(window).scrollTop();
+            if (lastScrollTop <= currentScrollTop){
+                if (currentScrollTop > 120 && currentScrollTop < 600){
+                    if(width < 100)
+                        setWidth(img, width+1);
+                }
             }
-        }
-        else{
-            if (currentScrollTop < 500 && currentScrollTop > 50){
-                if (width > 60)
-                    setWidth(img, width-1);
+            else{
+                if (currentScrollTop < 500 && currentScrollTop > 50){
+                    if (width > 60)
+                        setWidth(img, width-1);
+                }
             }
-        }
-        width = getWidth(img);
-        lastScrollTop = currentScrollTop;
-    });
-}
+            width = getWidth(img);
+            lastScrollTop = currentScrollTop;
+        });
+    }
+    return {
+        initialize : addZoomEffect
+    }
+})(jQuery);
