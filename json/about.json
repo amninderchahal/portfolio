@@ -1,9 +1,8 @@
 {
-    "intro":"I am an experienced Web Developer with a drive to learn and work with emerging technologies. I like to write code that is efficient, reusable, and well-documented. I love working with front-end technologies such as Angular JS, React JS, and jQuery. In the past, I have worked on the development of RESTful APIs, Relational Databases, back-ends and front-ends for websites. ",
-    "skillSummary":"I have experience working as a web developer and building websites of highest quality that are responsive, perform efficiently, and work on multiple platforms. I have worked from front-end to server-side programming and designing relational databases. I use Github and Bitbucket for version control for my apps",
+    "skillSummary":"I am a Web developer with experience building pixel-perfect websites and exceptional user experience. I understand the importance of writing highly readable and reusable code. I want to be involved in projects that challenge me to learn and work with new technologies and awesome people.",
     "mySkills":[
         {
-         "title": "Front-End Developer",
+         "title": "Front-End",
          "skills":[
                 {
                     "title":"HTML5",
@@ -26,22 +25,17 @@
                     "img":"images/skills/jquery.png"
                 },
                 {
-                    "title":"Angular JS",
+                    "title":"AngularJS",
                     "img":"images/skills/angularjs.png"
                 },
                 {
                     "title":"React JS",
                     "img":"images/skills/reactjs.png"
-                },
-                {
-                    "title":"jQuery UI",
-                    "img":"images/skills/jquery_ui.png"
                 }
-            ],
-            "description":"While working as a web developer, I learned to use above technologies to build websites with beautiful user interfaces, that work on various devices and browsers. I have used Angular JS and React JS to build single-page applications with reusable components, jQuery and jQuery UI to build additional functionality and dynamic elements for exceptional user experience."
+            ]
         },
         {
-        "title": "Back-End Developer",
+        "title": "Back-End",
          "skills":[
                 {
                     "title":"PHP",
@@ -58,10 +52,6 @@
                 {
                     "title":"C#",
                     "img":"images/skills/csharp.png"
-                },
-                {
-                    "title":"NUnit",
-                    "img":"images/skills/nunit.png"
                 },
                 {
                     "title":"Node JS",
@@ -88,8 +78,7 @@
                     "title":"MongoDB",
                     "img":"images/skills/mongodb.png"
                 }
-            ],
-            "description":"I have experience working with the above mentioned server-side technologies. I strictly follow the DRY approach when coding. I write source code that is efficient, easy to read and reuse, and is well-documented to assist future developers. I follow object-oriented programming principles to design and maintain projects. I also have experience working with Microsoft SQL Server and MySQL to design and maintain relational databases."
+            ]
         }
     ]
 }

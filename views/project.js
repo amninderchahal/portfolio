@@ -6,7 +6,6 @@ angular.module("portfolio.project", ["ngRoute"])
         $scope.project = response.data.projects[id];
     });
     $scope.pageClass = "page-project";
-    $rootScope.projectId = $routeParams.id;
 
     $scope.topBtnClick = function($event){
         $event.preventDefault();
@@ -15,7 +14,7 @@ angular.module("portfolio.project", ["ngRoute"])
         }, 1000);
     };
     $scope.$on('LastRepeaterElement', function(){
-        setTimeout(zoomOnScroll.initialize, 200);
+        animateOnScroll.initialize();
     });
 }])
 .directive('emitLastRepeaterElement', function() {
@@ -25,41 +24,26 @@ angular.module("portfolio.project", ["ngRoute"])
     };
 });
 
-var zoomOnScroll = (function($){
-    var getWidth = function(img){
-        var parentWidth = img.parent().width(),
-            width = img.width(),
-            widthPercent = (width / parentWidth) * 100;
-    
-        return widthPercent;
-    }
-    var setWidth = function(img, width){
-        var parentWidth = img.parent().width(),
-            newWidth = (parentWidth * width) / 100;
-        img.width(newWidth);
-    }
+var animateOnScroll = (function($){
     var addZoomEffect = function(){
-        var lastScrollTop = $(window).scrollTop(),
-            currentScrollTop,
-            img = $('.image-wrapper>img'),
-            width = getWidth(img);
-            
-        $(window).scroll(function(){
-            currentScrollTop = $(window).scrollTop();
-            if (lastScrollTop <= currentScrollTop){
-                if (currentScrollTop > 120 && currentScrollTop < 600){
-                    if(width < 100)
-                        setWidth(img, width+1);
+        $(function(){
+            var $window = $(window),
+                scrollTop,
+                $img = $('.image-wrapper>img'),
+                target = 200;
+
+            if($window.width() < 992) return;
+                
+            $window.scroll(function(){
+                scrollTop = $window.scrollTop();
+                
+                if (scrollTop > target){
+                    $img.css("width", "100%");
                 }
-            }
-            else{
-                if (currentScrollTop < 500 && currentScrollTop > 50){
-                    if (width > 60)
-                        setWidth(img, width-1);
+                else{
+                    $img.css("width", "60%");
                 }
-            }
-            width = getWidth(img);
-            lastScrollTop = currentScrollTop;
+            });
         });
     }
     return {

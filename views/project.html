@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="image-wrapper">
-            <img ng-repeat="img in project.img" ng-src="{{img}}" alt="Image">
+            <img id="img-{{$index+1}}" ng-repeat="img in project.img" ng-src="{{img}}" alt="Image">
         </div>
     </div>
     <a class="btn btn-success" ng-click="topBtnClick($event)" href="#"><span class="glyphicon glyphicon-chevron-up"></span> Top</a>
