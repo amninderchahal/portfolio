@@ -789,9 +789,9 @@ a:focus{
         top: 40%;
         left: 47%;
         display: block;
-        transition-property: top, left, transform; 
-        -webkit-transition-property: top, left, transform;
-        -moz-transition-property: top, left, transform; 
+        transition: top, left, transform; 
+        -webkit-transition: top, left, transform;
+        -moz-transition: top, left, transform; 
         transition-duration : 0.8s;
         -webkit-transition-duration: 0.8s;
         -moz-transition-duration: 0.8s;

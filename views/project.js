@@ -9,12 +9,10 @@ angular.module("portfolio.project", ["ngRoute"])
 
     $scope.topBtnClick = function($event){
         $event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $(".main").offset().top
-        }, 1000);
+        BindJSEvents.topBtnClickHandler();
     };
     $scope.$on('LastRepeaterElement', function(){
-        animateOnScroll.initialize();
+        BindJSEvents.init();
     });
 }])
 .directive('emitLastRepeaterElement', function() {
@@ -24,29 +22,40 @@ angular.module("portfolio.project", ["ngRoute"])
     };
 });
 
-var animateOnScroll = (function($){
-    var addZoomEffect = function(){
-        $(function(){
-            var $window = $(window),
-                scrollTop,
-                $img = $('.image-wrapper>img'),
-                target = 200;
+var BindJSEvents = (function($){
+    var $window = $(window),
+        $img;
 
-            if($window.width() < 992) return;
-                
+    var scrollEventHandler = function(){
+        var target = 200,
+            scrollTop = $window.scrollTop();
+        if (scrollTop > target){
+            $img.css("width", "100%");
+        }
+        else{
+            $img.css("width", "60%");
+        }
+    }
+    var init = function(){
+        $(function(){
+            $img = $('.image-wrapper>img');
+            var windowWidth = $window.width();
+            if(windowWidth < 992) {
+                return;
+            }
+
             $window.scroll(function(){
-                scrollTop = $window.scrollTop();
-                
-                if (scrollTop > target){
-                    $img.css("width", "100%");
-                }
-                else{
-                    $img.css("width", "60%");
-                }
+                scrollEventHandler();
             });
         });
     }
+    var topBtnClickHandler = function(){
+        $('html, body').animate({
+            scrollTop: $(".main").offset().top
+        }, 1000);
+    }
     return {
-        initialize : addZoomEffect
+        init : init,
+        topBtnClickHandler : topBtnClickHandler
     }
 })(jQuery);

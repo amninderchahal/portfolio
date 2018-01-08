@@ -5,7 +5,7 @@ angular.module('portfolio.about', ['ngRoute'])
     $scope.startTimer = function(){
         if ( angular.isDefined(timer) ) return;
         timer = $interval(function(){
-            renderSkills.refresh(limit);
+            BackgroundSkillsModule.refresh(limit);
         }, 4000);
     }
     $scope.clearTimer = function(){
@@ -23,10 +23,10 @@ angular.module('portfolio.about', ['ngRoute'])
             skills = [];
             $scope.mySkills.map(function(obj){
                 obj.skills.map(function(skill){
-                    skills.push(skill.title);
+                    skills.push(skill.title)
                 })
             });
-            renderSkills.init(skills);
+            BackgroundSkillsModule.init(skills);
             limit = skills.length;
             $scope.startTimer();
     });
@@ -44,158 +44,162 @@ angular.module('portfolio.about', ['ngRoute'])
             span.classList.add("glyphicon-pause");
             span.classList.remove("glyphicon-play");
             isPlaying = true;
-            renderSkills.refresh(limit);
+            BackgroundSkillsModule.refresh(limit);
             $scope.startTimer();
         }
     }
     $scope.$on('$destroy', function() {
         $scope.clearTimer();
-        renderSkills.clearScrollTimer();
     });
 }]);
+
 Number.prototype.between = function(a, b) {
     var min = Math.min(a, b),
       max = Math.max(a, b);
   
     return this > min && this < max;
 };
-var renderSkills = (function($){
-    var scrollTimer,
-        colors = ['#B8860B', '#03A678','#3477DB', '#F64747', '#9B59B6'];
-    var getRandom = function(range, check){
-        var rnd = Math.random(),
-            number = Math.floor(rnd * range);
 
-        if(check){
-            while(number < 4){
+var BackgroundSkillsModule = (function($) {
+    var $window = $(window),
+        $bgContainer, $buttons, $scrollDownBtn,
+        colors = ['#B8860B', '#03A678', '#3477DB', '#F64747', '#9B59B6'];
+
+    var getRandomNumber = function(range, checkLimit) {
+        var rndm = Math.random(),
+            number = Math.floor(rndm * range);
+
+        if (checkLimit) {
+            while (number < 4) {
                 rnd = Math.random();
                 number = Math.floor(rnd * range);
             }
         }
         return number;
     }
-    var getElement= function(txt, index){
-        var element = "<p id='bg-skill-"+index+"' class='bg-skill'>"+txt+"</p>";
-        return element;
-    }
-    var checkCss = function(top, left, styles){
-        var isSame = false;
-        styles.forEach(function(style){
-            var cssTop = parseInt(style.css.top);
-            var cssLeft = parseInt(style.css.left);
-            if(cssTop.between(top-12, top+12) && cssLeft.between(left-15, left+15)){
+    var checkOverlappingStyle = function(top, left, styles) {
+        var cssTop, cssLeft, checkCssTop, checkCssLeft,
+            isSame = false;
+        styles.forEach(function(style) {
+            cssTop = parseInt(style.css.top);
+            cssLeft = parseInt(style.css.left);
+            checkCssTop = cssTop.between(top - 12, top + 12);
+            checkCssLeft = cssLeft.between(left - 15, left + 15);
+            if (checkCssTop && checkCssLeft) {
                 isSame = true;
             }
         });
         return isSame;
     }
-    var renderStyle = function(limit){
-        var opacity, top, left, rndm, deg, orientation, rotate,  
-            styles = [];
-        
-        for(i=0; i<limit; i++){
-            top = getRandom(80, true);
-            left = getRandom(85, true);
-            opacity = 1;
+    var getCssForElement = function(counter, styles) {
+        var rotateProp, randomIndex, degree, isClockwise,
+            top = getRandomNumber(80, true),
+            left = getRandomNumber(85, true),
+            elementNumber = counter + 1;
 
-            while(checkCss(top, left, styles)){
-                top = getRandom(80, true);
-                left = getRandom(85, true);
+        while (checkOverlappingStyle(top, left, styles)) {
+            top = getRandomNumber(80, true);
+            left = getRandomNumber(85, true);
+        }
+
+        randomIndex = getRandomNumber(5, false);
+        degree = getRandomNumber(14, true);
+        isClockwise = Math.random() >= 0.5;
+        if (isClockwise) {
+            rotateProp = "rotate(" + degree + "deg)";
+        } else {
+            rotateProp = "rotate(-" + degree + "deg)";
+        }
+        return {
+            elementId: "#bg-skill-" + elementNumber,
+            css: {
+                top: top + "%",
+                left: left + "%",
+                color: colors[randomIndex],
+                transform: rotateProp
             }
-            
-            rndm = getRandom(5, false);
-            deg = getRandom(14, true);
-            orientation = Math.random() >= 0.5;
-            if(orientation){
-                rotate = "rotate("+deg+"deg)";
-            }
-            else{
-                rotate = "rotate(-"+deg+"deg)";
-            }
-            styles.push({
-                name:"#bg-skill-"+(i+1),
-                css: {
-                    top: top+"%",
-                    left: left+"%",
-                    color: colors[rndm],
-                    opacity:opacity,
-                    transform: rotate
-                }
-            })
+        }
+    }
+    var createStyleArray = function(elementCount) {
+        var styles = [];
+
+        for (i = 0; i < elementCount; i++) {
+            var style = getCssForElement(i, styles);
+            styles.push(style);
         }
         return styles;
     }
-    var applyStyle = function(styles){
-        styles.map(function(style){
-            $(style.name).css(style.css);
+    var getElementsArray = function(skills) {
+        var elements = [],
+            element, elementNumber;
+
+        skills.map(function(txt, index) {
+            elementNumber = index + 1;
+            element = "<p id='bg-skill-" + elementNumber + "' class='bg-skill'>" + txt + "</p>"
+            elements.push(element);
+        });
+        return elements;
+    }
+    var applyStyleToSkillsText = function(styles) {
+        styles.map(function(style) {
+            $(style.elementId).css(style.css);
         });
     }
-    var scrollHandler = function(scrollTop){
+    var animateOnScroll = function(scrollTop) {
         var blur = 0,
-            scale = 1,
-            $bgContainer = $('.bg-container'),
-            $btns = $('#scroll-down-btn, #refreshSkills');
+            scale = 1;
 
-        if(scrollTop > 150){
+        if (scrollTop > 150) {
             blur = 5;
             scale = 1.6;
-            $btns.css("opacity", 0);
-        }
-        else{
+            $buttons.css("opacity", 0);
+        } else {
             blur = 0;
             scale = 1;
-            $btns.css("opacity", 1);
+            $buttons.css("opacity", 1);
         }
         $bgContainer.css({
-            filter : "blur("+blur+"px)",
-            transform : "scale("+scale+")"
+            filter: "blur(" + blur + "px)",
+            transform: "scale(" + scale + ")"
         });
     }
-    var initialize = function(skills){
-        var elements = [],
-            skill, styles,
-            limit = skills.length;
-
-        skills.map(function(txt, index){
-            skill = getElement(txt, index+1);
-            elements.push(skill);
-        });
-        $('.bg-container').append(elements);
-        styles = renderStyle(limit);
-
-        $(function(){
-            var scrollTop,
-                isScrolled = false;
-            
-            applyStyle(styles);
-            
-            $(window).scroll(function(){
+    var bindJqueryEvents = function(data) {
+        $bgContainer = $('.bg-container');
+        $buttons = $('#scroll-down-btn, #refreshSkills');
+        $scrollDownBtn = $('#scroll-down-btn');
+        $bgContainer.append(data.elements);
+        $(function() {
+            var scrollTop;
+            applyStyleToSkillsText(data.stylesArray);
+            $window.scroll(function() {
                 scrollTop = $(window).scrollTop();
-                isScrolled = true;
+                animateOnScroll(scrollTop);
             });
-            scrollTimer = setInterval(function() {
-                if (isScrolled) {
-                    scrollHandler(scrollTop);
-                    isScrolled = false;
-                }
-              }, 50);
-            $('#scroll-down-btn').click(function(){
+            $scrollDownBtn.click(function() {
                 $('html, body').animate({
-                    scrollTop : $('.about-page-content').offset().top
+                    scrollTop: $('.about-page-content').offset().top
                 }, 1200);
             });
         });
     }
-    var refresh = function(limit){
-        var styles = renderStyle(limit);
-        applyStyle(styles);
+    var init = function(skills) {
+        var stylesArray, elements,
+            count = skills.length;
+
+        elements = getElementsArray(skills);
+        stylesArray = createStyleArray(count);
+        var data = {
+            elements: elements,
+            stylesArray: stylesArray
+        }
+        bindJqueryEvents(data);
     }
-    var clearScrollTimer = function(){
-        clearInterval(scrollTimer);
+    var refresh = function(count) {
+        stylesArray = createStyleArray(count);
+        applyStyleToSkillsText(stylesArray);
     }
     return {
-        init : initialize,
-        refresh : refresh,
-        clearScrollTimer : clearScrollTimer
+        init: init,
+        refresh: refresh
     }
 })(jQuery);

@@ -18,7 +18,7 @@
         /* Prevent same page reload on nav click */
         $('.nav-link').on('click', preventSamePageReload);
 
-        /* Hide navbar on mobile when user clicks on content */
+        /* Hide navbar on mobile when user clicks on body */
         $('.main').on('click', function(){
             if($('.sidebar').hasClass('sidebar-visible')){
                 $('.sidebar-toggle>button').trigger('click');
