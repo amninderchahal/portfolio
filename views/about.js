@@ -55,7 +55,7 @@ angular.module('portfolio.about', ['ngRoute'])
 
 Number.prototype.between = function(a, b) {
     var min = Math.min(a, b),
-      max = Math.max(a, b);
+        max = Math.max(a, b);
   
     return this > min && this < max;
 };
@@ -65,7 +65,7 @@ var BackgroundSkillsModule = (function($) {
         $bgContainer, $buttons, $scrollDownBtn,
         colors = ['#B8860B', '#03A678', '#3477DB', '#F64747', '#9B59B6'];
 
-    var getRandomNumber = function(range, checkLimit) {
+    var _getRandomNumber = function(range, checkLimit) {
         var rndm = Math.random(),
             number = Math.floor(rndm * range);
 
@@ -77,7 +77,7 @@ var BackgroundSkillsModule = (function($) {
         }
         return number;
     }
-    var checkOverlappingStyle = function(top, left, styles) {
+    var _checkOverlappingStyle = function(top, left, styles) {
         var cssTop, cssLeft, checkCssTop, checkCssLeft,
             isSame = false;
         styles.forEach(function(style) {
@@ -91,19 +91,19 @@ var BackgroundSkillsModule = (function($) {
         });
         return isSame;
     }
-    var getCssForElement = function(counter, styles) {
+    var _getCssForElement = function(counter, styles) {
         var rotateProp, randomIndex, degree, isClockwise,
-            top = getRandomNumber(80, true),
-            left = getRandomNumber(85, true),
+            top = _getRandomNumber(80, true),
+            left = _getRandomNumber(85, true),
             elementNumber = counter + 1;
 
-        while (checkOverlappingStyle(top, left, styles)) {
-            top = getRandomNumber(80, true);
-            left = getRandomNumber(85, true);
+        while (_checkOverlappingStyle(top, left, styles)) {
+            top = _getRandomNumber(80, true);
+            left = _getRandomNumber(85, true);
         }
 
-        randomIndex = getRandomNumber(5, false);
-        degree = getRandomNumber(14, true);
+        randomIndex = _getRandomNumber(5, false);
+        degree = _getRandomNumber(14, true);
         isClockwise = Math.random() >= 0.5;
         if (isClockwise) {
             rotateProp = "rotate(" + degree + "deg)";
@@ -120,16 +120,16 @@ var BackgroundSkillsModule = (function($) {
             }
         }
     }
-    var createStyleArray = function(elementCount) {
+    var _createStyleArray = function(elementCount) {
         var styles = [];
 
         for (i = 0; i < elementCount; i++) {
-            var style = getCssForElement(i, styles);
+            var style = _getCssForElement(i, styles);
             styles.push(style);
         }
         return styles;
     }
-    var getElementsArray = function(skills) {
+    var _getElementsArray = function(skills) {
         var elements = [],
             element, elementNumber;
 
@@ -140,12 +140,12 @@ var BackgroundSkillsModule = (function($) {
         });
         return elements;
     }
-    var applyStyleToSkillsText = function(styles) {
+    var _applyStyleToSkillsText = function(styles) {
         styles.map(function(style) {
             $(style.elementId).css(style.css);
         });
     }
-    var animateOnScroll = function(scrollTop) {
+    var _animateOnScroll = function(scrollTop) {
         var blur = 0,
             scale = 1;
 
@@ -163,17 +163,18 @@ var BackgroundSkillsModule = (function($) {
             transform: "scale(" + scale + ")"
         });
     }
-    var bindJqueryEvents = function(data) {
+    var _bindJqueryEvents = function(data) {
         $bgContainer = $('.bg-container');
         $buttons = $('#scroll-down-btn, #refreshSkills');
         $scrollDownBtn = $('#scroll-down-btn');
         $bgContainer.append(data.elements);
+
         $(function() {
             var scrollTop;
-            applyStyleToSkillsText(data.stylesArray);
+            _applyStyleToSkillsText(data.stylesArray);
             $window.scroll(function() {
                 scrollTop = $(window).scrollTop();
-                animateOnScroll(scrollTop);
+                _animateOnScroll(scrollTop);
             });
             $scrollDownBtn.click(function() {
                 $('html, body').animate({
@@ -186,17 +187,17 @@ var BackgroundSkillsModule = (function($) {
         var stylesArray, elements,
             count = skills.length;
 
-        elements = getElementsArray(skills);
-        stylesArray = createStyleArray(count);
+        elements = _getElementsArray(skills);
+        stylesArray = _createStyleArray(count);
         var data = {
             elements: elements,
             stylesArray: stylesArray
         }
-        bindJqueryEvents(data);
+        _bindJqueryEvents(data);
     }
     var refresh = function(count) {
-        stylesArray = createStyleArray(count);
-        applyStyleToSkillsText(stylesArray);
+        stylesArray = _createStyleArray(count);
+        _applyStyleToSkillsText(stylesArray);
     }
     return {
         init: init,

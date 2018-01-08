@@ -26,7 +26,7 @@ var BindJSEvents = (function($){
     var $window = $(window),
         $img;
 
-    var scrollEventHandler = function(){
+    var _scrollEventHandler = function(){
         var target = 200,
             scrollTop = $window.scrollTop();
         if (scrollTop > target){
@@ -45,7 +45,7 @@ var BindJSEvents = (function($){
             }
 
             $window.scroll(function(){
-                scrollEventHandler();
+                _scrollEventHandler();
             });
         });
     }
