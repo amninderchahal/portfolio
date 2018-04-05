@@ -456,7 +456,7 @@ a:focus{
     margin-left: 30px;
 }
 .project{
-    margin: 30px auto;
+    margin: 30px;
 }
 .project-link,
 .project-link:hover,
@@ -468,9 +468,17 @@ a:focus{
     display: block;
     position: relative;
     font-size: 28px;
-    width:85%;
+    width:90%;
     margin:auto;
     overflow: hidden;
+}
+.project-container:nth-child(even) .project-link{
+    margin-left:auto;
+    margin-right:3%;
+}
+.project-container:nth-child(odd) .project-link{
+    margin-left:3%;
+    margin-right:auto;
 }
 .project-link>img{
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
@@ -1026,8 +1034,13 @@ a:focus{
     .project-section{
         width:95%;
     }
-    .project{
+    .project-link{
         width:100%;
+    }
+    .project-container:nth-child(even) .project-link,
+    .project-container:nth-child(odd) .project-link{
+        margin-left: 0;
+        margin-right: 0;
     }
     .project-close-icon{
         width:50px;
