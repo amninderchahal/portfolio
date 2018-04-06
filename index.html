@@ -1,80 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolio">
-<head>
-    <meta charset="UTF-8">
-    <title ng-bind="$root.title+ ' - Amninder Chahal'"></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--Icons-->
-    <link rel="stylesheet" href="css/material-icons.css">
-    <!--Fonts-->
-    <link href="css/google-fonts.css" rel="stylesheet">
-    <!--Stylesheet-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
-
-    <!-- Internet Explorer Style-->
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
-    <!--[if IE]>
-        <link rel="stylesheet" type="text/css" href="css/IE.css">
-    <![endif]-->
-</head>
-<body ng-controller="appCtrl">
-    <div>
-        <div class="sidebar-toggle animateEaseInOut">
-            <button class="btn btn-default" type="button">
-                <span class="glyphicon glyphicon-menu-hamburger"></span>
-            </button>
-        </div>
-        <div class="sidebar animateEaseInOut">
-            <a ng-class="{active:isActive('/')}" class="nav-link" href="#/">
-                <h4 class="nav-link-text">About</h4>
-                <span class="nav-link-icon-span">
-                    <hr class="nav-link-line" />
-                    <p class="nav-link-icon"><i class="material-icons">account_box</i></p>
-                </span>
-                <p class="nav-link-subtitle">Who I Am</p>
-            </a>
-            <a ng-class="{active:isActive('/work') || isActive('/work/project/'+projectId)}" class="nav-link" href="#/work">
-                <h4 class="nav-link-text">Work</h4>
-                <span class="nav-link-icon-span">
-                    <hr class="nav-link-line" />
-                    <p class="nav-link-icon"><i class="material-icons">desktop_mac</i></p>
-                </span>
-                <p class="nav-link-subtitle">View Projects</p>
-            </a>
-            <a ng-class="{active:isActive('/contact')}" class="nav-link" href="#/contact">
-                <h4 class="nav-link-text">Contact</h4>
-                <span class="nav-link-icon-span">
-                    <hr class="nav-link-line" />
-                    <p class="nav-link-icon"><i class="material-icons">contact_phone</i></p>
-                </span>
-                <p class="nav-link-subtitle">Get In Touch</p>
-            </a>
-        </div>
-    </div>
-    <div class="main">
-        <div class="section {{ pageClass }}" ng-view></div>
-    </div>
-    <!--Scripts-->
-    <!--jQuery and Bootstrap-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--Angular JS-->
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
-    <script src="js/angular-animate.min.js"></script>
-    <!--custom scripts-->
-    <script src="app.js"></script>
-    <script src="js/script.js"></script>
-    <script src="views/about.js"></script>
-    <script src="views/work.js"></script>
-    <script src="views/project.js"></script>
-    <script src="views/resume.js"></script>
-    <script src="views/contact.js"></script>
-    <script src="views/directives/projectLink.js"></script>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>portfolio</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
