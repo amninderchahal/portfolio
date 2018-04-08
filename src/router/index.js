@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/pages/HelloWorld'
+import About from '@/pages/about/about'
 
 Vue.use(Router)
 
@@ -9,9 +9,9 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      meta: {title: 'Hello world'},
-      component: HelloWorld
+      name: 'About',
+      meta: {title: 'Portfolio - About'},
+      component: About
     }
   ]
 });
