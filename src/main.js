@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+require('./assets/js/jquery.min.js');
+require('./assets/js/bootstrap.min.js');
+require('./assets/js/script.js');
 
 Vue.config.productionTip = false
 
