@@ -10,6 +10,20 @@
         "repeatable":[
             {
                 "title":"Web Developer",
+                "duration":"Jan 2018 - Present",
+                "institutionName":"Cloud DX",
+                "location":"Kitchener, ON, Canada",
+                "text":"A company that revolutionized remote health monitoring by building ISO compliant medical devices that monitor vitals of patient and keep the patient connected to the doctors.",
+                "listTitle":"Responsibilities:",
+                "listItems":[
+                    "Build front-end using Angular, RxJS, and Webpack",
+                    "Design user interfaces using HTML5 and CSS3",
+                    "Fix bugs in existing applications in Node.js and ASP.Net",
+                    "Follow agile methodologies"
+                ]
+            },
+            {
+                "title":"Web Developer",
                 "duration":"July 2015 - July 2016",
                 "institutionName":"HackEarth Private Limited",
                 "location":"Mohali, Punjab, India",
@@ -45,7 +59,7 @@
         "repeatable":[
             {
                 "title":"Mobile Solutions Development",
-                "duration":"Sept 2016 - Present",
+                "duration":"Sept 2016 - Jan 2018",
                 "institutionName":"Conestoga College",
                 "location":"Kitchener, ON, Canada",
                 "text":"Solid understanding of software design concepts. Proficient with user interface design principles, computer and web application security, and usability testing",
@@ -67,7 +81,7 @@
         "repeatable":[
             {
                 "listItems":[
-                    "Front-end: Angularjs, React JS, jQuery, jQuery UI, and Bootstrap",
+                    "Front-end: Angular, React JS, jQuery, jQuery UI, and Bootstrap",
                     "Back-end: Laravel, ASP.Net, Java EE, Node JS, and ES6",
                     "Core programming languages: HTML5, CSS3, JavaScript, PHP, C#, Java, and SQL",
                     "Databases: MySQL, Microsoft SQL Server",

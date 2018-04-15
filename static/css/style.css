@@ -68,7 +68,7 @@ a:focus{
     -webkit-transition: color .5s;
     -moz-transition: color .5s;
 }
-.nav-link.active{
+.nav-link.router-link-active{
     border-right: 3px solid #666666;
 }
 .nav-link>h4{
@@ -179,7 +179,7 @@ a:focus{
 }
 .learn-more{
     text-align: center;
-    padding-top:30px;
+    padding-top:80px;
     clear: both;
     font-size: 15px;
     margin-top: auto;

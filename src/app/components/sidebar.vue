@@ -6,7 +6,7 @@
             </button>
         </div>
         <div class="sidebar animateEaseInOut">
-            <router-link class="nav-link active" to="/">
+            <router-link class="nav-link" to="/about">
                 <h4 class="nav-link-text">About</h4>
                 <span class="nav-link-icon-span">
                     <hr class="nav-link-line" />
