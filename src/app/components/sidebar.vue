@@ -6,30 +6,30 @@
             </button>
         </div>
         <div class="sidebar animateEaseInOut">
-            <a class="nav-link active" href="#/">
+            <router-link class="nav-link active" to="/">
                 <h4 class="nav-link-text">About</h4>
                 <span class="nav-link-icon-span">
                     <hr class="nav-link-line" />
                     <p class="nav-link-icon"><i class="material-icons">account_box</i></p>
                 </span>
                 <p class="nav-link-subtitle">Who I Am</p>
-            </a>
-            <a class="nav-link" href="#/work">
+            </router-link>
+            <router-link class="nav-link" to="/work">
                 <h4 class="nav-link-text">Work</h4>
                 <span class="nav-link-icon-span">
                     <hr class="nav-link-line" />
                     <p class="nav-link-icon"><i class="material-icons">desktop_mac</i></p>
                 </span>
                 <p class="nav-link-subtitle">View Projects</p>
-            </a>
-            <a class="nav-link" href="#/contact">
+            </router-link>
+            <router-link class="nav-link" to="/contact">
                 <h4 class="nav-link-text">Contact</h4>
                 <span class="nav-link-icon-span">
                     <hr class="nav-link-line" />
                     <p class="nav-link-icon"><i class="material-icons">contact_phone</i></p>
                 </span>
                 <p class="nav-link-subtitle">Get In Touch</p>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>

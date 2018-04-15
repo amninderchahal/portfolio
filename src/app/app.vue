@@ -2,19 +2,21 @@
 <div>
   <SideBar/>
   <div class="main">
-    <router-view/>
+      <router-view/>
   </div>
 </div>
 </template>
 
 <script>
-
-import SideBar from './components/SideBar.vue';
+import SideBar from './components/sidebar.vue';
 
 export default {
   name: 'App',
   components: {
     SideBar
+  },
+  created(){
+    this.$store.dispatch('getStateData')
   }
 }
 </script>
