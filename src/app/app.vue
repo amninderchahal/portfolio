@@ -1,8 +1,10 @@
 <template>
 <div>
   <SideBar/>
-  <div class="main">
+  <div id="main" class="main">
+    <transition name="animate">
       <router-view/>
+    </transition>
   </div>
 </div>
 </template>

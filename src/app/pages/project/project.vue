@@ -1,6 +1,6 @@
 <template>
-<div class="section">
-    <div class="project-div">
+<div class="section project-page">
+    <div class="project-div" v-if="project">
         <router-link class="project-close-icon"  to="/work">
             <div class="lr">
                 <div class="rl"></div>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="image-wrapper">
-                <img id="img-index+1" v-for="(img, index) in project.img" :key="index" :src="'/'+img" alt="Image">
+                <img class="project-page-images" id="img-index+1" v-for="(img, index) in project.img" :key="index" :src="'/'+img" alt="Image">
             </div>
         </div>
         <a class="btn btn-success" @click="topBtnClick" href="#">
@@ -41,19 +41,56 @@
 
 <script>
 export default {
-    name: 'Project',
-    computed: {
-        project(){
-            const index = this.$route.params.index;
-            return this.$store.getters.getProject(index - 1);
-        }
-    },
-    methods: {
-        topBtnClick(event){
-            if(event){
-                event.preventDefault();
-            }
-        }
+  name: "Project",
+  computed: {
+    project() {
+      const index = this.$route.params.index;
+      return this.$store.getters.getProject(index - 1);
     }
-}
+  },
+  methods: {
+    topBtnClick(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        const scrollTop = document.body.scrollTop,
+            targetOffsetX = document.getElementById("main").offsetTop,
+            animationTime = 1000;
+        for(let i = 0; i < animationTime; i++){
+            this.timer = setInterval(() => {
+
+            }, 1);
+        }
+        
+        window.scrollTo()
+    },
+    scrollTo(){
+        
+    }
+  },
+  mounted() {
+    let scrollTop;
+    const target = 200,
+      images = document.getElementsByClassName("project-page-images"),
+      windowWidth = window.innerWidth;
+    console.log(images);
+    const setWidthToEachImg = function(width) {
+      Array.prototype.forEach.call(images, img => {
+        img.style.width = width;
+      });
+    };
+
+    if (windowWidth < 992) {
+      return;
+    }
+    window.onscroll = function() {
+      scrollTop = document.body.scrollTop;
+      if (scrollTop > target) {
+        setWidthToEachImg("100%");
+      } else {
+        setWidthToEachImg("60%");
+      }
+    };
+  }
+};
 </script>

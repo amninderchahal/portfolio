@@ -1,8 +1,14 @@
+const webpack = require('webpack');
+const path = require('path');
+
 module.exports = {
-    entry: './src/main.js',
+    entry: {
+        main: './src/main.js',
+        vendor: ['vue', 'vue-router', 'vuex', 'axios']
+    },
     output: {
-        path: __dirname + '/dist',
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -40,4 +46,15 @@ module.exports = {
         },
         extensions: ['*', '.js', '.vue', '.json']
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendor",
+                    chunks: "all"
+                }
+            }
+        }
+    }
 }

@@ -1,5 +1,5 @@
 <template>
-<div class="section">
+<div class="section work-page">
     <div class="content-wrapper work-section container-fluid">
         <div class="row heading-wrapper">
             <h1 class="heading-1 title" @click="log()">Personal Projects</h1>

@@ -466,11 +466,9 @@ a:focus{
 }
 .project-link{
     display: block;
-    position: relative;
     font-size: 28px;
     width:90%;
     margin:auto;
-    overflow: hidden;
 }
 .project-container:nth-child(even) .project-link{
     margin-left:auto;
@@ -480,13 +478,19 @@ a:focus{
     margin-left:3%;
     margin-right:auto;
 }
-.project-link>img{
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-    z-index:9;
-    margin:auto;
+.project-link-img-wrapper{
     display: block;
-    max-width: 99%;
-    height: auto;
+    width: 100%;
+    position: relative;
+    margin: 5px;
+}
+.project-link-img-wrapper>img{
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.16);
+    z-index:9;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .project-title{
     color:#4d4d4d;
@@ -494,24 +498,34 @@ a:focus{
     text-align: center;
     margin-top: 10px;
 }
+@keyframes hoverAnimation{
+    from { left: 50% }
+    to { width: 100%; left: 0; right: 0; }
+}
 .overlay {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom:46px;
-    height: 0;
-    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 50%;
+    right: 50%;
+    height: 100%;
+    width: 0;
     z-index:10;
     opacity: 0.9;
-    transition: height .5s ease-in-out;
-    -webkit-transition: height .5s ease-in-out;
-    -moz-transition: height .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
     background-color: #5F76B3;
+}
+.project-link:hover .overlay{
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 .text {
     color:#fff;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     height: 38px;
     visibility: hidden;
@@ -524,9 +538,6 @@ a:focus{
 }
 .text .material-icons{
     font-size: 38px;
-}
-.project-link:hover .overlay{
-    height:100%;
 }
 .project-link:hover .text{
     visibility: visible;
@@ -845,42 +856,29 @@ a:focus{
         60% { -moz-transform: rotateZ(16deg); }
         100% { -moz-transform: translateY(100%) rotateZ(17deg); }
     }
-    /* slide in from right */
-    @keyframes slideInRight {
-        from 	{ transform:translateX(100%); }
-        to 		{ transform: translateX(0); }
-    }
-    @-moz-keyframes slideInRight {
-        from 	{ -moz-transform:translateX(100%); }
-        to 		{ -moz-transform: translateX(0); }
-    }
-    @-webkit-keyframes slideInRight {
-        from 	{ -webkit-transform:translateX(100%); }
-        to 		{ -webkit-transform: translateX(0); }
-    }
     /* slide down */
-    @keyframes slideDown {
+    @keyframes SlideDown {
         from 	{ transform:translateY(0); }
         to 		{ transform: translateY(100%); }
     }
-    @-moz-keyframes slideDown {
+    @-moz-keyframes SlideDown {
         from 	{ -moz-transform:translateY(0); }
         to 		{ -moz-transform: translateY(100%); }
     }
-    @-webkit-keyframes slideDown {
+    @-webkit-keyframes SlideDown {
         from 	{ -webkit-transform:translateY(0); }
         to 		{ -webkit-transform: translateY(100%); }
     }
     /* slide in from bottom */
-    @keyframes slideInBottom {
+    @keyframes SlideInBottom {
         from 	{ transform:translateY(100%); }
         to 		{ transform: translateY(0); }
     }
-    @-moz-keyframes slideInBottom {
+    @-moz-keyframes SlideInBottom {
         from 	{ -moz-transform:translateY(100%); }
         to 		{ -moz-transform: translateY(0); }
     }
-    @-webkit-keyframes slideInBottom {
+    @-webkit-keyframes SlideInBottom {
         from 	{ -webkit-transform:translateY(100%); }
         to 		{ -webkit-transform: translateY(0); }
     }
@@ -910,29 +908,56 @@ a:focus{
         from 	{ opacity:0; }
         to 		{ opacity: 1; }
     }
-    /* Page load animations */
-    .main .ng-enter{
-        z-index: 888; 
-        animation:FadeIn 0.8s ease;
+    /* Slide out left */
+    @keyframes SlideOutLeft {
+        from 	{ transform: translateX(0); }
+        to 		{ transform: translateX(-100%); }
     }
-    .main .ng-leave{
+    @-moz-keyframes SlideOutLeft {
+        from 	{ -moz-transform: translateX(0); }
+        to 		{ -moz-transform: translateX(-100%); }
+    }
+    @-webkit-keyframes SlideOutLeft {
+        from 	{ -webkit-transform: translateX(0); }
+        to 		{ -webkit-transform: translateX(-100%); }
+    }
+    /* Slide in from Left */
+    @keyframes SlideInLeft {
+        from 	{ transform: translateX(-100%); }
+        to 		{ transform: translateX(0); }
+    }
+    @-moz-keyframes SlideInLeft {
+        from 	{ -moz-transform: translateX(-100%); }
+        to 		{ -moz-transform: translateX(0); }
+    }
+    @-webkit-keyframes SlideInLeft {
+        from 	{ -webkit-transform: translateX(-100%); }
+        to 		{ -webkit-transform: translateX(0); }
+    }
+    /* Page load animations */
+    .animate-enter-active{
+        z-index: 888;
+        animation: FadeIn 0.8s ease;
+    }
+    .animate-leave-active{
         z-index: 999;
-        transform-origin: 0% 0%; 
+        transform-origin: 0% 0%;
         animation: rotateFall 1.2s both ease-in;
     }
-    .main .page-about.ng-leave{
+    .page-about.animate-leave-active{
         animation: none;
     }
-    .main .page-work.ng-leave{
-        z-index: 777;
-        animation: FadeOut 0.6s ease;
+    .work-page.animate-enter-active{
+        animation: SlideInLeft 0.8s ease;
     }
-    .main .page-project.ng-enter{
-        z-index: 1000;
-        animation:slideInBottom 0.8s ease;
+    .work-page.animate-leave-active{
+        animation: SlideOutLeft 0.8s ease;
     }
-    .main .page-project.ng-leave{
-        animation:slideDown 0.8s ease-in;
+    .project-page.animate-enter-active{
+        animation: SlideInBottom 0.8s ease;
+    }
+    .project-page.animate-leave-active{
+        animation:SlideDown 0.8s ease-in;
     }
 }
 /****** Tablets ******/
