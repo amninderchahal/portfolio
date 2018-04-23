@@ -1,5 +1,5 @@
 <template>
-<div class="section project-page">
+<div id="project-page" class="section project-page">
     <div class="project-div" v-if="project">
         <router-link class="project-close-icon"  to="/work">
             <div class="lr">
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="image-wrapper">
-                <img class="project-page-images" id="img-index+1" v-for="(img, index) in project.img" :key="index" :src="'/'+img" alt="Image">
+                <img class="project-page-images" id="img-index+1" v-for="(img, index) in project.img" :key="index" :src="img" alt="Image">
             </div>
         </div>
         <a class="btn btn-success" @click="topBtnClick" href="#">
@@ -53,19 +53,22 @@ export default {
         if (event) {
             event.preventDefault();
         }
-        const scrollTop = document.body.scrollTop,
-            targetOffsetX = document.getElementById("main").offsetTop,
-            animationTime = 1000;
-        for(let i = 0; i < animationTime; i++){
-            this.timer = setInterval(() => {
+        const projectPageDiv = document.getElementById("project-page");
+        let currentScrollTop = document.body.scrollTop,
+            targetOffsetX = projectPageDiv.offsetTop + 20,
+            difference = currentScrollTop - targetOffsetX,
+            scrollUnit = difference / 100;
 
-            }, 1);
-        }
-        
-        window.scrollTo()
-    },
-    scrollTo(){
-        
+        this.interval = setInterval(() => {
+            currentScrollTop = document.body.scrollTop;
+            if(currentScrollTop > targetOffsetX){
+                window.scrollTo(0, currentScrollTop - 14);
+                console.log('Interval called'); 
+            } else {
+                window.clearInterval(this.interval);
+                console.log('cleared'); 
+            }
+        }, 1);
     }
   },
   mounted() {
@@ -83,14 +86,18 @@ export default {
     if (windowWidth < 992) {
       return;
     }
-    window.onscroll = function() {
+    window.addEventListener('scroll', function() {
       scrollTop = document.body.scrollTop;
       if (scrollTop > target) {
         setWidthToEachImg("100%");
       } else {
         setWidthToEachImg("60%");
       }
-    };
+    });
+  },
+  beforeDestroy(){
+      window.clearInterval(this.interval);
+      window.removeEventListener('scroll');
   }
 };
 </script>

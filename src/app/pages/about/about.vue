@@ -3,10 +3,10 @@
     <div class="container-fluid">
         <button id="refreshSkills" class="btn btn-primary" type="button" @click="toggle($event)"><span class="glyphicon glyphicon-pause"></span></button>
         <div class="bg-container"></div>
-        <button id="scroll-down-btn" type="button" > 
+        <button id="scroll-down-btn" type="button" @click="scrollDown"> 
             <span class="glyphicon glyphicon-chevron-down"></span>
         </button>
-        <div class="about-page-content">
+        <div  id="about-content" class="about-page-content">
             <div class="row about-heading-wrapper heading-wrapper">
                 <div class="name-heading-wrapper">
                     <h1 class="title heading-1">Amninder Chahal</h1>
@@ -65,19 +65,57 @@
 </template>
 
 <script>
-import  { mapState } from 'vuex';
+import { mapState } from "vuex";
 // import BackgroundSkillsModule from '../../assets/js/background-skills';
 export default {
-  name: 'About',
+  name: "About",
   computed: mapState({
     intro: state => state.aboutData.intro,
     mySkills: state => state.aboutData.mySkills,
     skillSummary: state => state.aboutData.skillSummary
   }),
+  mounted() {
+    const scrollBtn = document.getElementById("scroll-down-btn"),
+      refreshBtn = document.getElementById("refreshSkills");
+
+    let scrollTop,
+      aboutContentOffset = document.getElementById("about-content").offsetTop,
+      mainDivOffset = document.getElementById("main").offsetTop,
+      midPoint = (aboutContentOffset - mainDivOffset) / 2;
+
+    window.addEventListener("scroll", () => {
+      scrollTop = document.body.scrollTop;
+      if (scrollTop > midPoint) {
+        scrollBtn.style.opacity = "0";
+        refreshBtn.style.opacity = "0";
+      } else {
+        scrollBtn.style.opacity = "1";
+        refreshBtn.style.opacity = "1";
+      }
+    });
+  },
   methods: {
-    toggle(){
-        console.log('Toggle called');
+    toggle() {
+      console.log("Toggle called");
+    },
+    scrollDown() {
+      const aboutContentDiv = document.getElementById("about-content");
+      let currentScrollTop = document.body.scrollTop,
+        targetOffsetX = aboutContentDiv.offsetTop;
+
+      this.interval = setInterval(() => {
+        currentScrollTop = document.body.scrollTop;
+        if (currentScrollTop < targetOffsetX) {
+          window.scrollTo(0, currentScrollTop + 10);
+        } else {
+          window.clearInterval(this.interval);
+        }
+      }, 1);
     }
+  },
+  destroyed() {
+    window.removeEventListener("scroll");
+    window.clearInterval(this.interval);
   }
-}
+};
 </script>
