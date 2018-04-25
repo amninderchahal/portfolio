@@ -1,11 +1,12 @@
 <template>
 <div id="project-page" class="section project-page">
     <div class="project-div" v-if="project">
-        <router-link class="project-close-icon"  to="/work">
-            <div class="lr">
+        <div class="project-close-icon">
+            <router-link class="close-icon-wrapper"  to="/work">
+                <div class="lr"></div>
                 <div class="rl"></div>
-            </div>
-        </router-link>
+            </router-link>
+        </div>
         <h3 class="title heading-1">{{project.title}}</h3>
         <p class="project-labels">
             <span v-for="(label, index) in project.labels" :key="index" class="label label-primary">{{label}}</span>

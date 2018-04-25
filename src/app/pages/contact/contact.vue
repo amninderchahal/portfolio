@@ -12,14 +12,14 @@
             </div>
             <div class="contact-section">
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <a href="mailto:amninderchahal101@gmail.com" class="contact-item">
                         <i class="material-icons">email</i>
-                        <p>amninderchahhal@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
+                        <p>amninderchahal101@gmail.com</p>
+                    </a>
+                    <a href="tel:+15197221603" class="contact-item">
                         <i class="material-icons">phone</i>
                         <p>+1 (519) 722-1603</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="social-media-links">
                     <div class="link-wrapper">
@@ -43,7 +43,7 @@
             </div>
             <div class="contact-section">
                 <div class="mail-btn-wrapper">
-                    <a class="mail-btn btn btn-primary" href="mailto:amninderchahhal@gmail.com">Send An Email</a>
+                    <a class="mail-btn btn btn-primary" href="mailto:amninderchahal101@gmail.com">Send An Email</a>
                 </div>
             </div>
         </div>

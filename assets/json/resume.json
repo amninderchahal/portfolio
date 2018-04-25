@@ -81,12 +81,12 @@
         "repeatable":[
             {
                 "listItems":[
-                    "Front-end: Angular, React JS, jQuery, jQuery UI, and Bootstrap",
-                    "Back-end: Laravel, ASP.Net, Java EE, Node JS, and ES6",
+                    "Front-end: Angular, React, Vue JS, Redux, RxJS, jQuery, jQuery UI, and Bootstrap",
+                    "Back-end: Laravel, ASP.Net, Java EE, Node JS, Express JS, and ES6",
                     "Core programming languages: HTML5, CSS3, JavaScript, PHP, C#, Java, and SQL",
-                    "Databases: MySQL, Microsoft SQL Server",
+                    "Databases: MySQL, Microsoft SQL Server, MongoDB",
                     "IDE: Visual Studio 2015, SQL Server Management Studio, NetBeans, and Eclipse",
-                    "Tools: Github, Bitbucket"
+                    "Tools: Github, Bitbucket, Jira, Confluence, Slack"
                 ]
             }
         ]

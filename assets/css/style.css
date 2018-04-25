@@ -548,7 +548,6 @@ a:focus{
     padding-top: 50px;
 }
 .project-close-icon{
-    text-align: center;
     display: block;
     position: absolute;
     right:40px;
@@ -556,28 +555,35 @@ a:focus{
     height:70px;
     width: 70px;
 }
-.project-close-icon .lr{
-    z-index: 1051;
+.close-icon-wrapper{
+    position: relative;
+    display: block;
+    height: inherit;
+}
+.close-icon-wrapper .lr,
+.close-icon-wrapper .rl{
+    left: 50%;
+    position: relative;
     width: 1px;
     height: 75px;
-    margin-left: 35px;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
+    background-color: #222;
+    transition: all 0.6s ease-in-out;
+}
+.close-icon-wrapper .lr{
     transform: rotate(45deg);
-    background-color: #222;
 }
-.project-close-icon .lr .rl {
-    z-index: 1052;
-    width: 1px;
-    height: 75px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-color: #222;
+.close-icon-wrapper .rl{
+    top: -75px;
+    transform: rotate(-45deg);
 }
-.project-close-icon:hover .lr,
-.project-close-icon:hover .rl{
-    background-color: gray;
+.project-close-icon:hover{
+    overflow: hidden;
+}
+.close-icon-wrapper:hover .lr{
+    transform: rotate(-225deg);
+}
+.close-icon-wrapper:hover .rl{
+    transform: rotate(225deg);
 }
 .project-close-icon:focus{
     outline: 0;
@@ -718,6 +724,7 @@ a:focus{
 .contact-item{
     margin: 20px auto;
     width: 250px;
+    display: block;
     position: relative;
     font-family: 'Archivo Narrow';
     font-weight: 400;
