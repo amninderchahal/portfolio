@@ -6,31 +6,40 @@
          "skills":[
                 {
                     "title":"HTML5",
-                    "img":"images/skills/html5.png"
+                    "img":"/assets/images/skills/html5.png"
                 },
                 {
                     "title":"CSS3",
-                    "img":"images/skills/css3.png"
+                    "img":"/assets/images/skills/css3.png"
                 },
                 {
                     "title":"JavaScript",
-                    "img":"images/skills/js.png"
+                    "img":"/assets/images/skills/js.png"
                 },
                 {
                     "title":"Bootstrap",
-                    "img":"images/skills/bootstrap.png"
+                    "img":"/assets/images/skills/bootstrap.png"
                 },
                 {
                     "title":"jQuery",
-                    "img":"images/skills/jquery.png"
+                    "img":"/assets/images/skills/jquery.png"
                 },
                 {
-                    "title":"AngularJS",
-                    "img":"images/skills/angularjs.png"
+                    "title":"Angular",
+                    "img":"/assets/images/skills/angular.png"
                 },
                 {
                     "title":"React JS",
-                    "img":"images/skills/reactjs.png"
+                    "img":"/assets/images/skills/reactjs.png"
+                },{
+                    "title":"Vue JS",
+                    "img":"/assets/images/skills/vuejs.jpg"
+                },{
+                    "title":"RxJS",
+                    "img":"/assets/images/skills/rxjs.png"
+                },{
+                    "title":"Redux",
+                    "img":"/assets/images/skills/redux.png"
                 }
             ]
         },
@@ -39,44 +48,44 @@
          "skills":[
                 {
                     "title":"PHP",
-                    "img":"images/skills/php.png"
+                    "img":"/assets/images/skills/php.png"
                 },
                 {
                     "title":"Laravel",
-                    "img":"images/skills/laravel.png"
+                    "img":"/assets/images/skills/laravel.png"
                 },
                 {
                     "title":"ASP.Net",
-                    "img":"images/skills/asp.net.png"
+                    "img":"/assets/images/skills/asp.net.png"
                 },
                 {
                     "title":"C#",
-                    "img":"images/skills/csharp.png"
+                    "img":"/assets/images/skills/csharp.png"
                 },
                 {
                     "title":"Node JS",
-                    "img":"images/skills/nodejs.jpg"
+                    "img":"/assets/images/skills/nodejs.jpg"
                 },
                 {
                     "title":"Java EE",
-                    "img":"images/skills/java_ee.png"
+                    "img":"/assets/images/skills/java_ee.png"
                 },
                 
                 {
                     "title":"RESTful API",
-                    "img":"images/skills/restapi.png"
+                    "img":"/assets/images/skills/restapi.png"
                 },
                 {
                     "title":"SQL Server",
-                    "img":"images/skills/sqlserver.png"
+                    "img":"/assets/images/skills/sqlserver.png"
                 },
                 {
                     "title":"MySQL",
-                    "img":"images/skills/mysql.png"
+                    "img":"/assets/images/skills/mysql.png"
                 },
                 {
                     "title":"MongoDB",
-                    "img":"images/skills/mongodb.png"
+                    "img":"/assets/images/skills/mongodb.png"
                 }
             ]
         }

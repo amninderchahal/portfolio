@@ -3,7 +3,8 @@ angular.module("portfolio.directive.projectLink", [])
     return {
         restrict : 'E',
         scope :{
-            project : "="
+            project : "=",
+            index : "="
         },
         templateUrl : "views/directives/projectLink.html",
         replace : true

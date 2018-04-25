@@ -4,10 +4,10 @@
             <h1 class="heading-1 title">Personal Projects</h1>
         </div>
         <div ng-repeat="project in projects" class="col-sm-6 project-container">
-            <project-link project="project"></project-link>
+            <project-link project="project" index="$index"></project-link>
         </div>
         <div class="learn-more">
-                <p>If you'd like to find out more about my work experience, feel free to <a href="#/contact">contact me</a>.</p>
+            <p>If you'd like to find out more about my work experience, feel free to <a href="#/contact">contact me</a>.</p>
             <div class="learn-more-links">
                 <div class="link-wrapper">
                     <div class="link">
