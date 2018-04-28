@@ -839,6 +839,15 @@ a:focus{
         line-height: 30px;
     }
     /* Background style ends here */
+    /* Hide background skills*/
+    .bg-container,
+    #scroll-down-btn,
+    #refreshSkills{
+        display: none;
+    }
+    .about-page-content{
+        margin-top: 0;
+    }
 
     /****** Page Change Animations for Desktop Only ******/
     /* rotate and fall */
