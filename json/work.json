@@ -3,8 +3,8 @@
             "title" : "BookMySched",
             "labels":["React JS","Laravel","Bootstrap", "jQuery"],
             "img" : [
-                "/assets/images/projects/project-1-img-1.png",
-                "/assets/images/projects/project-1-img-2.png"
+                "/images/projects/project-1-img-1.png",
+                "/images/projects/project-1-img-2.png"
             ],
             "description":"BookMySched is a web-based scheduling system that offers a user friendly, easy to use scheduler with elegant UI. It provides a complete solution for appointment management. It is highly scalable, it can be used by multiple organzations.",
             "features" : [
@@ -23,8 +23,8 @@
             "title" : "Pizzastore Dashboard",
             "labels":["Java","jQuery","Highcharts JS", "Bootstrap"],
             "img" : [
-                "/assets/images/projects/project-2-img-1.png",
-                "/assets/images/projects/project-2-img-2.png"
+                "/images/projects/project-2-img-1.png",
+                "/images/projects/project-2-img-2.png"
             ],
             "description":"A Java Web Application that tracks various expenses and financial statistics of a pizza store and displays the data in beautiful graphs built using HighCharts JS library.",
             "features" : [
@@ -40,8 +40,8 @@
             "title" : "Tic Tac Toe Game",
             "labels":["ASP.Net","C#"],
             "img" : [
-                "/assets/images/projects/project-3-img-1.PNG",
-                "/assets/images/projects/project-3-img-2.PNG"
+                "/images/projects/project-3-img-1.PNG",
+                "/images/projects/project-3-img-2.PNG"
             ],
             "description":"An ASP.Net web application that lets the user play a game of Tic Tac Toe against computer. A simple and fun web based game that I made for class assignment",
             "features" : [
