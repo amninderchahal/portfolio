@@ -3,6 +3,7 @@ angular.module("portfolio.work", ["ngRoute", "portfolio.directive.projectLink"])
     $scope.pageClass = "page-work";
     $http.get('/json/work.json')
     .then(function(response){
-        $scope.projects = response.data.projects;
+        $scope.projects = response.data;
+        console.log($scope.projects);
     });
 }]);
