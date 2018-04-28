@@ -1090,8 +1090,9 @@ a:focus{
     .project-close-icon .lr{
         height: 50px;
     }
-    .project-close-icon .lr .rl {
+    .project-close-icon .rl {
         height: 50px;
+        top: -50px;
     }
     .image-wrapper>img{
         width: 100%;
