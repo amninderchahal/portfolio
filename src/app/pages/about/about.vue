@@ -114,7 +114,6 @@ export default {
     }
   },
   destroyed() {
-    window.removeEventListener("scroll");
     window.clearInterval(this.interval);
   }
 };

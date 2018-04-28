@@ -98,7 +98,6 @@ export default {
   },
   beforeDestroy(){
       window.clearInterval(this.interval);
-      window.removeEventListener('scroll');
   }
 };
 </script>
