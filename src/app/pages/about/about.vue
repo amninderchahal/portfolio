@@ -83,7 +83,7 @@ export default {
       mainDivOffset = document.getElementById("main").offsetTop,
       midPoint = (aboutContentOffset - mainDivOffset) / 2;
 
-    window.addEventListener("scroll", () => {
+    window.onscroll = () => {
       scrollTop = document.body.scrollTop;
       if (scrollTop > midPoint) {
         scrollBtn.style.opacity = "0";
@@ -92,11 +92,11 @@ export default {
         scrollBtn.style.opacity = "1";
         refreshBtn.style.opacity = "1";
       }
-    });
+    };
   },
   methods: {
     toggle() {
-      console.log("Toggle called");
+      // console.log("Toggle called");
     },
     scrollDown() {
       const aboutContentDiv = document.getElementById("about-content");
@@ -104,9 +104,9 @@ export default {
         targetOffsetX = aboutContentDiv.offsetTop;
 
       this.interval = setInterval(() => {
-        currentScrollTop = document.body.scrollTop;
+        currentScrollTop = document.body.scrollTop || window.pageYOffset;
         if (currentScrollTop < targetOffsetX) {
-          window.scrollTo(0, currentScrollTop + 10);
+          window.scrollBy(0, 12);
         } else {
           window.clearInterval(this.interval);
         }

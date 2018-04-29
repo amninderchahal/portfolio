@@ -2,7 +2,7 @@
 <div class="section work-page">
     <div class="content-wrapper work-section container-fluid">
         <div class="row heading-wrapper">
-            <h1 class="heading-1 title" @click="log()">Personal Projects</h1>
+            <h1 class="heading-1 title">Personal Projects</h1>
         </div>
         <div v-for="(project, index) in projects" :key="index" class="col-sm-6 project-container">
             <project-link-item :project="project" :index="index"></project-link-item>
@@ -42,11 +42,6 @@ export default {
     components: {
         ProjectLinkItem
     },
-    computed: mapState(['projects']),
-    methods: { 
-        log(){
-            console.log(this.projects);
-        }
-    }
+    computed: mapState(['projects'])
 }
 </script>

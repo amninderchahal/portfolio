@@ -580,7 +580,7 @@ a:focus{
     overflow: hidden;
 }
 .close-icon-wrapper:hover .lr{
-    transform: rotate(-225deg);
+    transform: rotate(315deg);
 }
 .close-icon-wrapper:hover .rl{
     transform: rotate(225deg);

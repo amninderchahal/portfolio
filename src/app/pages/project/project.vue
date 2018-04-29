@@ -54,20 +54,14 @@ export default {
         if (event) {
             event.preventDefault();
         }
-        const projectPageDiv = document.getElementById("project-page");
-        let currentScrollTop = document.body.scrollTop,
-            targetOffsetX = projectPageDiv.offsetTop + 20,
-            difference = currentScrollTop - targetOffsetX,
-            scrollUnit = difference / 100;
-
+        let currentScrollTop;
+        window.clearInterval(this.interval);
         this.interval = setInterval(() => {
-            currentScrollTop = document.body.scrollTop;
-            if(currentScrollTop > targetOffsetX){
-                window.scrollTo(0, currentScrollTop - 14);
-                console.log('Interval called'); 
+            currentScrollTop = window.pageYOffset || window.scrollTop;
+            if(currentScrollTop > 20){
+                window.scrollBy(0, -12);
             } else {
                 window.clearInterval(this.interval);
-                console.log('cleared'); 
             }
         }, 1);
     }
@@ -77,7 +71,6 @@ export default {
     const target = 200,
       images = document.getElementsByClassName("project-page-images"),
       windowWidth = window.innerWidth;
-    console.log(images);
     const setWidthToEachImg = function(width) {
       Array.prototype.forEach.call(images, img => {
         img.style.width = width;
@@ -87,14 +80,14 @@ export default {
     if (windowWidth < 992) {
       return;
     }
-    window.addEventListener('scroll', function() {
-      scrollTop = document.body.scrollTop;
+    window.onscroll = () => {
+      scrollTop = window.pageYOffset || window.scrollTop;
       if (scrollTop > target) {
         setWidthToEachImg("100%");
       } else {
         setWidthToEachImg("60%");
       }
-    });
+    };
   },
   beforeDestroy(){
       window.clearInterval(this.interval);
