@@ -37,12 +37,20 @@
             <span class="glyphicon glyphicon-chevron-up"></span> Top
         </a>
     </div>
+    <div v-else>
+        <Error />
+    </div>
 </div>
 </template>
 
 <script>
+import Error from '../../components/error'
+
 export default {
   name: "Project",
+  components: {
+      Error
+  },
   computed: {
     project() {
       const index = this.$route.params.index;
