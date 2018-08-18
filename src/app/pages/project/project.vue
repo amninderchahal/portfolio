@@ -59,7 +59,7 @@ export default {
         this.interval = setInterval(() => {
             currentScrollTop = window.pageYOffset || window.scrollTop;
             if(currentScrollTop > 20){
-                window.scrollBy(0, -12);
+                window.scrollBy(0, -13);
             } else {
                 window.clearInterval(this.interval);
             }
