@@ -5,11 +5,11 @@ import Work from './app/pages/work/work.vue'
 import Project from './app/pages/project/project.vue'
 import Contact from './app/pages/contact/contact.vue'
 import Resume from './app/pages/resume/resume.vue'
+import Error from './app/components/error'
 
 Vue.use(Router)
 
 const router = new Router({
-  mode: 'history',
   routes: [
     { 
       path: '/',
@@ -39,9 +39,14 @@ const router = new Router({
       path: '/contact',
       meta: {title: 'Contact - Amninder Chahal'},
       component: Contact
+    },
+    {
+      path: '*',
+      meta: {title: 'Page not found'},
+      component: Error
     }
   ],
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior () {
     return { x: 0, y: 0 }
   }
 });
