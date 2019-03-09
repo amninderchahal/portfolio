@@ -23,21 +23,6 @@
                 ]
             },
             {
-                "title":"Web Developer",
-                "duration":"July 2015 - July 2016",
-                "institutionName":"HackEarth Private Limited",
-                "location":"Mohali, Punjab, India",
-                "text":"A startup that provides IT solutions to professionals and enterprises. I worked on the development, styling,  testing, and deployment of web applications to the cloud.",
-                "listTitle":"Responsibilities:",
-                "listItems":[
-                    "Build front-end using JavaScript, jQuery, Angularjs, and React JS",
-                    "Create responsive user interfaces using HTML5, CSS3, and Bootstrap",
-                    "Create back-end logic for websites and Web APIs in Laravel",
-                    "Write SQL commands and stored procedures in MySQL",
-                    "Work as per agile methodology"
-                ]
-            },
-            {
                 "title":"Web Developer Internship",
                 "duration":"Jan 2015 - June 2015",
                 "institutionName":"HackEarth Private Limited",
