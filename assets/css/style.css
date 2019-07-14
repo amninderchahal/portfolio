@@ -361,6 +361,12 @@ a:focus{
     float: left;
     margin-bottom: 0;
 }
+.resume-section-content .details .duration {
+    width: 70%;
+}
+.resume-section-content .details .location {
+    width: 30%;
+}
 .resume-section-content .header .title{
     float:left;
 }

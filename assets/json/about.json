@@ -1,8 +1,9 @@
 {
     "skillSummary":"I am a Web developer with experience building pixel-perfect websites and exceptional user experience. I understand the importance of writing highly readable and reusable code. I want to be involved in projects that challenge me to learn, work with new technologies and awesome people.",
+    "skillSummary":"I am a Web developer with experience building pixel-perfect websites and exceptional user experience. I want to be involved in projects that challenge me to learn and work with new technologies and awesome people.",
     "mySkills":[
         {
-         "title": "Front-End",
+         "title": "Front-End skills",
          "skills":[
                 {
                     "title":"HTML5",
@@ -38,13 +39,16 @@
                     "title":"RxJS",
                     "img":"/assets/images/skills/rxjs.png"
                 },{
-                    "title":"Redux",
-                    "img":"/assets/images/skills/redux.png"
+                    "title":"NgRx(Redux)",
+                    "img":"/assets/images/skills/ngrx.png"
+                },{
+                    "title":"Kendo UI",
+                    "img":"/assets/images/skills/Kendo_UI.png"
                 }
             ]
         },
         {
-        "title": "Back-End",
+        "title": "Back-End skills",
          "skills":[
                 {
                     "title":"PHP",
@@ -67,10 +71,9 @@
                     "img":"/assets/images/skills/nodejs.jpg"
                 },
                 {
-                    "title":"Java EE",
-                    "img":"/assets/images/skills/java_ee.png"
+                    "title":"Docker",
+                    "img":"/assets/images/skills/docker.png"
                 },
-                
                 {
                     "title":"RESTful API",
                     "img":"/assets/images/skills/restapi.png"
