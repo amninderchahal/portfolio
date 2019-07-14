@@ -4,17 +4,21 @@ import router from './router'
 import store from './store'
 
 new Vue({
-    el: '#app',
-    router,
-    store,
-    components: { App },
-    template: '<App/>'
-  })
+  el: '#app',
+  router,
+  store,
+  components: { App },
+  template: '<App/>'
+})
 
-ga('set', 'page', router.currentRoute.path);
-ga('send', 'pageview');
+// GA 
+// After route change
+router.afterEach((to, from) => sendGAPageview(to.path));
 
-router.afterEach(( to, from ) => {
-  ga('set', 'page', to.path);
+// Initial pageview
+setTimeout(() => sendGAPageview(router.currentRoute.path), 400);
+
+const sendGAPageview = pageName => {
+  ga('set', 'page', pageName);
   ga('send', 'pageview');
-});
+};
