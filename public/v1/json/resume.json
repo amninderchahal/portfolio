@@ -1,0 +1,94 @@
+[
+    {
+        "heading":"Profile",
+        "description":"Web Developer with experience building high quality responsive websites. Flexible in working environments, able to work on front-end development, back-end development and databases. Familiar with Agile Methodologies in software development lifecycle. Quick learner, adaptable and able to work in a team or as an individual",
+        "repeatable":false
+    },
+    {
+        "heading":"Work Experience",
+        "description":false,
+        "repeatable":[
+            {
+                "title":"Web Developer",
+                "duration":"Jan 2018 - Present",
+                "institutionName":"Cloud DX",
+                "location":"Kitchener, ON, Canada",
+                "text":"A company that revolutionized remote health monitoring by building ISO compliant medical devices that monitor vitals of patient and keep the patient connected to the doctors.",
+                "listTitle":"Responsibilities:",
+                "listItems":[
+                    "Build front-end using Angular, RxJS, and Webpack",
+                    "Design user interfaces using HTML5 and CSS3",
+                    "Fix bugs in existing applications in Node.js and ASP.Net",
+                    "Follow agile methodologies"
+                ]
+            },
+            {
+                "title":"Web Developer",
+                "duration":"July 2015 - July 2016",
+                "institutionName":"HackEarth Private Limited",
+                "location":"Mohali, Punjab, India",
+                "text":"A startup that provides IT solutions to professionals and enterprises. I worked on the development, styling,  testing, and deployment of web applications to the cloud.",
+                "listTitle":"Responsibilities:",
+                "listItems":[
+                    "Build front-end using JavaScript, jQuery, Angularjs, and React JS",
+                    "Create responsive user interfaces using HTML5, CSS3, and Bootstrap",
+                    "Create back-end logic for websites and Web APIs in Laravel",
+                    "Write SQL commands and stored procedures in MySQL",
+                    "Work as per agile methodology"
+                ]
+            },
+            {
+                "title":"Web Developer Internship",
+                "duration":"Jan 2015 - June 2015",
+                "institutionName":"HackEarth Private Limited",
+                "location":"Mohali, Punjab, India",
+                "text":"I worked on the designing and development of an ecommerce web application.",
+                "listTitle":"Responsibilities:",
+                "listItems":[
+                    "Build client side with HTML5, CSS3, and Bootstrap",
+                    "Implement dynamic components using JavaScript and jQuery",
+                    "Develop back-end logic in PHP",
+                    "Design relational database in MySQL"
+                ]
+            }
+        ]
+    },
+    {
+        "heading":"Education",
+        "description":false,
+        "repeatable":[
+            {
+                "title":"Mobile Solutions Development",
+                "duration":"Sept 2016 - Jan 2018",
+                "institutionName":"Conestoga College",
+                "location":"Kitchener, ON, Canada",
+                "text":"Solid understanding of software design concepts. Proficient with user interface design principles, computer and web application security, and usability testing",
+                "listItems":false
+            },
+            {
+                "title":"Bachelor of Technology (Computer Science and Engineering)",
+                "duration":"Aug 2011 - June 2015",
+                "institutionName":"Chandigarh Group of Colleges",
+                "location":"Gharuan, Punjab, India",
+                "text":"Immersed in four years of learning technical and programming concepts in the development of software systems, and implemented the knowledge to build enterprise level software and web applications",
+                "listItems":false
+            }
+        ]
+    },
+    {
+        "heading":"Technical Expertise",
+        "description":false,
+        "repeatable":[
+            {
+                "listItems":[
+                    "Front-end: Angular, React, Vue JS, Redux, RxJS, jQuery, jQuery UI, and Bootstrap",
+                    "Back-end: Laravel, ASP.Net, Java EE, Node JS, Express JS, and ES6",
+                    "Core programming languages: HTML5, CSS3, JavaScript, PHP, C#, Java, and SQL",
+                    "Databases: MySQL, Microsoft SQL Server, MongoDB",
+                    "IDE: Visual Studio 2015, SQL Server Management Studio, NetBeans, and Eclipse",
+                    "Tools: Github, Bitbucket, Jira, Confluence, Slack"
+                ]
+            }
+        ]
+    }
+]
