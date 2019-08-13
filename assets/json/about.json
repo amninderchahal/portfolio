@@ -1,0 +1,95 @@
+{
+    "skillSummary":"I am a Web Developer with experience building high quality responsive websites and exceptional user experience. I'm flexible in working environments, able to work on front-end development or back-end development. I want to be involved in projects that challenge me to learn and work with new technologies and awesome people.",
+    "mySkills":[
+        {
+         "title": "Front-End skills",
+         "skills":[
+                {
+                    "title":"HTML5",
+                    "img":"/assets/images/skills/html5.png"
+                },
+                {
+                    "title":"CSS3",
+                    "img":"/assets/images/skills/css3.png"
+                },
+                {
+                    "title":"JavaScript",
+                    "img":"/assets/images/skills/js.png"
+                },
+                {
+                    "title":"Bootstrap",
+                    "img":"/assets/images/skills/bootstrap.png"
+                },
+                {
+                    "title":"jQuery",
+                    "img":"/assets/images/skills/jquery.png"
+                },
+                {
+                    "title":"Angular",
+                    "img":"/assets/images/skills/angular.png"
+                },
+                {
+                    "title":"React JS",
+                    "img":"/assets/images/skills/reactjs.png"
+                },{
+                    "title":"Vue JS",
+                    "img":"/assets/images/skills/vuejs.jpg"
+                },{
+                    "title":"RxJS",
+                    "img":"/assets/images/skills/rxjs.png"
+                },{
+                    "title":"NgRx(Redux)",
+                    "img":"/assets/images/skills/ngrx.png"
+                },{
+                    "title":"Kendo UI",
+                    "img":"/assets/images/skills/Kendo_UI.png"
+                }
+            ]
+        },
+        {
+        "title": "Back-End skills",
+         "skills":[
+                {
+                    "title":"PHP",
+                    "img":"/assets/images/skills/php.png"
+                },
+                {
+                    "title":"Laravel",
+                    "img":"/assets/images/skills/laravel.png"
+                },
+                {
+                    "title":"ASP.Net",
+                    "img":"/assets/images/skills/asp.net.png"
+                },
+                {
+                    "title":"C#",
+                    "img":"/assets/images/skills/csharp.png"
+                },
+                {
+                    "title":"Node JS",
+                    "img":"/assets/images/skills/nodejs.jpg"
+                },
+                {
+                    "title":"Docker",
+                    "img":"/assets/images/skills/docker.png"
+                },
+                {
+                    "title":"RESTful API",
+                    "img":"/assets/images/skills/restapi.png"
+                },
+                {
+                    "title":"SQL Server",
+                    "img":"/assets/images/skills/sqlserver.png"
+                },
+                {
+                    "title":"MySQL",
+                    "img":"/assets/images/skills/mysql.png"
+                },
+                {
+                    "title":"MongoDB",
+                    "img":"/assets/images/skills/mongodb.png"
+                }
+            ]
+        }
+    ]
+}
