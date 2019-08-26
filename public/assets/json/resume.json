@@ -2,34 +2,39 @@
     "about": [
         {
             "title": "City",
-            "type": "text",
+            "type": "icon",
+            "icon": "fas fa-map-marker-alt",
             "value": "Waterloo, ON",
             "valueType": "text"
         },
         {
-            "title": "fas fa-phone-square",
+            "title": "Phone",
             "type": "icon",
+            "icon": "fas fa-phone",
             "value": "(519) 722-1603",
             "valueType": "link",
             "href": "http://amninderchahal.com/tel:+15197221603"
         },
         {
-            "title": "fas fa-envelope",
+            "title": "Email",
             "type": "icon",
+            "icon": "fas fa-envelope",
             "value": "amninderchahal101@gmail.com",
             "valueType": "link",
             "href": "mailto:amninderchahal101@gmail.com"
         },
         {
-            "title": "fab fa-linkedin",
+            "title": "LinkedIn",
             "type": "icon",
+            "icon": "fab fa-linkedin-in",
             "value": "linkedin.com/in/amninderchahal",
             "valueType": "link",
             "href": "https://www.linkedin.com/in/amninderchahal/"
         },
         {
-            "title": "fab fa-github",
+            "title": "GitHub",
             "type": "icon",
+            "icon": "fab fa-github-alt",
             "value": "github.com/amninderchahal",
             "valueType": "link",
             "href": "https://github.com/amninderchahal"

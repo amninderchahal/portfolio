@@ -4,4 +4,5 @@ export interface About {
     value: string;
     valueType: string;
     href?: string;
+    icon?: string;
 }
