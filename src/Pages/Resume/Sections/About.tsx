@@ -7,19 +7,24 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       wordBreak: 'break-all',
-      margin: theme.spacing(0, 2),
+      paddingTop: theme.spacing(8)
     },
     infoTitle: {
-      borderTop: '1px solid #3D3C40',
-      borderBottom: '1px solid #3D3C40',
-      padding: theme.spacing(0, 1),
       textTransform: 'uppercase',
-      margin: theme.spacing(2, 0),
       fontWeight: 500,
-      fontFamily: "'Raleway', sans-serif"
+      fontSize: '1.05rem',
+      fontFamily: "'Raleway', sans-serif",
+      borderTop: '1px solid #A4A4A4',
+      borderBottom: '1px solid #A4A4A4',
+      paddingLeft: theme.spacing(1)
+    },
+    content: {
+      paddingTop: theme.spacing(2)
     },
     sectionWrapper: {
-      padding: theme.spacing(1.5, 0),
+      paddingTop: theme.spacing(1.5),
+      paddingBottom: theme.spacing(1.5),
+      color: '#DADADA'
     },
     icon: {
       "& i": {
@@ -28,24 +33,39 @@ const useStyles = makeStyles((theme: Theme) =>
         height: 32,
         borderRadius: '50%',
         textAlign: 'center',
-        backgroundColor: '#3D3C40',
-        color: '#fff',
+        backgroundColor: '#DADADA',
+        color: '#3D3C40',
         padding: theme.spacing(1),
-        fontSize: '1.05rem'
+        fontSize: 17
+      },
+      "& a": {
+        textDecoration: 'none'
       }
+    },
+    sectionContent: {
+      paddingLeft: theme.spacing(0.5)
     },
     sectionTitle: {
       fontWeight: 600,
       fontFamily: "'Raleway', sans-serif",
-      fontSize: '0.9rem',
-      lineHeight: '0.95rem'
+      fontSize: '0.87rem',
+      lineHeight: '0.85rem'
     },
     sectionLink: {
-      color: '#3D3C40',
-      fontSize: '0.82rem',
+      fontSize: '0.85rem',
       textDecoration: 'none',
+      color: '#DADADA',
+      fontStyle: 'italic',
+      fontFamily: '"Arial", sans-serif',
       '&:hover': {
         textDecoration: 'underline',
+      }
+    },
+    sectionText: {
+      display: 'block',
+      marginTop: 3,
+      '&:hover': {
+        textDecoration: 'none',
       }
     }
   })
@@ -59,20 +79,20 @@ const renderAboutSectionHeader = (section: About) => {
 
 const renderAboutSectionContent = (section: About) => {
   return section.valueType === 'text'
-    ? <Box>
+    ? <Box className={classes.sectionContent}>
       <Typography className={classes.sectionTitle} variant="subtitle2">{section.title}</Typography>
-      <Typography className={classes.sectionLink} variant="body2">{section.value}</Typography>
+      <Typography className={`${classes.sectionLink} ${classes.sectionText}`} variant="body2">{section.value}</Typography>
     </Box>
-    : <Box>
+    : <Box className={classes.sectionContent}>
       <Typography className={classes.sectionTitle} variant="subtitle2">{section.title}</Typography>
-      <a className={classes.sectionLink} href={section.href}>{section.value}</a>
+      <a className={classes.sectionLink} href={section.href} target="__blank">{section.value}</a>
     </Box>
 }
 
 const mapAboutSection = (section: About, index: number) => {
   return (
     <Box className={classes.sectionWrapper} key={index}>
-      <Grid container justify="center" alignItems="center">
+      <Grid container justify="center" alignItems="flex-start">
         <Grid item className={classes.icon} xs={2}>
           {renderAboutSectionHeader(section)}
         </Grid>
@@ -88,8 +108,10 @@ const AboutSection: React.FC<{ about: About[] }> = (props) => {
   classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Box className={classes.infoTitle}>Info</Box>
-      {props.about ? props.about.map(mapAboutSection) : ''}
+      <Typography className={classes.infoTitle}>Info</Typography>
+      <Box className={classes.content}>
+        {props.about ? props.about.map(mapAboutSection) : ''}
+      </Box>
     </Box>
   );
 }

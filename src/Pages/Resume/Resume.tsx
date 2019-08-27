@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Paper, Grid, Box, createStyles, withStyles, Theme } from '@material-ui/core';
+import { Paper, Grid, createStyles, withStyles, Theme } from '@material-ui/core';
 import http from '../../Services/http';
 import AboutSection from './Sections/About';
 import Header from './Sections/Header';
@@ -9,21 +9,18 @@ const styles = (theme: Theme) =>
   createStyles({
     root: {
       backgroundColor: '#076585',
-      backgroundImage: 'linear-gradient(160deg, #e2eef8, #f9e7e8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */',
-      opacity: 0.95,
+      backgroundImage: 'linear-gradient(160deg, #e2eef8, #f9e7e8)',
       minHeight: '100%',
       padding: theme.spacing(3)
     },
     resumeWrapper: {
-      maxWidth: 900,
+      width: 870,
       margin: 'auto',
-      '@media print': {
-        width: '100%'
-      }
+      color: '#fff'
     },
-    footer: {
+    leftContent: {
       backgroundColor: '#3D3C40',
-      padding: theme.spacing(1.5),
+      padding: theme.spacing(2, 3)
     }
   })
 
@@ -54,24 +51,17 @@ class Resume extends Component<Props, State> {
 
     return (
       <Grid container className={classes.root} justify="center" spacing={2}>
-        <Grid item xs={9}>
           <Paper className={classes.resumeWrapper} elevation={6}>
-            <Header></Header>
-
-            <Box p={2}>
-              <Grid container spacing={2}>
-                <Grid item xs={4}>
+              <Grid container>
+                <Grid item xs={4} className={classes.leftContent}>
+                  <Header></Header>
                   <AboutSection about={this.state.about}></AboutSection>
                 </Grid>
                 <Grid item xs={8}>
                   Main
                 </Grid>
               </Grid>
-            </Box>
-
-            <Box className={classes.footer}></Box>
           </Paper>
-        </Grid>
       </Grid>
     );
   }
